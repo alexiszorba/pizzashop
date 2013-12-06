@@ -1,37 +1,37 @@
-alex_pizza_homepage:
+alex_hello_homepage:
     pattern:  /
-    defaults: { _controller: AlexPizzaBundle:Pizza:index }    
+    defaults: { _controller: AlexHelloBundle:Hello:index }    
     
-alex_pizza_shop:
+alex_hello_shop:
     path: /shop
-    defaults: { _controller: AlexPizzaBundle:Pizza:shop }   
+    defaults: { _controller: AlexHelloBundle:Hello:shop }   
     
-alex_pizza_map:
+alex_hello_map:
     path: /map
-    defaults: { _controller: AlexPizzaBundle:Pizza:map }  
+    defaults: { _controller: AlexHelloBundle:Hello:map }  
     
-AlexPizzaBundle_extras:
-        resource: "@AlexPizzaBundle/Resources/config/routing/extras.yml"
+AlexHelloBundle_extras:
+        resource: "@AlexHelloBundle/Resources/config/routing/extras.yml"
         prefix:   /extras
         
-AlexPizzaBundle_kosten:
-        resource: "@AlexPizzaBundle/Resources/config/routing/kosten.yml"
+AlexHelloBundle_kosten:
+        resource: "@AlexHelloBundle/Resources/config/routing/kosten.yml"
         prefix:   /kosten
         
-AlexPizzaBundle_pizza:
-        resource: "@AlexPizzaBundle/Resources/config/routing/pizza.yml"
+AlexHelloBundle_pizza:
+        resource: "@AlexHelloBundle/Resources/config/routing/pizza.yml"
         prefix:   /pizza
         
-AlexPizzaBundle_postnr:
-        resource: "@AlexPizzaBundle/Resources/config/routing/postnr.yml"
+AlexHelloBundle_postnr:
+        resource: "@AlexHelloBundle/Resources/config/routing/postnr.yml"
         prefix:   /postnr
 
-AlexPizzaBundle_size:
-        resource: "@AlexPizzaBundle/Resources/config/routing/size.yml"
+AlexHelloBundle_size:
+        resource: "@AlexHelloBundle/Resources/config/routing/size.yml"
         prefix:   /size
         
-AlexPizzaBundle_type:
-        resource: "@AlexPizzaBundle/Resources/config/routing/type.yml"
+AlexHelloBundle_type:
+        resource: "@AlexHelloBundle/Resources/config/routing/type.yml"
         prefix:   /type
         
 fos_user_security:
@@ -52,4 +52,6 @@ fos_user_resetting:
 fos_user_change_password:
     resource: "@FOSUserBundle/Resources/config/routing/change_password.xml"
     prefix: /profile
+    
+
     

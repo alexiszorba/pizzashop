@@ -1,0 +1,261 @@
+<?php
+namespace Alex\HelloBundle\Entity;
+
+use Doctrine\ORM\Mapping AS ORM;
+
+/** 
+ * @ORM\Entity
+ */
+class Klanten
+{
+    /** 
+     * @ORM\Id
+     * @ORM\Column(type="integer")
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /** 
+     * @ORM\Column(type="string", length=255, nullable=false)
+     */
+    private $naam;
+
+    /** 
+     * @ORM\Column(type="string", length=255, nullable=false)
+     */
+    private $adres;
+
+    /** 
+     * @ORM\Column(type="string", length=10, nullable=false)
+     */
+    private $telnr;
+
+    /** 
+     * @ORM\Column(type="string", length=255, nullable=false)
+     */
+    private $email;
+
+    /** 
+     * @ORM\Column(type="string", length=255, nullable=false)
+     */
+    private $promotie;
+
+    /** 
+     * @ORM\Column(type="boolean", nullable=false)
+     */
+    private $blokkering;
+
+    /** 
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $bemerking;
+
+    /** 
+     * @ORM\ManyToOne(targetEntity="postnr")
+     * @ORM\JoinColumn(name="postnr_id", referencedColumnName="id", nullable=false)
+     */
+    private $postnr;
+    
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+    
+    /**
+     * 
+     * @return string
+     */
+    public function __toString() {
+        return $this->getNaam();
+    }
+
+    /**
+     * Set naam
+     *
+     * @param string $naam
+     * @return Klanten
+     */
+    public function setNaam($naam)
+    {
+        $this->naam = $naam;
+    
+        return $this;
+    }
+
+    /**
+     * Get naam
+     *
+     * @return string 
+     */
+    public function getNaam()
+    {
+        return $this->naam;
+    }
+
+    /**
+     * Set adres
+     *
+     * @param string $adres
+     * @return Klanten
+     */
+    public function setAdres($adres)
+    {
+        $this->adres = $adres;
+    
+        return $this;
+    }
+
+    /**
+     * Get adres
+     *
+     * @return string 
+     */
+    public function getAdres()
+    {
+        return $this->adres;
+    }
+
+    /**
+     * Set telnr
+     *
+     * @param string $telnr
+     * @return Klanten
+     */
+    public function setTelnr($telnr)
+    {
+        $this->telnr = $telnr;
+    
+        return $this;
+    }
+
+    /**
+     * Get telnr
+     *
+     * @return string 
+     */
+    public function getTelnr()
+    {
+        return $this->telnr;
+    }
+
+    /**
+     * Set email
+     *
+     * @param string $email
+     * @return Klanten
+     */
+    public function setEmail($email)
+    {
+        $this->email = $email;
+    
+        return $this;
+    }
+
+    /**
+     * Get email
+     *
+     * @return string 
+     */
+    public function getEmail()
+    {
+        return $this->email;
+    }
+
+    /**
+     * Set promotie
+     *
+     * @param string $promotie
+     * @return Klanten
+     */
+    public function setPromotie($promotie)
+    {
+        $this->promotie = $promotie;
+    
+        return $this;
+    }
+
+    /**
+     * Get promotie
+     *
+     * @return string 
+     */
+    public function getPromotie()
+    {
+        return $this->promotie;
+    }
+
+    /**
+     * Set blokkering
+     *
+     * @param boolean $blokkering
+     * @return Klanten
+     */
+    public function setBlokkering($blokkering)
+    {
+        $this->blokkering = $blokkering;
+    
+        return $this;
+    }
+
+    /**
+     * Get blokkering
+     *
+     * @return boolean 
+     */
+    public function getBlokkering()
+    {
+        return $this->blokkering;
+    }
+
+    /**
+     * Set bemerking
+     *
+     * @param string $bemerking
+     * @return Klanten
+     */
+    public function setBemerking($bemerking)
+    {
+        $this->bemerking = $bemerking;
+    
+        return $this;
+    }
+
+    /**
+     * Get bemerking
+     *
+     * @return string 
+     */
+    public function getBemerking()
+    {
+        return $this->bemerking;
+    }
+
+    /**
+     * Set postnr
+     *
+     * @param \Alex\HelloBundle\Entity\postnr $postnr
+     * @return Klanten
+     */
+    public function setPostnr(\Alex\HelloBundle\Entity\postnr $postnr)
+    {
+        $this->postnr = $postnr;
+    
+        return $this;
+    }
+
+    /**
+     * Get postnr
+     *
+     * @return \Alex\HelloBundle\Entity\postnr 
+     */
+    public function getPostnr()
+    {
+        return $this->postnr;
+    }
+}

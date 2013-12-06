@@ -1,0 +1,230 @@
+<?php
+namespace Alex\HelloBundle\Entity;
+
+use Doctrine\ORM\Mapping AS ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+
+/** 
+ * @ORM\Entity
+ */
+class Details
+{
+    /** 
+     * @ORM\Id
+     * @ORM\Column(type="integer")
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+    
+
+    /** 
+     * @ORM\Column(type="integer", nullable=true)
+     */
+    private $aantal;
+
+    /** 
+     * @ORM\Column(type="float", nullable=true)
+     */
+    private $prijs;
+
+    /** 
+     * @ORM\Column(type="string", length=50, nullable=true)
+     */
+    private $promotie;
+
+    /** 
+     * @ORM\ManyToOne(targetEntity="bestelling")
+     * @ORM\JoinColumn(name="bestelling_id", referencedColumnName="id", nullable=false)
+     */
+    private $bestelling;
+    
+      /** 
+     * @ORM\ManyToOne(targetEntity="type")
+     * @ORM\JoinColumn(name="type_id", referencedColumnName="id", nullable=false)
+     */
+    private $type;
+    
+      /** 
+     * @ORM\ManyToOne(targetEntity="size")
+     * @ORM\JoinColumn(name="size_id", referencedColumnName="id", nullable=false)
+     */
+    private $size;
+
+    /** 
+     * @ORM\ManyToOne(targetEntity="pizza")
+     * @ORM\JoinColumn(name="pizza_id", referencedColumnName="id", nullable=false)
+     */
+    private $pizza;
+    
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set aantal
+     *
+     * @param integer $aantal
+     * @return Details
+     */
+    public function setAantal($aantal)
+    {
+        $this->aantal = $aantal;
+    
+        return $this;
+    }
+
+    /**
+     * Get aantal
+     *
+     * @return integer 
+     */
+    public function getAantal()
+    {
+        return $this->aantal;
+    }
+
+    /**
+     * Set prijs
+     *
+     * @param float $prijs
+     * @return Details
+     */
+    public function setPrijs($prijs)
+    {
+        $this->prijs = $prijs;
+    
+        return $this;
+    }
+
+    /**
+     * Get prijs
+     *
+     * @return float 
+     */
+    public function getPrijs()
+    {
+        return $this->prijs;
+    }
+
+    /**
+     * Set promotie
+     *
+     * @param string $promotie
+     * @return Details
+     */
+    public function setPromotie($promotie)
+    {
+        $this->promotie = $promotie;
+    
+        return $this;
+    }
+
+    /**
+     * Get promotie
+     *
+     * @return string 
+     */
+    public function getPromotie()
+    {
+        return $this->promotie;
+    }
+
+    /**
+     * Set bestelling
+     *
+     * @param \Alex\HelloBundle\Entity\bestelling $bestelling
+     * @return Details
+     */
+    public function setBestelling(\Alex\HelloBundle\Entity\bestelling $bestelling)
+    {
+        $this->bestelling = $bestelling;
+    
+        return $this;
+    }
+
+    /**
+     * Get bestelling
+     *
+     * @return \Alex\HelloBundle\Entity\bestelling 
+     */
+    public function getBestelling()
+    {
+        return $this->bestelling;
+    }
+
+    /**
+     * Set pizza
+     *
+     * @param \Alex\HelloBundle\Entity\pizza $pizza
+     * @return Details
+     */
+    public function setPizza(\Alex\HelloBundle\Entity\pizza $pizza)
+    {
+        $this->pizza = $pizza;
+    
+        return $this;
+    }
+
+    /**
+     * Get pizza
+     *
+     * @return \Alex\HelloBundle\Entity\pizza 
+     */
+    public function getPizza()
+    {
+        return $this->pizza;
+    }
+
+    /**
+     * Set type
+     *
+     * @param \Alex\HelloBundle\Entity\type $type
+     * @return Details
+     */
+    public function setType(\Alex\HelloBundle\Entity\type $type)
+    {
+        $this->type = $type;
+    
+        return $this;
+    }
+
+    /**
+     * Get type
+     *
+     * @return \Alex\HelloBundle\Entity\type 
+     */
+    public function getType()
+    {
+        return $this->type;
+    }
+
+    /**
+     * Set size
+     *
+     * @param \Alex\HelloBundle\Entity\size $size
+     * @return Details
+     */
+    public function setSize(\Alex\HelloBundle\Entity\size $size)
+    {
+        $this->size = $size;
+    
+        return $this;
+    }
+
+    /**
+     * Get size
+     *
+     * @return \Alex\HelloBundle\Entity\size 
+     */
+    public function getSize()
+    {
+        return $this->size;
+    }
+}
