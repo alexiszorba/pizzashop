@@ -1,0 +1,30 @@
+extras:
+    pattern:  /
+    defaults: { _controller: "AlexPizzaBundle:Extras:index" }
+
+extras_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "AlexPizzaBundle:Extras:show" }
+
+extras_new:
+    pattern:  /new
+    defaults: { _controller: "AlexPizzaBundle:Extras:new" }
+
+extras_create:
+    pattern:  /create
+    defaults: { _controller: "AlexPizzaBundle:Extras:create" }
+    requirements: { _method: post }
+
+extras_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "AlexPizzaBundle:Extras:edit" }
+
+extras_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "AlexPizzaBundle:Extras:update" }
+    requirements: { _method: post|put }
+
+extras_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "AlexPizzaBundle:Extras:delete" }
+    requirements: { _method: post|delete }

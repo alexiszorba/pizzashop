@@ -1,0 +1,30 @@
+details:
+    pattern:  /
+    defaults: { _controller: "AlexPizzaBundle:Details:index" }
+
+details_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "AlexPizzaBundle:Details:show" }
+
+details_new:
+    pattern:  /new
+    defaults: { _controller: "AlexPizzaBundle:Details:new" }
+
+details_create:
+    pattern:  /create
+    defaults: { _controller: "AlexPizzaBundle:Details:create" }
+    requirements: { _method: post }
+
+details_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "AlexPizzaBundle:Details:edit" }
+
+details_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "AlexPizzaBundle:Details:update" }
+    requirements: { _method: post|put }
+
+details_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "AlexPizzaBundle:Details:delete" }
+    requirements: { _method: post|delete }
