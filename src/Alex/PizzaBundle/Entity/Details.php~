@@ -1,5 +1,5 @@
 <?php
-namespace Alex\HelloBundle\Entity;
+namespace Alex\PizzaBundle\Entity;
 
 use Doctrine\ORM\Mapping AS ORM;
 use Symfony\Component\Validator\Constraints as Assert;
@@ -139,10 +139,10 @@ class Details
     /**
      * Set bestelling
      *
-     * @param \Alex\HelloBundle\Entity\bestelling $bestelling
+     * @param \Alex\PizzaBundle\Entity\bestelling $bestelling
      * @return Details
      */
-    public function setBestelling(\Alex\HelloBundle\Entity\bestelling $bestelling)
+    public function setBestelling(\Alex\PizzaBundle\Entity\bestelling $bestelling)
     {
         $this->bestelling = $bestelling;
     
@@ -152,7 +152,7 @@ class Details
     /**
      * Get bestelling
      *
-     * @return \Alex\HelloBundle\Entity\bestelling 
+     * @return \Alex\PizzaBundle\Entity\bestelling 
      */
     public function getBestelling()
     {
@@ -162,10 +162,10 @@ class Details
     /**
      * Set pizza
      *
-     * @param \Alex\HelloBundle\Entity\pizza $pizza
+     * @param \Alex\PizzaBundle\Entity\pizza $pizza
      * @return Details
      */
-    public function setPizza(\Alex\HelloBundle\Entity\pizza $pizza)
+    public function setPizza(\Alex\PizzaBundle\Entity\pizza $pizza)
     {
         $this->pizza = $pizza;
     
@@ -175,7 +175,7 @@ class Details
     /**
      * Get pizza
      *
-     * @return \Alex\HelloBundle\Entity\pizza 
+     * @return \Alex\PizzaBundle\Entity\pizza 
      */
     public function getPizza()
     {
@@ -185,10 +185,10 @@ class Details
     /**
      * Set type
      *
-     * @param \Alex\HelloBundle\Entity\type $type
+     * @param \Alex\PizzaBundle\Entity\type $type
      * @return Details
      */
-    public function setType(\Alex\HelloBundle\Entity\type $type)
+    public function setType(\Alex\PizzaBundle\Entity\type $type)
     {
         $this->type = $type;
     
@@ -198,7 +198,7 @@ class Details
     /**
      * Get type
      *
-     * @return \Alex\HelloBundle\Entity\type 
+     * @return \Alex\PizzaBundle\Entity\type 
      */
     public function getType()
     {
@@ -208,10 +208,10 @@ class Details
     /**
      * Set size
      *
-     * @param \Alex\HelloBundle\Entity\size $size
+     * @param \Alex\PizzaBundle\Entity\size $size
      * @return Details
      */
-    public function setSize(\Alex\HelloBundle\Entity\size $size)
+    public function setSize(\Alex\PizzaBundle\Entity\size $size)
     {
         $this->size = $size;
     
@@ -221,7 +221,7 @@ class Details
     /**
      * Get size
      *
-     * @return \Alex\HelloBundle\Entity\size 
+     * @return \Alex\PizzaBundle\Entity\size 
      */
     public function getSize()
     {

@@ -23,6 +23,7 @@
         "sonata-project/exporter": "*",
         "incenteev/composer-parameter-handler": "~2.0",
         "friendsofsymfony/user-bundle": "2.0.*",
+        "sonata-project/core-bundle": "~2.2@dev",
         "sonata-project/admin-bundle": "*",
         "sonata-project/doctrine-orm-admin-bundle": "*"
     },

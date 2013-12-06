@@ -1,37 +1,37 @@
-alex_hello_homepage:
+alex_pizza_homepage:
     pattern:  /
-    defaults: { _controller: AlexHelloBundle:Hello:index }    
+    defaults: { _controller: AlexPizzaBundle:Pizza:index }    
     
-alex_hello_shop:
+alex_pizza_shop:
     path: /shop
-    defaults: { _controller: AlexHelloBundle:Hello:shop }   
+    defaults: { _controller: AlexPizzaBundle:Pizza:shop }   
     
-alex_hello_map:
+alex_pizza_map:
     path: /map
-    defaults: { _controller: AlexHelloBundle:Hello:map }  
+    defaults: { _controller: AlexPizzaBundle:Pizza:map }  
     
-AlexHelloBundle_extras:
-        resource: "@AlexHelloBundle/Resources/config/routing/extras.yml"
+AlexPizzaBundle_extras:
+        resource: "@AlexPizzaBundle/Resources/config/routing/extras.yml"
         prefix:   /extras
         
-AlexHelloBundle_kosten:
-        resource: "@AlexHelloBundle/Resources/config/routing/kosten.yml"
+AlexPizzaBundle_kosten:
+        resource: "@AlexPizzaBundle/Resources/config/routing/kosten.yml"
         prefix:   /kosten
         
-AlexHelloBundle_pizza:
-        resource: "@AlexHelloBundle/Resources/config/routing/pizza.yml"
+AlexPizzaBundle_pizza:
+        resource: "@AlexPizzaBundle/Resources/config/routing/pizza.yml"
         prefix:   /pizza
         
-AlexHelloBundle_postnr:
-        resource: "@AlexHelloBundle/Resources/config/routing/postnr.yml"
+AlexPizzaBundle_postnr:
+        resource: "@AlexPizzaBundle/Resources/config/routing/postnr.yml"
         prefix:   /postnr
 
-AlexHelloBundle_size:
-        resource: "@AlexHelloBundle/Resources/config/routing/size.yml"
+AlexPizzaBundle_size:
+        resource: "@AlexPizzaBundle/Resources/config/routing/size.yml"
         prefix:   /size
         
-AlexHelloBundle_type:
-        resource: "@AlexHelloBundle/Resources/config/routing/type.yml"
+AlexPizzaBundle_type:
+        resource: "@AlexPizzaBundle/Resources/config/routing/type.yml"
         prefix:   /type
         
 fos_user_security:

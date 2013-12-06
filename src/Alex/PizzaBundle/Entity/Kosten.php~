@@ -1,5 +1,5 @@
 <?php
-namespace Alex\HelloBundle\Entity;
+namespace Alex\PizzaBundle\Entity;
 
 use Doctrine\ORM\Mapping AS ORM;
 use Symfony\Component\Validator\Constraints as Assert;
@@ -91,10 +91,10 @@ class Kosten
     /**
      * Set postnr
      *
-     * @param \Alex\HelloBundle\Entity\postnr $postnr
+     * @param \Alex\PizzaBundle\Entity\postnr $postnr
      * @return Kosten
      */
-    public function setPostnr(\Alex\HelloBundle\Entity\postnr $postnr)
+    public function setPostnr(\Alex\PizzaBundle\Entity\postnr $postnr)
     {
         $this->postnr = $postnr;
     
@@ -104,7 +104,7 @@ class Kosten
     /**
      * Get postnr
      *
-     * @return \Alex\HelloBundle\Entity\postnr 
+     * @return \Alex\PizzaBundle\Entity\postnr 
      */
     public function getPostnr()
     {

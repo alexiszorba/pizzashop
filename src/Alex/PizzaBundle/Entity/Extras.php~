@@ -1,6 +1,6 @@
 <?php
 
-namespace Alex\HelloBundle\Entity;
+namespace Alex\PizzaBundle\Entity;
 
 use Doctrine\ORM\Mapping AS ORM;
 use Symfony\Component\Validator\Constraints as Assert;
@@ -29,7 +29,7 @@ class Extras {
 
     /**
      * @var Doctrine\Common\Collections\ArrayCollection $pizzas
-     * @ORM\ManyToMany(targetEntity="Alex\HelloBundle\Entity\Pizza", mappedBy="extras")
+     * @ORM\ManyToMany(targetEntity="Alex\PizzaBundle\Entity\Pizza", mappedBy="extras")
      */
     private $pizzas;
 
@@ -102,10 +102,10 @@ class Extras {
     /**
      * Add pizzas
      *
-     * @param \Alex\HelloBundle\Entity\Pizza $pizzas
+     * @param \Alex\PizzaBundle\Entity\Pizza $pizzas
      * @return Extras
      */
-    public function addPizza(\Alex\HelloBundle\Entity\Pizza $pizzas) {
+    public function addPizza(\Alex\PizzaBundle\Entity\Pizza $pizzas) {
         $this->pizzas[] = $pizzas;
 
         return $this;
@@ -114,9 +114,9 @@ class Extras {
     /**
      * Remove pizzas
      *
-     * @param \Alex\HelloBundle\Entity\Pizza $pizzas
+     * @param \Alex\PizzaBundle\Entity\Pizza $pizzas
      */
-    public function removePizza(\Alex\HelloBundle\Entity\Pizza $pizzas) {
+    public function removePizza(\Alex\PizzaBundle\Entity\Pizza $pizzas) {
         $this->pizzas->removeElement($pizzas);
     }
 

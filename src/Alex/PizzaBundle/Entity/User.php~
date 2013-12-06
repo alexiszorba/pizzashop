@@ -1,8 +1,8 @@
 <?php
 
-// src/Alex/HelloBundle/Entity/User.php
+// src/Alex/PizzaBundle/Entity/User.php
 
-namespace Alex\HelloBundle\Entity;
+namespace Alex\PizzaBundle\Entity;
 
 use FOS\UserBundle\Model\User as BaseUser;
 use Doctrine\ORM\Mapping as ORM;
@@ -181,10 +181,10 @@ class User extends BaseUser {
     /**
      * Set postnr
      *
-     * @param \Alex\HelloBundle\Entity\postnr $postnr
+     * @param \Alex\PizzaBundle\Entity\postnr $postnr
      * @return User
      */
-    public function setPostnr(\Alex\HelloBundle\Entity\postnr $postnr)
+    public function setPostnr(\Alex\PizzaBundle\Entity\postnr $postnr)
     {
         $this->postnr = $postnr;
     
@@ -194,7 +194,7 @@ class User extends BaseUser {
     /**
      * Get postnr
      *
-     * @return \Alex\HelloBundle\Entity\postnr 
+     * @return \Alex\PizzaBundle\Entity\postnr 
      */
     public function getPostnr()
     {

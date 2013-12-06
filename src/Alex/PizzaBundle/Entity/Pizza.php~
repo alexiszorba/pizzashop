@@ -1,6 +1,6 @@
 <?php
 
-namespace Alex\HelloBundle\Entity;
+namespace Alex\PizzaBundle\Entity;
 
 use Doctrine\ORM\Mapping AS ORM;
 use Symfony\Component\Validator\Constraints as Assert;
@@ -34,7 +34,7 @@ class Pizza {
 
     /**
      * @var Doctrine\Common\Collections\ArrayCollection $extras
-     * @ORM\ManyToMany(targetEntity="Alex\HelloBundle\Entity\Extras", inversedBy="pizzas")
+     * @ORM\ManyToMany(targetEntity="Alex\PizzaBundle\Entity\Extras", inversedBy="pizzas")
      * @ORM\JoinTable(name="pizza_extras", 
      *     joinColumns={@ORM\JoinColumn(name="pizza_id", referencedColumnName="id")},
      *     inverseJoinColumns={@ORM\JoinColumn(name="extras_id", referencedColumnName="id")}
@@ -125,10 +125,10 @@ class Pizza {
     /**
      * Set extras
      *
-     * @param \Alex\HelloBundle\Entity\extras $extras
+     * @param \Alex\PizzaBundle\Entity\extras $extras
      * @return Pizza
      */
-    public function setExtras(\Alex\HelloBundle\Entity\extras $extras = null) {
+    public function setExtras(\Alex\PizzaBundle\Entity\extras $extras = null) {
         $this->extras = $extras;
 
         return $this;
@@ -137,7 +137,7 @@ class Pizza {
     /**
      * Get extras
      *
-     * @return \Alex\HelloBundle\Entity\extras 
+     * @return \Alex\PizzaBundle\Entity\extras 
      */
     public function getExtras() {
         return $this->extras;
@@ -153,10 +153,10 @@ class Pizza {
     /**
      * Add extras
      *
-     * @param \Alex\HelloBundle\Entity\Extras $extras
+     * @param \Alex\PizzaBundle\Entity\Extras $extras
      * @return Pizza
      */
-    public function addExtra(\Alex\HelloBundle\Entity\Extras $extras) {
+    public function addExtra(\Alex\PizzaBundle\Entity\Extras $extras) {
         $this->extras[] = $extras;
 
         return $this;
@@ -165,9 +165,9 @@ class Pizza {
     /**
      * Remove extras
      *
-     * @param \Alex\HelloBundle\Entity\Extras $extras
+     * @param \Alex\PizzaBundle\Entity\Extras $extras
      */
-    public function removeExtra(\Alex\HelloBundle\Entity\Extras $extras) {
+    public function removeExtra(\Alex\PizzaBundle\Entity\Extras $extras) {
         $this->extras->removeElement($extras);
     }
 

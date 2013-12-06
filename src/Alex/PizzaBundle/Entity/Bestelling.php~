@@ -1,5 +1,5 @@
 <?php
-namespace Alex\HelloBundle\Entity;
+namespace Alex\PizzaBundle\Entity;
 
 use Doctrine\ORM\Mapping AS ORM;
 use Symfony\Component\Validator\Constraints as Assert;
@@ -120,10 +120,10 @@ class Bestelling
     /**
      * Set user
      *
-     * @param \Alex\HelloBundle\Entity\user $user
+     * @param \Alex\PizzaBundle\Entity\user $user
      * @return Bestelling
      */
-    public function setUser(\Alex\HelloBundle\Entity\user $user)
+    public function setUser(\Alex\PizzaBundle\Entity\user $user)
     {
         $this->user = $user;
     
@@ -133,7 +133,7 @@ class Bestelling
     /**
      * Get klanten
      *
-     * @return \Alex\HelloBundle\Entity\user
+     * @return \Alex\PizzaBundle\Entity\user
      */
     public function getUser()
     {
