@@ -25,7 +25,8 @@
         "friendsofsymfony/user-bundle": "2.0.*",
         "sonata-project/core-bundle": "~2.2@dev",
         "sonata-project/admin-bundle": "*",
-        "sonata-project/doctrine-orm-admin-bundle": "*"
+        "sonata-project/doctrine-orm-admin-bundle": "*",
+        "sonata-project/cache-bundle": "*"
     },
     "scripts": {
         "post-install-cmd": [
