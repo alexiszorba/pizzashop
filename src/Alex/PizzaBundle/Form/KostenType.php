@@ -36,6 +36,6 @@ class KostenType extends AbstractType
      */
     public function getName()
     {
-        return 'alex_hellobundle_kosten';
+        return 'alex_pizzabundle_kosten';
     }
 }

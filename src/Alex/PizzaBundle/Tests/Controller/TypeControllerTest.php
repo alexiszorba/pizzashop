@@ -19,7 +19,7 @@ class TypeControllerTest extends WebTestCase
 
         // Fill in the form and submit it
         $form = $crawler->selectButton('Create')->form(array(
-            'alex_hellobundle_typetype[field_name]'  => 'Test',
+            'alex_pizzabundle_typetype[field_name]'  => 'Test',
             // ... other fields to fill
         ));
 
@@ -33,7 +33,7 @@ class TypeControllerTest extends WebTestCase
         $crawler = $client->click($crawler->selectLink('Edit')->link());
 
         $form = $crawler->selectButton('Edit')->form(array(
-            'alex_hellobundle_typetype[field_name]'  => 'Foo',
+            'alex_pizzabundle_typetype[field_name]'  => 'Foo',
             // ... other fields to fill
         ));
 

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <orm-designer version="2.2.5.754" mvc="Symfony2" orm="Doctrine2">
-  <module name="MainModule" import-format="Doctrine2Php" import-path="src/Alex/HelloBundle/Entity" uuid="c60a08e1-99fb-4b39-ac90-90609d56dd86">
+  <module name="MainModule" import-format="Doctrine2Php" import-path="src/Alex/PizzaBundle/Entity" uuid="c60a08e1-99fb-4b39-ac90-90609d56dd86">
     <entity name="Type" uuid="cb2d0e4b-9d81-4c16-9f65-4182bde85bb7">
       <field name="TypeId" type="integer" required="true" unique="true" primary="true" auto-increment="true" uuid="579e8fc0-0b9c-4df1-be8b-7e32e6d11f2b"/>
       <field name="TypeOmschrijving" type="string" required="true" unique="true" uuid="dbccea50-17ae-47d6-a970-c8d650e516ae"/>
