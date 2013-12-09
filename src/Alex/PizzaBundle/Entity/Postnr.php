@@ -6,7 +6,7 @@ use Doctrine\ORM\Mapping AS ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="Alex\PizzaBundle\Entity\PostnrRepository")
  */
 class Postnr {
 

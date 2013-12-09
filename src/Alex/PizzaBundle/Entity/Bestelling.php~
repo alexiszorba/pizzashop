@@ -5,7 +5,8 @@ use Doctrine\ORM\Mapping AS ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /** 
- * @ORM\Entity
+ * @ORM\HasLifecycleCallbacks
+ * @ORM\Entity(repositoryClass="Alex\PizzaBundle\Entity\BestellingRepository")
  */
 class Bestelling
 {
@@ -138,5 +139,13 @@ class Bestelling
     public function getUser()
     {
         return $this->user;
+    }
+    
+    /**
+     * @ORM\PrePersist
+     */
+    public function onPrePersist()
+    {
+        $this->createdAt = new DateTime();
     }
 }
