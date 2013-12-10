@@ -6,6 +6,24 @@ services:
         arguments: [%fos_user.model.user.class%]
         tags:
             - { name: form.type, alias: alex_user_registration }
+            
+    alex.pizza.admin.bestelling:
+      class: Alex\PizzaBundle\Admin\BestellingAdmin
+      tags:
+          - { name: sonata.admin, manager_type: orm, group: pizza, label: Bestelling } 
+      arguments:
+            - ~
+            - Alex\PizzaBundle\Entity\Bestelling
+            - 'AlexPizzaBundle:BestellingAdmin'
+            
+    alex.pizza.admin.details:
+      class: Alex\PizzaBundle\Admin\DetailsAdmin
+      tags:
+          - { name: sonata.admin, manager_type: orm, group: pizza, label: Details } 
+      arguments:
+            - ~
+            - Alex\PizzaBundle\Entity\Details
+            - 'AlexPizzaBundle:DetailsAdmin'
 
     alex.pizza.admin.extras:
       class: Alex\PizzaBundle\Admin\ExtrasAdmin

@@ -152,6 +152,126 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return array (  '_controller' => 'Alex\\PizzaBundle\\Controller\\PizzaController::mapAction',  '_route' => 'alex_pizza_map',);
         }
 
+        if (0 === strpos($pathinfo, '/bestelling')) {
+            // bestelling
+            if (rtrim($pathinfo, '/') === '/bestelling') {
+                if (substr($pathinfo, -1) !== '/') {
+                    return $this->redirect($pathinfo.'/', 'bestelling');
+                }
+
+                return array (  '_controller' => 'Alex\\PizzaBundle\\Controller\\BestellingController::indexAction',  '_route' => 'bestelling',);
+            }
+
+            // bestelling_show
+            if (preg_match('#^/bestelling/(?P<id>[^/]++)/show$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'bestelling_show')), array (  '_controller' => 'Alex\\PizzaBundle\\Controller\\BestellingController::showAction',));
+            }
+
+            // bestelling_new
+            if ($pathinfo === '/bestelling/new') {
+                return array (  '_controller' => 'Alex\\PizzaBundle\\Controller\\BestellingController::newAction',  '_route' => 'bestelling_new',);
+            }
+
+            // bestelling_create
+            if ($pathinfo === '/bestelling/create') {
+                if ($this->context->getMethod() != 'POST') {
+                    $allow[] = 'POST';
+                    goto not_bestelling_create;
+                }
+
+                return array (  '_controller' => 'Alex\\PizzaBundle\\Controller\\BestellingController::createAction',  '_route' => 'bestelling_create',);
+            }
+            not_bestelling_create:
+
+            // bestelling_edit
+            if (preg_match('#^/bestelling/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'bestelling_edit')), array (  '_controller' => 'Alex\\PizzaBundle\\Controller\\BestellingController::editAction',));
+            }
+
+            // bestelling_update
+            if (preg_match('#^/bestelling/(?P<id>[^/]++)/update$#s', $pathinfo, $matches)) {
+                if (!in_array($this->context->getMethod(), array('POST', 'PUT'))) {
+                    $allow = array_merge($allow, array('POST', 'PUT'));
+                    goto not_bestelling_update;
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'bestelling_update')), array (  '_controller' => 'Alex\\PizzaBundle\\Controller\\BestellingController::updateAction',));
+            }
+            not_bestelling_update:
+
+            // bestelling_delete
+            if (preg_match('#^/bestelling/(?P<id>[^/]++)/delete$#s', $pathinfo, $matches)) {
+                if (!in_array($this->context->getMethod(), array('POST', 'DELETE'))) {
+                    $allow = array_merge($allow, array('POST', 'DELETE'));
+                    goto not_bestelling_delete;
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'bestelling_delete')), array (  '_controller' => 'Alex\\PizzaBundle\\Controller\\BestellingController::deleteAction',));
+            }
+            not_bestelling_delete:
+
+        }
+
+        if (0 === strpos($pathinfo, '/details')) {
+            // details
+            if (rtrim($pathinfo, '/') === '/details') {
+                if (substr($pathinfo, -1) !== '/') {
+                    return $this->redirect($pathinfo.'/', 'details');
+                }
+
+                return array (  '_controller' => 'Alex\\PizzaBundle\\Controller\\DetailsController::indexAction',  '_route' => 'details',);
+            }
+
+            // details_show
+            if (preg_match('#^/details/(?P<id>[^/]++)/show$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'details_show')), array (  '_controller' => 'Alex\\PizzaBundle\\Controller\\DetailsController::showAction',));
+            }
+
+            // details_new
+            if ($pathinfo === '/details/new') {
+                return array (  '_controller' => 'Alex\\PizzaBundle\\Controller\\DetailsController::newAction',  '_route' => 'details_new',);
+            }
+
+            // details_create
+            if ($pathinfo === '/details/create') {
+                if ($this->context->getMethod() != 'POST') {
+                    $allow[] = 'POST';
+                    goto not_details_create;
+                }
+
+                return array (  '_controller' => 'Alex\\PizzaBundle\\Controller\\DetailsController::createAction',  '_route' => 'details_create',);
+            }
+            not_details_create:
+
+            // details_edit
+            if (preg_match('#^/details/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'details_edit')), array (  '_controller' => 'Alex\\PizzaBundle\\Controller\\DetailsController::editAction',));
+            }
+
+            // details_update
+            if (preg_match('#^/details/(?P<id>[^/]++)/update$#s', $pathinfo, $matches)) {
+                if (!in_array($this->context->getMethod(), array('POST', 'PUT'))) {
+                    $allow = array_merge($allow, array('POST', 'PUT'));
+                    goto not_details_update;
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'details_update')), array (  '_controller' => 'Alex\\PizzaBundle\\Controller\\DetailsController::updateAction',));
+            }
+            not_details_update:
+
+            // details_delete
+            if (preg_match('#^/details/(?P<id>[^/]++)/delete$#s', $pathinfo, $matches)) {
+                if (!in_array($this->context->getMethod(), array('POST', 'DELETE'))) {
+                    $allow = array_merge($allow, array('POST', 'DELETE'));
+                    goto not_details_delete;
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'details_delete')), array (  '_controller' => 'Alex\\PizzaBundle\\Controller\\DetailsController::deleteAction',));
+            }
+            not_details_delete:
+
+        }
+
         if (0 === strpos($pathinfo, '/extras')) {
             // extras
             if (rtrim($pathinfo, '/') === '/extras') {
@@ -721,6 +841,82 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             }
 
             if (0 === strpos($pathinfo, '/admin/alex/pizza')) {
+                if (0 === strpos($pathinfo, '/admin/alex/pizza/bestelling')) {
+                    // admin_alex_pizza_bestelling_list
+                    if ($pathinfo === '/admin/alex/pizza/bestelling/list') {
+                        return array (  '_controller' => 'Alex\\PizzaBundle\\Controller\\BestellingAdminController::listAction',  '_sonata_admin' => 'alex.pizza.admin.bestelling',  '_sonata_name' => 'admin_alex_pizza_bestelling_list',  '_route' => 'admin_alex_pizza_bestelling_list',);
+                    }
+
+                    // admin_alex_pizza_bestelling_create
+                    if ($pathinfo === '/admin/alex/pizza/bestelling/create') {
+                        return array (  '_controller' => 'Alex\\PizzaBundle\\Controller\\BestellingAdminController::createAction',  '_sonata_admin' => 'alex.pizza.admin.bestelling',  '_sonata_name' => 'admin_alex_pizza_bestelling_create',  '_route' => 'admin_alex_pizza_bestelling_create',);
+                    }
+
+                    // admin_alex_pizza_bestelling_batch
+                    if ($pathinfo === '/admin/alex/pizza/bestelling/batch') {
+                        return array (  '_controller' => 'Alex\\PizzaBundle\\Controller\\BestellingAdminController::batchAction',  '_sonata_admin' => 'alex.pizza.admin.bestelling',  '_sonata_name' => 'admin_alex_pizza_bestelling_batch',  '_route' => 'admin_alex_pizza_bestelling_batch',);
+                    }
+
+                    // admin_alex_pizza_bestelling_edit
+                    if (preg_match('#^/admin/alex/pizza/bestelling/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'admin_alex_pizza_bestelling_edit')), array (  '_controller' => 'Alex\\PizzaBundle\\Controller\\BestellingAdminController::editAction',  '_sonata_admin' => 'alex.pizza.admin.bestelling',  '_sonata_name' => 'admin_alex_pizza_bestelling_edit',));
+                    }
+
+                    // admin_alex_pizza_bestelling_delete
+                    if (preg_match('#^/admin/alex/pizza/bestelling/(?P<id>[^/]++)/delete$#s', $pathinfo, $matches)) {
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'admin_alex_pizza_bestelling_delete')), array (  '_controller' => 'Alex\\PizzaBundle\\Controller\\BestellingAdminController::deleteAction',  '_sonata_admin' => 'alex.pizza.admin.bestelling',  '_sonata_name' => 'admin_alex_pizza_bestelling_delete',));
+                    }
+
+                    // admin_alex_pizza_bestelling_show
+                    if (preg_match('#^/admin/alex/pizza/bestelling/(?P<id>[^/]++)/show$#s', $pathinfo, $matches)) {
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'admin_alex_pizza_bestelling_show')), array (  '_controller' => 'Alex\\PizzaBundle\\Controller\\BestellingAdminController::showAction',  '_sonata_admin' => 'alex.pizza.admin.bestelling',  '_sonata_name' => 'admin_alex_pizza_bestelling_show',));
+                    }
+
+                    // admin_alex_pizza_bestelling_export
+                    if ($pathinfo === '/admin/alex/pizza/bestelling/export') {
+                        return array (  '_controller' => 'Alex\\PizzaBundle\\Controller\\BestellingAdminController::exportAction',  '_sonata_admin' => 'alex.pizza.admin.bestelling',  '_sonata_name' => 'admin_alex_pizza_bestelling_export',  '_route' => 'admin_alex_pizza_bestelling_export',);
+                    }
+
+                }
+
+                if (0 === strpos($pathinfo, '/admin/alex/pizza/details')) {
+                    // admin_alex_pizza_details_list
+                    if ($pathinfo === '/admin/alex/pizza/details/list') {
+                        return array (  '_controller' => 'Alex\\PizzaBundle\\Controller\\DetailsAdminController::listAction',  '_sonata_admin' => 'alex.pizza.admin.details',  '_sonata_name' => 'admin_alex_pizza_details_list',  '_route' => 'admin_alex_pizza_details_list',);
+                    }
+
+                    // admin_alex_pizza_details_create
+                    if ($pathinfo === '/admin/alex/pizza/details/create') {
+                        return array (  '_controller' => 'Alex\\PizzaBundle\\Controller\\DetailsAdminController::createAction',  '_sonata_admin' => 'alex.pizza.admin.details',  '_sonata_name' => 'admin_alex_pizza_details_create',  '_route' => 'admin_alex_pizza_details_create',);
+                    }
+
+                    // admin_alex_pizza_details_batch
+                    if ($pathinfo === '/admin/alex/pizza/details/batch') {
+                        return array (  '_controller' => 'Alex\\PizzaBundle\\Controller\\DetailsAdminController::batchAction',  '_sonata_admin' => 'alex.pizza.admin.details',  '_sonata_name' => 'admin_alex_pizza_details_batch',  '_route' => 'admin_alex_pizza_details_batch',);
+                    }
+
+                    // admin_alex_pizza_details_edit
+                    if (preg_match('#^/admin/alex/pizza/details/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'admin_alex_pizza_details_edit')), array (  '_controller' => 'Alex\\PizzaBundle\\Controller\\DetailsAdminController::editAction',  '_sonata_admin' => 'alex.pizza.admin.details',  '_sonata_name' => 'admin_alex_pizza_details_edit',));
+                    }
+
+                    // admin_alex_pizza_details_delete
+                    if (preg_match('#^/admin/alex/pizza/details/(?P<id>[^/]++)/delete$#s', $pathinfo, $matches)) {
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'admin_alex_pizza_details_delete')), array (  '_controller' => 'Alex\\PizzaBundle\\Controller\\DetailsAdminController::deleteAction',  '_sonata_admin' => 'alex.pizza.admin.details',  '_sonata_name' => 'admin_alex_pizza_details_delete',));
+                    }
+
+                    // admin_alex_pizza_details_show
+                    if (preg_match('#^/admin/alex/pizza/details/(?P<id>[^/]++)/show$#s', $pathinfo, $matches)) {
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'admin_alex_pizza_details_show')), array (  '_controller' => 'Alex\\PizzaBundle\\Controller\\DetailsAdminController::showAction',  '_sonata_admin' => 'alex.pizza.admin.details',  '_sonata_name' => 'admin_alex_pizza_details_show',));
+                    }
+
+                    // admin_alex_pizza_details_export
+                    if ($pathinfo === '/admin/alex/pizza/details/export') {
+                        return array (  '_controller' => 'Alex\\PizzaBundle\\Controller\\DetailsAdminController::exportAction',  '_sonata_admin' => 'alex.pizza.admin.details',  '_sonata_name' => 'admin_alex_pizza_details_export',  '_route' => 'admin_alex_pizza_details_export',);
+                    }
+
+                }
+
                 if (0 === strpos($pathinfo, '/admin/alex/pizza/extras')) {
                     // admin_alex_pizza_extras_list
                     if ($pathinfo === '/admin/alex/pizza/extras/list') {

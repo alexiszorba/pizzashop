@@ -10,6 +10,14 @@ alex_pizza_map:
     path: /map
     defaults: { _controller: AlexPizzaBundle:Pizza:map }  
     
+AlexPizzaBundle_bestelling:
+        resource: "@AlexPizzaBundle/Resources/config/routing/bestelling.yml"
+        prefix:   /bestelling
+        
+AlexPizzaBundle_details:
+        resource: "@AlexPizzaBundle/Resources/config/routing/details.yml"
+        prefix:   /details
+    
 AlexPizzaBundle_extras:
         resource: "@AlexPizzaBundle/Resources/config/routing/extras.yml"
         prefix:   /extras
