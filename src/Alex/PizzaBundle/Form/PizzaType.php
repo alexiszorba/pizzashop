@@ -38,7 +38,7 @@ class PizzaType extends AbstractType {
      * @return string
      */
     public function getName() {
-        return 'alex_pizzabundle_pizza';
+        return 'alex_hellobundle_pizza';
     }
 
 }

@@ -35,6 +35,6 @@ class PostnrType extends AbstractType
      */
     public function getName()
     {
-        return 'alex_pizzabundle_postnr';
+        return 'alex_hellobundle_postnr';
     }
 }

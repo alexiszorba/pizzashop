@@ -4,9 +4,8 @@ namespace Alex\PizzaBundle\Entity;
 use Doctrine\ORM\Mapping AS ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 
-/**
- * @ORM\HasLifecycleCallbacks 
- * @ORM\Entity(repositoryClass="Alex\PizzaBundle\Entity\DetailsRepository")
+/** 
+ * @ORM\Entity
  */
 class Details
 {
@@ -227,13 +226,5 @@ class Details
     public function getSize()
     {
         return $this->size;
-    }
-    
-    /**
-     * @ORM\PrePersist
-     */
-    public function onPrePersist()
-    {
-        
     }
 }

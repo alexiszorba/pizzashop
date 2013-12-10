@@ -8558,7 +8558,7 @@ $this->buildEditForm($formMapper, $block);
 }
 public function getCacheKeys(BlockInterface $block)
 {
-return array('block_id'=> $block->getId(),'updated_at'=> $block->getUpdatedAt()->format('U'),
+return array('block_id'=> $block->getId(),'updated_at'=> $block->getUpdatedAt() ? $block->getUpdatedAt()->format('U') : strtotime('now'),
 );
 }
 public function prePersist(BlockInterface $block)
@@ -13712,6 +13712,10 @@ public function getFunctions()
 return array(
 new \Twig_SimpleFunction('sonata_block_render',
 array($this->blockHelper,'render'),
+array('is_safe'=> array('html'))
+),
+new \Twig_SimpleFunction('sonata_block_render_event',
+array($this->blockHelper,'renderEvent'),
 array('is_safe'=> array('html'))
 ),
 new \Twig_SimpleFunction('sonata_block_include_javascripts',

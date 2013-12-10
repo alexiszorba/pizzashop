@@ -36,6 +36,6 @@ class ExtrasType extends AbstractType
      */
     public function getName()
     {
-        return 'alex_pizzabundle_extras';
+        return 'alex_hellobundle_extras';
     }
 }

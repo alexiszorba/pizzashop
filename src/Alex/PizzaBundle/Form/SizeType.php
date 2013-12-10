@@ -35,6 +35,6 @@ class SizeType extends AbstractType
      */
     public function getName()
     {
-        return 'alex_pizzabundle_size';
+        return 'alex_hellobundle_size';
     }
 }

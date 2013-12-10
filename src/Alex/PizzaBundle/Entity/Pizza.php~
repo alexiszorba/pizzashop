@@ -6,7 +6,7 @@ use Doctrine\ORM\Mapping AS ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
- * @ORM\Entity(repositoryClass="Alex\PizzaBundle\Entity\PizzaRepository")
+ * @ORM\Entity
  */
 class Pizza {
 
@@ -68,7 +68,7 @@ class Pizza {
      * @return string
      */
     public function __toString() {
-        return $this->getNaam();
+        return $this->getOmschrijving();
     }
 
     /**

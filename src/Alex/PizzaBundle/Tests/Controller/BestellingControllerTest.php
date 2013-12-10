@@ -19,7 +19,7 @@ class BestellingControllerTest extends WebTestCase
 
         // Fill in the form and submit it
         $form = $crawler->selectButton('Create')->form(array(
-            'alex_pizzabundle_bestellingtype[field_name]'  => 'Test',
+            'alex_hellobundle_bestellingtype[field_name]'  => 'Test',
             // ... other fields to fill
         ));
 
@@ -33,7 +33,7 @@ class BestellingControllerTest extends WebTestCase
         $crawler = $client->click($crawler->selectLink('Edit')->link());
 
         $form = $crawler->selectButton('Edit')->form(array(
-            'alex_pizzabundle_bestellingtype[field_name]'  => 'Foo',
+            'alex_hellobundle_bestellingtype[field_name]'  => 'Foo',
             // ... other fields to fill
         ));
 

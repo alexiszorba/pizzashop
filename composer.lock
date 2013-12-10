@@ -746,12 +746,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfSymfony/FOSUserBundle.git",
-                "reference": "f7380a4e476302aa8ca16c9fd017d6d9adc9482e"
+                "reference": "7a5e29a56418fc409d1475149710239d17ad4135"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSUserBundle/zipball/f7380a4e476302aa8ca16c9fd017d6d9adc9482e",
-                "reference": "f7380a4e476302aa8ca16c9fd017d6d9adc9482e",
+                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSUserBundle/zipball/7a5e29a56418fc409d1475149710239d17ad4135",
+                "reference": "7a5e29a56418fc409d1475149710239d17ad4135",
                 "shasum": ""
             },
             "require": {
@@ -806,7 +806,7 @@
             "keywords": [
                 "User management"
             ],
-            "time": "2013-12-02 23:42:45"
+            "time": "2013-12-09 02:46:36"
         },
         {
             "name": "incenteev/composer-parameter-handler",
@@ -815,12 +815,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Incenteev/ParameterHandler.git",
-                "reference": "bc06242a63298affc72d2089f93d8986a6217c4c"
+                "reference": "143272a0a09c62616a3c8011fc165a10c6b35241"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Incenteev/ParameterHandler/zipball/bc06242a63298affc72d2089f93d8986a6217c4c",
-                "reference": "bc06242a63298affc72d2089f93d8986a6217c4c",
+                "url": "https://api.github.com/repos/Incenteev/ParameterHandler/zipball/143272a0a09c62616a3c8011fc165a10c6b35241",
+                "reference": "143272a0a09c62616a3c8011fc165a10c6b35241",
                 "shasum": ""
             },
             "require": {
@@ -858,7 +858,7 @@
             "keywords": [
                 "parameters management"
             ],
-            "time": "2013-09-03 08:29:03"
+            "time": "2013-12-07 10:10:39"
         },
         {
             "name": "jdorn/sql-formatter",
@@ -1352,12 +1352,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sonata-project/SonataAdminBundle.git",
-                "reference": "db85522c3c8aa3c6753d1ccf418e1e0dff0ea2d9"
+                "reference": "35daa6c76b06a8056c01f51e03696ec36a4b6436"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/SonataAdminBundle/zipball/db85522c3c8aa3c6753d1ccf418e1e0dff0ea2d9",
-                "reference": "db85522c3c8aa3c6753d1ccf418e1e0dff0ea2d9",
+                "url": "https://api.github.com/repos/sonata-project/SonataAdminBundle/zipball/35daa6c76b06a8056c01f51e03696ec36a4b6436",
+                "reference": "35daa6c76b06a8056c01f51e03696ec36a4b6436",
                 "shasum": ""
             },
             "require": {
@@ -1423,7 +1423,7 @@
                 "bootstrap",
                 "sonata"
             ],
-            "time": "2013-12-06 09:47:00"
+            "time": "2013-12-08 20:31:17"
         },
         {
             "name": "sonata-project/block-bundle",
@@ -1432,12 +1432,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sonata-project/SonataBlockBundle.git",
-                "reference": "6d1fa2640a5d3c5fb4c345ebcca298940c01bab4"
+                "reference": "e4c00ed729a8396bdf0945f41cdaffe2d4cdf8d7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/SonataBlockBundle/zipball/6d1fa2640a5d3c5fb4c345ebcca298940c01bab4",
-                "reference": "6d1fa2640a5d3c5fb4c345ebcca298940c01bab4",
+                "url": "https://api.github.com/repos/sonata-project/SonataBlockBundle/zipball/e4c00ed729a8396bdf0945f41cdaffe2d4cdf8d7",
+                "reference": "e4c00ed729a8396bdf0945f41cdaffe2d4cdf8d7",
                 "shasum": ""
             },
             "require": {
@@ -1486,7 +1486,7 @@
                 "block",
                 "sonata"
             ],
-            "time": "2013-11-28 16:17:38"
+            "time": "2013-12-06 13:52:12"
         },
         {
             "name": "sonata-project/cache-bundle",
@@ -2045,12 +2045,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "0ecd186432f4395d7f2ad812ca94578ece25bc70"
+                "reference": "eb7df1a2d75e6476af913aee3c7adc6c2e305f3c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/0ecd186432f4395d7f2ad812ca94578ece25bc70",
-                "reference": "0ecd186432f4395d7f2ad812ca94578ece25bc70",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/eb7df1a2d75e6476af913aee3c7adc6c2e305f3c",
+                "reference": "eb7df1a2d75e6476af913aee3c7adc6c2e305f3c",
                 "shasum": ""
             },
             "require": {
@@ -2145,7 +2145,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2013-12-06 07:09:14"
+            "time": "2013-12-07 08:07:05"
         },
         {
             "name": "twig/extensions",
@@ -2200,12 +2200,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fabpot/Twig.git",
-                "reference": "7066ce68ad2fa24b70880217b344505ab8613c83"
+                "reference": "d5984bbb0592f9cda85e95f3f57a196d301a39d2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fabpot/Twig/zipball/7066ce68ad2fa24b70880217b344505ab8613c83",
-                "reference": "7066ce68ad2fa24b70880217b344505ab8613c83",
+                "url": "https://api.github.com/repos/fabpot/Twig/zipball/d5984bbb0592f9cda85e95f3f57a196d301a39d2",
+                "reference": "d5984bbb0592f9cda85e95f3f57a196d301a39d2",
                 "shasum": ""
             },
             "require": {
@@ -2241,7 +2241,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2013-12-06 08:13:22"
+            "time": "2013-12-06 15:28:39"
         }
     ],
     "packages-dev": [

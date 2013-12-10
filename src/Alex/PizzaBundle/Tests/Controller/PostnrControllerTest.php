@@ -19,7 +19,7 @@ class PostnrControllerTest extends WebTestCase
 
         // Fill in the form and submit it
         $form = $crawler->selectButton('Create')->form(array(
-            'alex_pizzabundle_postnrtype[field_name]'  => 'Test',
+            'alex_hellobundle_postnrtype[field_name]'  => 'Test',
             // ... other fields to fill
         ));
 
@@ -33,7 +33,7 @@ class PostnrControllerTest extends WebTestCase
         $crawler = $client->click($crawler->selectLink('Edit')->link());
 
         $form = $crawler->selectButton('Edit')->form(array(
-            'alex_pizzabundle_postnrtype[field_name]'  => 'Foo',
+            'alex_hellobundle_postnrtype[field_name]'  => 'Foo',
             // ... other fields to fill
         ));
 
