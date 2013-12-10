@@ -6,7 +6,7 @@ use Doctrine\ORM\Mapping AS ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
- * @ORM\Entity(repositoryClass="Repository\BestellingRepository")
+ * @ORM\Entity(repositoryClass="Alex\PizzaBundle\Entity\BestellingRepository")
  * @ORM\HasLifecycleCallbacks()
  */
 class Bestelling {
@@ -29,7 +29,7 @@ class Bestelling {
     private $levering;
 
     /**
-     * @ORM\Column(type="float", length=20, nullable=false)
+     * @ORM\Column(type="decimal", scale=2, nullable=true)
      */
     private $leveringskost;
 

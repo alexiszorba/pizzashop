@@ -22,7 +22,7 @@ class Type
     private $omschrijving;
 
     /** 
-     * @ORM\Column(type="float", nullable=false)
+     * @ORM\Column(type="decimal", scale=2, nullable=false)
      */
     private $extrakost;
 

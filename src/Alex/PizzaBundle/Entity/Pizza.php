@@ -28,7 +28,7 @@ class Pizza {
     private $omschrijving;
 
     /**
-     * @ORM\Column(type="float", length=20, nullable=false)
+     * @ORM\Column(type="decimal", scale=2, nullable=false)
      */
     private $basisprijs;
 

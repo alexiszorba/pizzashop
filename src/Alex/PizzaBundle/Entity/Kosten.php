@@ -17,12 +17,12 @@ class Kosten
     private $id;
 
     /** 
-     * @ORM\Column(type="float", length=20, nullable=true)
+     * @ORM\Column(type="decimal", scale=2, nullable=true)
      */
     private $bedrag;
 
     /** 
-     * @ORM\Column(type="float", length=20, nullable=true)
+     * @ORM\Column(type="decimal", scale=2, nullable=true)
      */
     private $gratistarief;
 

@@ -36,6 +36,7 @@ class BestellingController extends Controller
     public function createAction(Request $request)
     {
         $entity = new Bestelling();
+        $entity->setDatum(new \DateTime) ;
         $form = $this->createCreateForm($entity);
         $form->handleRequest($request);
 

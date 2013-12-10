@@ -35,6 +35,6 @@ class TypeType extends AbstractType
      */
     public function getName()
     {
-        return 'alex_hellobundle_type';
+        return 'alex_pizzabundle_type';
     }
 }
