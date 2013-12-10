@@ -1,16 +1,16 @@
 <?php
 
 namespace Alex\PizzaBundle\Admin;
- 
+
 use Sonata\AdminBundle\Admin\Admin;
 use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Validator\ErrorElement;
 use Sonata\AdminBundle\Form\FormMapper;
 use Sonata\AdminBundle\Show\ShowMapper;
- 
-class DetailsAdmin extends Admin
-{
+
+class DetailsAdmin extends Admin {
+
     // setup the default sort column and order
     protected $datagridValues = array(
         '_sort_order' => 'ASC',
@@ -22,33 +22,38 @@ class DetailsAdmin extends Admin
                 ->add('aantal')
                 ->add('prijs')
                 ->add('promotie')
-                 ->add('bestelling')
+                ->add('bestelling')
                 ->add('type')
                 ->add('size')
                 ->add('pizza')
-                 // help messages
+                ->add('extras', null, array('required' => false))
                 
+        // help messages
+
+
+
         ;
     }
 
     protected function configureDatagridFilters(DatagridMapper $datagridMapper) {
-        $datagridMapper                
+        $datagridMapper
                 ->add('promotie')
                 ->add('bestelling')
                 ->add('type')
-       ;
+        ;
     }
 
     protected function configureListFields(ListMapper $listMapper) {
         $listMapper
                 ->addIdentifier('id')
-                 ->add('aantal')
+                ->add('aantal')
                 ->add('prijs')
                 ->add('promotie')
-                 ->add('bestelling')
+                ->add('bestelling')
                 ->add('type')
                 ->add('size')
                 ->add('pizza')
+                ->add('extras')
                 ->add('_action', 'actions', array(
                     'actions' => array(
                         'view' => array(),
@@ -61,13 +66,14 @@ class DetailsAdmin extends Admin
 
     protected function configureShowField(ShowMapper $showMapper) {
         $showMapper
-                 ->add('aantal')
+                ->add('aantal')
                 ->add('prijs')
                 ->add('promotie')
-                 ->add('bestelling')
+                ->add('bestelling')
                 ->add('type')
                 ->add('size')
                 ->add('pizza')
+                ->add('extras')
         ;
     }
 

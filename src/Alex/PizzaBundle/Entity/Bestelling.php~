@@ -1,51 +1,50 @@
 <?php
+
 namespace Alex\PizzaBundle\Entity;
 
 use Doctrine\ORM\Mapping AS ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 
-/** 
- * @ORM\Entity
- * @ORM\HasLifecycleCallbacks
+/**
+ * @ORM\Entity(repositoryClass="Repository\BestellingRepository")
+ * @ORM\HasLifecycleCallbacks()
  */
-class Bestelling
-{
-    /** 
+class Bestelling {
+
+    /**
      * @ORM\Id
      * @ORM\Column(type="integer")
      * @ORM\GeneratedValue(strategy="AUTO")
      */
     private $id;
 
-    /** 
+    /**
      * @ORM\Column(type="datetime", nullable=true)
      */
     private $datum;
 
-    /** 
+    /**
      * @ORM\Column(type="string", length=50, nullable=false)
      */
     private $levering;
 
-    /** 
+    /**
      * @ORM\Column(type="float", length=20, nullable=false)
      */
     private $leveringskost;
 
-    /** 
+    /**
      * @ORM\ManyToOne(targetEntity="user")
      * @ORM\JoinColumn(name="user_id", referencedColumnName="id", nullable=false)
      */
     private $user;
-
 
     /**
      * Get id
      *
      * @return integer 
      */
-    public function getId()
-    {
+    public function getId() {
         return $this->id;
     }
 
@@ -55,10 +54,9 @@ class Bestelling
      * @param \DateTime $datum
      * @return Bestelling
      */
-    public function setDatum($datum)
-    {
+    public function setDatum($datum) {
         $this->datum = $datum;
-    
+
         return $this;
     }
 
@@ -67,8 +65,7 @@ class Bestelling
      *
      * @return \DateTime 
      */
-    public function getDatum()
-    {
+    public function getDatum() {
         return $this->datum;
     }
 
@@ -78,10 +75,9 @@ class Bestelling
      * @param string $levering
      * @return Bestelling
      */
-    public function setLevering($levering)
-    {
+    public function setLevering($levering) {
         $this->levering = $levering;
-    
+
         return $this;
     }
 
@@ -90,8 +86,7 @@ class Bestelling
      *
      * @return string 
      */
-    public function getLevering()
-    {
+    public function getLevering() {
         return $this->levering;
     }
 
@@ -101,10 +96,9 @@ class Bestelling
      * @param float $leveringskost
      * @return Bestelling
      */
-    public function setLeveringskost($leveringskost)
-    {
+    public function setLeveringskost($leveringskost) {
         $this->leveringskost = $leveringskost;
-    
+
         return $this;
     }
 
@@ -113,8 +107,7 @@ class Bestelling
      *
      * @return float 
      */
-    public function getLeveringskost()
-    {
+    public function getLeveringskost() {
         return $this->leveringskost;
     }
 
@@ -124,10 +117,9 @@ class Bestelling
      * @param \Alex\PizzaBundle\Entity\user $user
      * @return Bestelling
      */
-    public function setUser(\Alex\PizzaBundle\Entity\user $user)
-    {
+    public function setUser(\Alex\PizzaBundle\Entity\user $user) {
         $this->user = $user;
-    
+
         return $this;
     }
 
@@ -136,8 +128,18 @@ class Bestelling
      *
      * @return \Alex\PizzaBundle\Entity\user
      */
-    public function getUser()
-    {
+    public function getUser() {
         return $this->user;
     }
+
+    /**
+     *
+     * @ORM\PrePersist
+     */
+    public function setInitValue() {
+        $this->datum = new \DateTime;
+       
+        return $this;
+    }
+
 }

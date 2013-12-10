@@ -221,4 +221,6 @@ class DetailsController extends Controller
             ->getForm()
         ;
     }
+    
+    
 }

@@ -2,6 +2,13 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/xampp/htdocs/pizzashop/src/Alex/PizzaBundle/Entity/Details.php</file>
+            <file>file:/C:/xampp/htdocs/pizzashop/src/Alex/PizzaBundle/Entity/Pizza.php</file>
+            <file>file:/C:/xampp/htdocs/pizzashop/src/Alex/PizzaBundle/Admin/KostenAdmin.php</file>
+            <file>file:/C:/xampp/htdocs/pizzashop/src/Alex/PizzaBundle/Admin/DetailsAdmin.php</file>
+            <file>file:/C:/xampp/htdocs/pizzashop/src/Alex/PizzaBundle/Controller/BestellingAdminController.php</file>
+            <file>file:/C:/xampp/htdocs/pizzashop/src/Alex/PizzaBundle/Controller/BestellingController.php</file>
+        </group>
     </open-files>
 </project-private>

@@ -68,7 +68,8 @@ class Pizza {
      * @return string
      */
     public function __toString() {
-        return $this->getOmschrijving();
+       
+        return $this->getNaam();
     }
 
     /**

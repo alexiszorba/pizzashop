@@ -31,8 +31,7 @@ class BestellingAdmin extends Admin
     protected function configureDatagridFilters(DatagridMapper $datagridMapper) {
         $datagridMapper                
                 ->add('datum')
-                ->add('levering')
-                ->add('leveringskost')
+                ->add('levering')                
                 ->add('user')
        ;
     }

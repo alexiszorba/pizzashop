@@ -8,7 +8,7 @@ use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Validator\ErrorElement;
 use Sonata\AdminBundle\Form\FormMapper;
 use Sonata\AdminBundle\Show\ShowMapper;
-use Alex\PizzaBundle\Entity\Extras;
+
 
 class PizzaAdmin extends Admin {
 
@@ -23,7 +23,15 @@ class PizzaAdmin extends Admin {
                 ->add('naam')
                 ->add('omschrijving')
                 ->add('basisprijs')
-                ->add('extras')
+                //->add('extras')
+                ->add('extras', 'sonata_type_collection', array(
+                // Prevents the "Delete" option from being displayed
+                'type_options' => array('delete' => false)
+            ), array(
+                'edit' => 'inline',
+                'inline' => 'table',
+                'sortable' => 'position',
+            ))
                 // help messages 
                 ->setHelps(array(
                     'extras' => $this->trans('click in whitespace in extras to add new extras')
@@ -64,4 +72,5 @@ class PizzaAdmin extends Admin {
         ;
     }
 
+   
 }
