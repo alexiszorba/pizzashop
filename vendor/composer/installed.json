@@ -1543,12 +1543,12 @@
         "source": {
             "type": "git",
             "url": "https://github.com/sonata-project/SonataCoreBundle.git",
-            "reference": "69a080213ea8b85ef80d21fecc16eb3a18e4beec"
+            "reference": "ef3cdf3f1c4508f1bca64069f39266c6b15fcac0"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/sonata-project/SonataCoreBundle/zipball/69a080213ea8b85ef80d21fecc16eb3a18e4beec",
-            "reference": "69a080213ea8b85ef80d21fecc16eb3a18e4beec",
+            "url": "https://api.github.com/repos/sonata-project/SonataCoreBundle/zipball/ef3cdf3f1c4508f1bca64069f39266c6b15fcac0",
+            "reference": "ef3cdf3f1c4508f1bca64069f39266c6b15fcac0",
             "shasum": ""
         },
         "require": {
@@ -1557,7 +1557,10 @@
             "symfony/translation": "~2.2",
             "twig/twig": "~1.12"
         },
-        "time": "2013-12-10 12:57:38",
+        "require-dev": {
+            "sonata-project/exporter": "~1.3"
+        },
+        "time": "2013-12-11 16:06:54",
         "type": "symfony-bundle",
         "extra": {
             "branch-alias": {
@@ -2044,12 +2047,12 @@
         "source": {
             "type": "git",
             "url": "https://github.com/sonata-project/SonataAdminBundle.git",
-            "reference": "f709b77dbf5a3a06d4948927390e6f085e62938d"
+            "reference": "8c96d24c1e4932e4eecea12fc2c8dd3a88c12e55"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/sonata-project/SonataAdminBundle/zipball/f709b77dbf5a3a06d4948927390e6f085e62938d",
-            "reference": "f709b77dbf5a3a06d4948927390e6f085e62938d",
+            "url": "https://api.github.com/repos/sonata-project/SonataAdminBundle/zipball/8c96d24c1e4932e4eecea12fc2c8dd3a88c12e55",
+            "reference": "8c96d24c1e4932e4eecea12fc2c8dd3a88c12e55",
             "shasum": ""
         },
         "require": {
@@ -2081,7 +2084,7 @@
             "sonata-project/doctrine-orm-admin-bundle": "2.2.*@dev",
             "sonata-project/intl-bundle": "2.1.*"
         },
-        "time": "2013-12-09 16:32:10",
+        "time": "2013-12-11 15:46:31",
         "type": "symfony-bundle",
         "extra": {
             "branch-alias": {
@@ -2115,66 +2118,6 @@
             "Admin Generator",
             "admin",
             "bootstrap",
-            "sonata"
-        ]
-    },
-    {
-        "name": "sonata-project/doctrine-orm-admin-bundle",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
-        "target-dir": "Sonata/DoctrineORMAdminBundle",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/sonata-project/SonataDoctrineORMAdminBundle.git",
-            "reference": "2d7b9ff36aabf38e509295fa160baf2f947c8892"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/sonata-project/SonataDoctrineORMAdminBundle/zipball/2d7b9ff36aabf38e509295fa160baf2f947c8892",
-            "reference": "2d7b9ff36aabf38e509295fa160baf2f947c8892",
-            "shasum": ""
-        },
-        "require": {
-            "doctrine/orm": "~2.3",
-            "sonata-project/admin-bundle": "~2.2,>=2.2.2",
-            "sonata-project/core-bundle": "~2.2@dev",
-            "symfony/symfony": "~2.2"
-        },
-        "time": "2013-12-09 16:55:15",
-        "type": "symfony-bundle",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "2.2.x-dev"
-            }
-        },
-        "installation-source": "source",
-        "autoload": {
-            "psr-0": {
-                "Sonata\\DoctrineORMAdminBundle": ""
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Thomas Rabaix",
-                "email": "thomas.rabaix@sonata-project.org",
-                "homepage": "http://sonata-project.org"
-            },
-            {
-                "name": "Sonata Community",
-                "homepage": "https://github.com/sonata-project/SonataDoctrineORMAdminBundle/contributors"
-            }
-        ],
-        "description": "Symfony Sonata / Integrate Doctrine ORM into the SonataAdminBundle",
-        "homepage": "http://sonata-project.org/bundles/admin",
-        "keywords": [
-            "Admin Generator",
-            "admin",
-            "bootstrap",
-            "generator",
             "sonata"
         ]
     },
@@ -2312,6 +2255,66 @@
             "log",
             "logging",
             "psr-3"
+        ]
+    },
+    {
+        "name": "sonata-project/doctrine-orm-admin-bundle",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "target-dir": "Sonata/DoctrineORMAdminBundle",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/sonata-project/SonataDoctrineORMAdminBundle.git",
+            "reference": "e728725af38a36778185c738d36703ab325b9327"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/sonata-project/SonataDoctrineORMAdminBundle/zipball/e728725af38a36778185c738d36703ab325b9327",
+            "reference": "e728725af38a36778185c738d36703ab325b9327",
+            "shasum": ""
+        },
+        "require": {
+            "doctrine/orm": "~2.3",
+            "sonata-project/admin-bundle": "~2.2,>=2.2.2",
+            "sonata-project/core-bundle": "~2.2@dev",
+            "symfony/symfony": "~2.2"
+        },
+        "time": "2013-12-11 11:01:59",
+        "type": "symfony-bundle",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "2.2.x-dev"
+            }
+        },
+        "installation-source": "source",
+        "autoload": {
+            "psr-0": {
+                "Sonata\\DoctrineORMAdminBundle": ""
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Thomas Rabaix",
+                "email": "thomas.rabaix@sonata-project.org",
+                "homepage": "http://sonata-project.org"
+            },
+            {
+                "name": "Sonata Community",
+                "homepage": "https://github.com/sonata-project/SonataDoctrineORMAdminBundle/contributors"
+            }
+        ],
+        "description": "Symfony Sonata / Integrate Doctrine ORM into the SonataAdminBundle",
+        "homepage": "http://sonata-project.org/bundles/admin",
+        "keywords": [
+            "Admin Generator",
+            "admin",
+            "bootstrap",
+            "generator",
+            "sonata"
         ]
     }
 ]

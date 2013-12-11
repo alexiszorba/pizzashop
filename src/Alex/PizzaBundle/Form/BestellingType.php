@@ -15,7 +15,7 @@ class BestellingType extends AbstractType {
     public function buildForm(FormBuilderInterface $builder, array $options) {
         $builder
         ->add('datum', null, array('required' => true, 'data' => new \DateTime('now')))
-        ->add('levering', null, array('required' => true, 'data' => (new \DateTime('now'))->add(new \DateInterval('PT1H'))))
+        ->add('levering', null, array('required' => true, 'data' => (new \DateTime('now'))->add(new \DateInterval("PT1H"))))
         ->add('leveringskost')
         ->add('user')
         ;

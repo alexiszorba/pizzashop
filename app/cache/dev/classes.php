@@ -6647,7 +6647,7 @@ abstract class Admin implements AdminInterface, DomainObjectInterface
 {
 const CONTEXT_MENU ='menu';
 const CONTEXT_DASHBOARD ='dashboard';
-const CLASS_REGEX ='@([A-Za-z0-9]*)\\\(Bundle\\\)?([A-Za-z0-9]+)Bundle\\\(Entity|Document|Model|PHPCR|Phpcr|Doctrine\\\Orm|Doctrine\\\Phpcr|Doctrine\\\MongoDB|Doctrine\\\CouchDB)\\\(.*)@';
+const CLASS_REGEX ='@([A-Za-z0-9]*)\\\(Bundle\\\)?([A-Za-z0-9]+)Bundle\\\(Entity|Document|Model|PHPCR|CouchDocument|Phpcr|Doctrine\\\Orm|Doctrine\\\Phpcr|Doctrine\\\MongoDB|Doctrine\\\CouchDB)\\\(.*)@';
 private $class;
 private $subClasses = array();
 private $list;
@@ -9383,7 +9383,7 @@ class NoValueException extends \Exception
 {
 }
 }
-namespace Sonata\AdminBundle\Export
+namespace Sonata\CoreBundle\Exporter
 {
 use Exporter\Source\SourceIteratorInterface;
 use Symfony\Component\HttpFoundation\StreamedResponse;
@@ -9422,6 +9422,14 @@ $handler->export();
 return new StreamedResponse($callback, 200, array('Content-Type'=> $contentType,'Content-Disposition'=> sprintf('attachment; filename=%s', $filename)
 ));
 }
+}
+}
+namespace Sonata\AdminBundle\Export
+{
+use Symfony\Component\HttpFoundation\StreamedResponse;
+use Sonata\CoreBundle\Exporter\Exporter as BaseExporter;
+class Exporter extends BaseExporter
+{
 }
 }
 namespace Sonata\AdminBundle\Filter
@@ -12082,7 +12090,7 @@ $this->environment = $environment;
 }
 public function getFilters()
 {
-return array('render_list_element'=> new \Twig_Filter_Method($this,'renderListElement', array('is_safe'=> array('html'))),'render_view_element'=> new \Twig_Filter_Method($this,'renderViewElement', array('is_safe'=> array('html'))),'render_relation_element'=> new \Twig_Filter_Method($this,'renderRelationElement'),'sonata_urlsafeid'=> new \Twig_Filter_Method($this,'getUrlsafeIdentifier'),'sonata_slugify'=> new \Twig_Filter_Method($this,'slugify'),
+return array('render_list_element'=> new \Twig_Filter_Method($this,'renderListElement', array('is_safe'=> array('html'))),'render_view_element'=> new \Twig_Filter_Method($this,'renderViewElement', array('is_safe'=> array('html'))),'render_relation_element'=> new \Twig_Filter_Method($this,'renderRelationElement'),'sonata_urlsafeid'=> new \Twig_Filter_Method($this,'getUrlsafeIdentifier'),
 );
 }
 public function getTokenParsers()
@@ -12166,17 +12174,6 @@ $admin = $this->pool->getAdminByClass(
 ClassUtils::getClass($model)
 );
 return $admin->getUrlsafeIdentifier($model);
-}
-public function slugify($text)
-{
-$text = preg_replace('~[^\\pL\d]+~u','-', $text);
-$text = trim($text,'-');
-if (function_exists('iconv')) {
-$text = iconv('utf-8','us-ascii//TRANSLIT', $text);
-}
-$text = strtolower($text);
-$text = preg_replace('~[^-\w]+~','', $text);
-return $text;
 }
 }
 }
