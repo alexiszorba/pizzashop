@@ -11,11 +11,11 @@
             </tr>
             <tr>
                 <th>Datum</th>
-                <td>{{ entity.datum|date('Y-m-d H:i:s') }}</td>
+                <td>{{ entity.datum|date('Y-m-d H:i') }}</td>
             </tr>
             <tr>
                 <th>Levering</th>
-                <td>{{ entity.levering }}</td>
+                <td>{{ entity.levering|date('Y-m-d H:i') }}</td>
             </tr>
             <tr>
                 <th>Leveringskost</th>
