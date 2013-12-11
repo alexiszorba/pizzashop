@@ -40,6 +40,15 @@ class Bestelling {
     private $user;
 
     /**
+     * 
+     * @return string
+     */
+    public function __toString() {
+
+        return "$this->id";
+    }
+
+    /**
      * Get id
      *
      * @return integer 
@@ -138,7 +147,8 @@ class Bestelling {
      */
     public function setInitValue() {
         $this->datum = new \DateTime;
-       
+
+
         return $this;
     }
 

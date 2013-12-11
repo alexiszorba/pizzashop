@@ -29,6 +29,7 @@ class UserAdmin extends Admin {
                 ->add('name')
                 ->add('surname')
                 ->add('address')
+                ->add('postnr')
                 ->add('telnr')
                 ->add('promotie', null, array('required' => false))
                 ->add('bemerking', null, array('required' => false))
@@ -41,6 +42,7 @@ class UserAdmin extends Admin {
                 ->add('name')
                 ->add('surname')
                  ->add('email')
+                ->add('postnr')
                 ->add('enabled')
                 ->add('telnr')
         ;
@@ -57,6 +59,7 @@ class UserAdmin extends Admin {
                 ->add('name')
                 ->add('surname')
                 ->add('address')
+                ->add('postnr')
                 ->add('telnr')
                 ->add('promotie')
                 ->add('bemerking')

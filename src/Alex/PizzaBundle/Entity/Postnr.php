@@ -2,6 +2,7 @@
 namespace Alex\PizzaBundle\Entity;
 
 use Doctrine\ORM\Mapping AS ORM;
+use Symfony\Component\Validator\Validation;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /** 
@@ -18,11 +19,15 @@ class Postnr
 
     /** 
      * @ORM\Column(type="string", length=5, nullable=false)
+     * 
+     * @Assert\NotBlank(message="Please enter your postcode.", groups={"Admin"})
      */
     private $postnr;
 
     /** 
      * @ORM\Column(type="string", length=255, nullable=false)
+     * 
+     * @Assert\NotBlank(message="Please enter your town.", groups={"Admin"})
      */
     private $gemeente;
 
@@ -41,7 +46,10 @@ class Postnr
      * @return string
      */
     public function __toString() {
-        return $this->getGemeente();
+        $postnrGemeente=  $this->getPostnr();
+        $postnrGemeente.=  " " ;
+        $postnrGemeente.=  $this->getGemeente();
+        return $postnrGemeente;
     }
     /**
      * Set postnr

@@ -47,6 +47,23 @@ class LoadUserData extends AbstractFixture implements OrderedFixtureInterface, C
 
 
         $em->persist($user);
+        
+        $user1 = new User();
+        $user1->setUsername('test');
+        $user1->setPlainPassword('test');
+
+        $user1->setName('Probeer');
+        $user1->setSurname('Tester');
+        $user1->setAddress('Test 1 bus 1');
+        $user1->setPostnr($this->getReference('Brugge'));        
+        $user1->setTelnr('0411011111');
+        $user1->setEmail('test1@test.com');
+        $user1->setEnabled('true');
+        $user1->setExpired('0');
+        $user1->setRoles(array('ROLE_USER'));
+
+
+        $em->persist($user1);
 
         $em->flush();
     }

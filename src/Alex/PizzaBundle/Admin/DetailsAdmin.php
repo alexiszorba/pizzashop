@@ -19,8 +19,8 @@ class DetailsAdmin extends Admin {
 
     protected function configureFormFields(FormMapper $formMapper) {
         $formMapper
-                ->add('aantal')
-                ->add('prijs')
+                ->add('aantal', null, array('required' => true))
+                ->add('prijs', null, array('required' => true))
                 ->add('promotie')
                 ->add('bestelling')
                 ->add('type')
@@ -37,9 +37,14 @@ class DetailsAdmin extends Admin {
 
     protected function configureDatagridFilters(DatagridMapper $datagridMapper) {
         $datagridMapper
-                ->add('promotie')
                 ->add('bestelling')
                 ->add('type')
+                ->add('size')
+                ->add('pizza')                              
+                ->add('extras')
+                ->add('promotie')               
+                ->add('aantal')
+                ->add('prijs')
         ;
     }
 

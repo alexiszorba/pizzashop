@@ -1,26 +1,34 @@
 {% extends '::base.html.twig' %}
 
 {% block body -%}
-    <h1>Details list</h1>
+<h1>Details list</h1>
 
-    <table class="records_list">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Aantal</th>
-                <th>Prijs</th>
-                <th>Promotie</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
+<table class="records_list">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Bestelling</th>
+            <th>Aantal</th>
+            <th>Prijs</th>
+            <th>Promotie</th>
+            <th>Type</th>
+            <th>Size</th>
+            <th>Pizza</th>            
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
         {% for entity in entities %}
-            <tr>
-                <td><a href="{{ path('details_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
-                <td>{{ entity.aantal }}</td>
-                <td>{{ entity.prijs }}</td>
-                <td>{{ entity.promotie }}</td>
-                <td>
+        <tr>
+            <td><a href="{{ path('details_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+            <td>{{ entity.bestelling }}</td>
+            <td>{{ entity.aantal }}</td>
+            <td>{{ entity.prijs }}</td>
+            <td>{{ entity.promotie }}</td>
+            <td>{{ entity.type }}</td>
+            <td>{{ entity.size }}</td>
+            <td>{{ entity.pizza }}</td>
+            <td>
                 <ul>
                     <li>
                         <a href="{{ path('details_show', { 'id': entity.id }) }}">show</a>
@@ -29,17 +37,17 @@
                         <a href="{{ path('details_edit', { 'id': entity.id }) }}">edit</a>
                     </li>
                 </ul>
-                </td>
-            </tr>
+            </td>
+        </tr>
         {% endfor %}
-        </tbody>
-    </table>
+    </tbody>
+</table>
 
-        <ul>
-        <li>
-            <a href="{{ path('details_new') }}">
-                Create a new entry
-            </a>
-        </li>
-    </ul>
+<ul>
+    <li>
+        <a href="{{ path('details_new') }}">
+            Create a new entry
+        </a>
+    </li>
+</ul>
     {% endblock %}

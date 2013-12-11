@@ -265,8 +265,8 @@ class Details {
      * @ORM\PrePersist
      */
     public function setInitValue() {
-        $this->setAantal(1);
-        $this->setType=1;
+        
+       
         return $this;
     }
 

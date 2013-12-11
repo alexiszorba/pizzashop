@@ -75,6 +75,8 @@ class User extends BaseUser {
 
     /**
      * @ORM\Column(type="string", length=10, nullable=false)
+     * 
+     * @Assert\NotBlank(message="Please enter your phonenumber.", groups={"Registration", "Profile"})
      */
     protected $telnr;
 
@@ -83,7 +85,7 @@ class User extends BaseUser {
      */
     protected $promotie;
     
-    // geblokkeerd wordt niet gebruikt we gebruiken $locked van fosUserBundle
+    // $geblokkeerd wordt niet gebruikt we gebruiken $locked van fosUserBundle
     
     
     /** 

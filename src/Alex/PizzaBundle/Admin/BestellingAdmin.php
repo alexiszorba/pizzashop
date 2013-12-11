@@ -19,7 +19,7 @@ class BestellingAdmin extends Admin
 
     protected function configureFormFields(FormMapper $formMapper) {
         $formMapper
-                ->add('datum')
+                //->add('datum')
                 ->add('levering')
                 ->add('leveringskost')
                 ->add('user')

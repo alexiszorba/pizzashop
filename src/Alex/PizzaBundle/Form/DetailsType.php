@@ -17,11 +17,11 @@ class DetailsType extends AbstractType
         $builder
             ->add('aantal')
             ->add('prijs')
-            ->add('promotie')
             ->add('bestelling')
             ->add('type')
             ->add('size')
-            ->add('pizza')
+            ->add('pizza')                
+            ->add('promotie')
         ;
     }
     
