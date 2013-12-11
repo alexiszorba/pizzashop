@@ -23,7 +23,7 @@ class UserAdmin extends Admin {
                 ->add('email')
                 ->add('enabled')
                 ->add('password')
-                ->add('locked')
+                ->add('locked', null, array('required' => false))
                 ->add('expired', null, array('required' => false))
                 ->add('roles')
                 ->add('name')
@@ -43,8 +43,11 @@ class UserAdmin extends Admin {
                 ->add('surname')
                  ->add('email')
                 ->add('postnr')
-                ->add('enabled')
                 ->add('telnr')
+                ->add('enabled')
+                ->add('locked')
+                ->add('expired')
+                
         ;
     }
 
@@ -54,15 +57,10 @@ class UserAdmin extends Admin {
                 ->add('email')
                 ->add('enabled')
                 ->add('locked')
-                ->add('expired', null, array('required' => false))
+                ->add('expired')
                 ->add('roles')
                 ->add('name')
                 ->add('surname')
-                ->add('address')
-                ->add('postnr')
-                ->add('telnr')
-                ->add('promotie')
-                ->add('bemerking')
                 ->add('_action', 'actions', array(
                     'actions' => array(
                         'view' => array(),

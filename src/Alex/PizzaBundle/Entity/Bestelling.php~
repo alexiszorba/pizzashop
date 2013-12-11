@@ -19,12 +19,12 @@ class Bestelling {
     private $id;
 
     /**
-     * @ORM\Column(type="datetime", nullable=true)
+     * @ORM\Column(type="datetime", nullable=false)
      */
     private $datum;
 
     /**
-     * @ORM\Column(type="string", length=50, nullable=false)
+     * @ORM\Column(type="datetime", nullable=false)
      */
     private $levering;
 
@@ -77,11 +77,11 @@ class Bestelling {
     public function getDatum() {
         return $this->datum;
     }
-
+    
     /**
      * Set levering
      *
-     * @param string $levering
+     * @param \DateTime $levering
      * @return Bestelling
      */
     public function setLevering($levering) {
@@ -93,7 +93,7 @@ class Bestelling {
     /**
      * Get levering
      *
-     * @return string 
+     * @return \DateTime 
      */
     public function getLevering() {
         return $this->levering;
@@ -102,7 +102,7 @@ class Bestelling {
     /**
      * Set leveringskost
      *
-     * @param float $leveringskost
+     * @param string $leveringskost
      * @return Bestelling
      */
     public function setLeveringskost($leveringskost) {
@@ -114,7 +114,7 @@ class Bestelling {
     /**
      * Get leveringskost
      *
-     * @return float 
+     * @return string 
      */
     public function getLeveringskost() {
         return $this->leveringskost;
@@ -146,10 +146,12 @@ class Bestelling {
      * @ORM\PrePersist
      */
     public function setInitValue() {
-        $this->datum = new \DateTime;
+        $this->datum = new \DateTime('now');
 
 
         return $this;
     }
+
+    
 
 }

@@ -1,16 +1,16 @@
 <?php
 
 namespace Alex\PizzaBundle\Admin;
- 
+
 use Sonata\AdminBundle\Admin\Admin;
 use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Validator\ErrorElement;
 use Sonata\AdminBundle\Form\FormMapper;
 use Sonata\AdminBundle\Show\ShowMapper;
- 
-class BestellingAdmin extends Admin
-{
+
+class BestellingAdmin extends Admin {
+
     // setup the default sort column and order
     protected $datagridValues = array(
         '_sort_order' => 'ASC',
@@ -20,20 +20,22 @@ class BestellingAdmin extends Admin
     protected function configureFormFields(FormMapper $formMapper) {
         $formMapper
                 //->add('datum')
-                ->add('levering')
+                //->add('levering', 'entity', array('class'=> 'AlexPizzaBundle:Bestelling', 'property'=>'levering'))
+                ->add('levering', 'datetime', array('required' => true, 'data' => new \DateTime('now')))
                 ->add('leveringskost')
                 ->add('user')
-                 // help messages
-                
+        // help messages
+
         ;
     }
 
     protected function configureDatagridFilters(DatagridMapper $datagridMapper) {
-        $datagridMapper                
+        $datagridMapper
                 ->add('datum')
-                ->add('levering')                
+                ->add('levering')
+                ->add('leveringskost')
                 ->add('user')
-       ;
+        ;
     }
 
     protected function configureListFields(ListMapper $listMapper) {

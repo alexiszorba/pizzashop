@@ -46,7 +46,10 @@ class Postnr
      * @return string
      */
     public function __toString() {
-        return $this->getGemeente();
+        $postnrGemeente=  $this->getPostnr();
+        $postnrGemeente.=  " " ;
+        $postnrGemeente.=  $this->getGemeente();
+        return $postnrGemeente;
     }
     /**
      * Set postnr
