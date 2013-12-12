@@ -1,7 +1,9 @@
-{% extends '::base.html.twig' %}
+{% extends 'AlexPizzaBundle::layout.html.twig' %}
+
+{% block content %}
 
 {% block body -%}
-    <h1>Bestelling list</h1>
+    <h1>Onze Pizzas</h1>
 
     <table class="records_list">
         <thead>
@@ -17,8 +19,8 @@
         {% for entity in entities %}
             <tr>
                 <td><a href="{{ path('bestelling_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
-                <td>{% if entity.datum %}{{ entity.datum|date('Y-m-d H:i:s') }}{% endif %}</td>
-                <td>{{ entity.levering }}</td>
+                <td>{% if entity.datum %}{{ entity.datum|date('Y-m-d H:i') }}{% endif %}</td>
+                <td>{{ entity.levering|date('Y-m-d H:i') }}</td>
                 <td>{{ entity.leveringskost }}</td>
                 <td>
                 <ul>
@@ -43,3 +45,4 @@
         </li>
     </ul>
     {% endblock %}
+{% endblock %}

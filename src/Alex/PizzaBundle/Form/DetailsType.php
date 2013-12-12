@@ -15,7 +15,7 @@ class DetailsType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('aantal')
+            ->add('aantal', null, array('required' => true, 'data' => 1))
             ->add('prijs')
             ->add('bestelling')
             ->add('type')

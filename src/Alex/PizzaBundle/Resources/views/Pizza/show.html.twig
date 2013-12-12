@@ -1,4 +1,6 @@
-{% extends '::base.html.twig' %}
+{% extends 'AlexPizzaBundle::layout.html.twig' %}
+
+{% block content %}
 
 {% block body -%}
 <h1>Pizza</h1>
@@ -45,4 +47,5 @@
         </li>
         <li>{{ form(delete_form) }}</li>
     </ul>
+{% endblock %}
 {% endblock %}

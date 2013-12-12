@@ -77,7 +77,7 @@ class Bestelling {
     public function getDatum() {
         return $this->datum;
     }
-
+    
     /**
      * Set levering
      *
@@ -96,7 +96,9 @@ class Bestelling {
      * @return \DateTime  formatted
      */
     public function getLevering() {
+
         return $this->levering;//->format('Y-m-d H:i');
+
     }
 
     /**
@@ -147,10 +149,11 @@ class Bestelling {
      */
     public function setInitValue() {
 
-        $this->datum = (new \DateTime('now'));
+        //$this->datum = (new \DateTime('now'));
         //$this->levering = $this->datum->add(new \DateInterval("PT1H"));
         //$this->datum->format('Y-m-d H:i');
         return $this;
     }
 
 }
+

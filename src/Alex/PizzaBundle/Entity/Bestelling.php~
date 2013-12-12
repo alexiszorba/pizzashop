@@ -75,7 +75,7 @@ class Bestelling {
      * @return \DateTime 
      */
     public function getDatum() {
-        return $this->datum;
+        return $this->datum->format('Y-m-d H:i:s');
     }
     
     /**
@@ -96,7 +96,7 @@ class Bestelling {
      * @return \DateTime 
      */
     public function getLevering() {
-        return $this->levering;
+        return $this->levering->format('Y-m-d H:i:s');
     }
 
     /**

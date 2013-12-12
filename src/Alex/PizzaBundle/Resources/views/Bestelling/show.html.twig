@@ -1,4 +1,6 @@
-{% extends '::base.html.twig' %}
+{% extends 'AlexPizzaBundle::layout.html.twig' %}
+
+{% block content %}
 
 {% block body -%}
     <h1>Bestelling</h1>
@@ -11,11 +13,11 @@
             </tr>
             <tr>
                 <th>Datum</th>
-                <td>{{ entity.datum|date('Y-m-d H:i:s') }}</td>
+                <td>{{ entity.datum|date('Y-m-d H:i') }}</td>
             </tr>
             <tr>
                 <th>Levering</th>
-                <td>{{ entity.levering }}</td>
+                <td>{{ entity.levering|date('Y-m-d H:i') }}</td>
             </tr>
             <tr>
                 <th>Leveringskost</th>
@@ -37,4 +39,5 @@
     </li>
     <li>{{ form(delete_form) }}</li>
 </ul>
+{% endblock %}
 {% endblock %}

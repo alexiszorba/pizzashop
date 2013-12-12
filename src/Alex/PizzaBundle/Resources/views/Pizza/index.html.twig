@@ -1,51 +1,23 @@
-{% extends '::base.html.twig' %}
+{% extends 'AlexPizzaBundle::layout.html.twig' %}
+
+{% block content %}
 
 {% block body -%}
-    <h1>Pizza list</h1>
+<h1>Pizza list</h1>
 
-    <table class="records_list">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Naam</th>
-                <th>Omschrijving</th>
-                <th>Basisprijs</th>
-                <th>Extras</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
+<table class="records_list">
+    
+    <tbody>
         {% for entity in entities %}
-            <tr>
-                <td><a href="{{ path('pizza_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
-                <td>{{ entity.naam }}</td>
-                <td>{{ entity.omschrijving }}</td>
-                <td>{{ entity.basisprijs }}</td>
-                <td>
-                    {% for extras in entity.extras %}
-                    {{ extras }} 
-                    {% endfor %}
-                </td>
-                <td>
-                <ul>
-                    <li>
-                        <a href="{{ path('pizza_show', { 'id': entity.id }) }}">show</a>
-                    </li>
-                    <li>
-                        <a href="{{ path('pizza_edit', { 'id': entity.id }) }}">edit</a>
-                    </li>
-                </ul>
-                </td>
-            </tr>
+        <tr>            
+            <td>{{ entity.naam }}</td>
+            <td>{{ entity.omschrijving }}</td>
+            <td>{{ entity.basisprijs }}</td>         
+        </tr>
         {% endfor %}
-        </tbody>
-    </table>
+    </tbody>
+</table>
 
-        <ul>
-        <li>
-            <a href="{{ path('pizza_new') }}">
-                Create a new entry
-            </a>
-        </li>
-    </ul>
+
     {% endblock %}
+{% endblock %}
