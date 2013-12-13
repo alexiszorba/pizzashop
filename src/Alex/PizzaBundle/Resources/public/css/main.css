@@ -49,7 +49,7 @@ body
 
 #header h1 a {
   display: block;
-  width: 540px;
+  width: 783px;
   height: 110px;
   background: url(../images/logo.jpg) no-repeat;
 }
@@ -69,7 +69,7 @@ body
 
 #sub_header .search input
 {
-  background: url(../images/button-search.jpg) no-repeat;
+  background: url(../images/button-search.png) no-repeat;
   text-indent: -9999px;
   border: 0;
   width: 95px;
@@ -110,7 +110,7 @@ body
 #sub_header .post div a
 {
   display: block;
-  background: url(../images/button-post.jpg);
+  background: url(../images/button-post.png);
   text-indent: -9999px;
   width: 150px;
   height: 48px;
@@ -147,7 +147,7 @@ body
 
 #sub_header .search h2
 {
-  background: url(../images/header-job.jpg) no-repeat;
+  background: url(../images/header-job.png) no-repeat;
   height: 23px;
   width: 250px;
   margin-bottom: 7px;
