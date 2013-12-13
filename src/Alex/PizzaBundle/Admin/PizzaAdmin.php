@@ -23,15 +23,15 @@ class PizzaAdmin extends Admin {
                 ->add('naam')
                 ->add('omschrijving')
                 ->add('basisprijs')
-                //->add('extras')
-                ->add('extras', 'sonata_type_collection', array(
-                // Prevents the "Delete" option from being displayed
-                'type_options' => array('delete' => false)
-            ), array(
-                'edit' => 'inline',
-                'inline' => 'table',
-                'sortable' => 'position',
-            ))
+                ->add('extras')
+//                ->add('extras', 'sonata_type_collection', array(
+//                // Prevents the "Delete" option from being displayed
+//                'type_options' => array('delete' => false)
+//            ), array(
+//                'edit' => 'inline',
+//                'inline' => 'table',
+//                'sortable' => 'position',
+//            ))
                 // help messages 
                 ->setHelps(array(
                     'extras' => $this->trans('click in whitespace in extras to add new extras')

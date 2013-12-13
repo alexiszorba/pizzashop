@@ -19,7 +19,7 @@ class DetailsAdmin extends Admin {
 
     protected function configureFormFields(FormMapper $formMapper) {
         $formMapper
-                ->add('aantal', null, array('required' => true))
+                ->add('aantal', null, array('required' => true, 'data' => 1))
                 ->add('prijs', null, array('required' => true))
                 ->add('promotie')
                 ->add('bestelling')
