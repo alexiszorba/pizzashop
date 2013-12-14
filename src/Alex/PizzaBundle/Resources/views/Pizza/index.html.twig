@@ -3,16 +3,21 @@
 {% block content %}
 
 {% block body -%}
-<h1>Pizza list</h1>
+<h1>Onze Pizza's</h1>
 
 <table class="records_list">
-    
+
     <tbody>
-        {% for entity in entities %}
-        <tr>            
-            <td>{{ entity.naam }}</td>
-            <td>{{ entity.omschrijving }}</td>
-            <td>{{ entity.basisprijs }}</td>         
+        <tr>
+            <th></th>
+            <th></th>
+            <th style="color:#BF011D;text-align:center;">Basis Prijs</th>            
+        </tr>
+        {% for entity in entities %}        
+        <tr> 
+            <td style="color:#BF011D;text-align:left;font-size: 24px;width: 305px;height: 35px;">{{ entity.naam }}</td>
+            <td style="color:blue;text-align:left;font-size: 12px;">{{ entity.omschrijving }}</td>
+            <td style="color:#BF011D;text-align:left;font-size: 24px;width: 95px;">€ {{ entity.basisprijs }}</td>         
         </tr>
         {% endfor %}
     </tbody>

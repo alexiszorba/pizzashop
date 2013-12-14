@@ -21,7 +21,7 @@ class BestellingAdmin extends Admin {
         $formMapper
                 //->add('datum')
                 //->add('levering', 'entity', array('class'=> 'AlexPizzaBundle:Bestelling', 'property'=>'levering'))
-                ->add('levering', 'datetime', array('required' => true, 'data' => new \DateTime('now')))
+                ->add('levering', 'datetime', array('required' => true, 'data' => (new \DateTime('now'))->add(new \DateInterval("PT1H"))))
                 ->add('leveringskost')
                 ->add('user')
         // help messages
