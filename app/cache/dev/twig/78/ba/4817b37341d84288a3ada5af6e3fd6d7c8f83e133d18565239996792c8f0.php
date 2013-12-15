@@ -14,7 +14,7 @@ class __TwigTemplate_78ba4817b37341d84288a3ada5af6e3fd6d7c8f83e133d1856523999679
 
     protected function doGetParent(array $context)
     {
-        return $this->env->resolveTemplate($this->getAttribute($this->getAttribute((isset($context["sonata_block"]) ? $context["sonata_block"] : $this->getContext($context, "sonata_block")), "templates"), "block_base"));
+        return $this->env->resolveTemplate($this->getAttribute($this->getAttribute((isset($context["sonata_block"]) ? $context["sonata_block"] : null), "templates"), "block_base"));
     }
 
     protected function doDisplay(array $context, array $blocks = array())
@@ -27,7 +27,7 @@ class __TwigTemplate_78ba4817b37341d84288a3ada5af6e3fd6d7c8f83e133d1856523999679
     {
         // line 15
         echo "    ";
-        echo (isset($context["content"]) ? $context["content"] : $this->getContext($context, "content"));
+        echo (isset($context["content"]) ? $context["content"] : null);
         echo "
 ";
     }

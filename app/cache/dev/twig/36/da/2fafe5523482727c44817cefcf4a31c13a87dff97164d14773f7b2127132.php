@@ -80,10 +80,10 @@ class __TwigTemplate_36da2fafe5523482727c44817cefcf4a31c13a87dff97164d14773f7b21
 
             ";
         // line 82
-        if ((!twig_test_empty((isset($context["_title"]) ? $context["_title"] : $this->getContext($context, "_title"))))) {
+        if ((!twig_test_empty((isset($context["_title"]) ? $context["_title"] : null)))) {
             // line 83
             echo "                ";
-            echo (isset($context["_title"]) ? $context["_title"] : $this->getContext($context, "_title"));
+            echo (isset($context["_title"]) ? $context["_title"] : null);
             echo "
             ";
         } else {
@@ -95,7 +95,7 @@ class __TwigTemplate_36da2fafe5523482727c44817cefcf4a31c13a87dff97164d14773f7b21
                     ";
                 // line 87
                 $context['_parent'] = (array) $context;
-                $context['_seq'] = twig_ensure_traversable($this->getAttribute((isset($context["admin"]) ? $context["admin"] : $this->getContext($context, "admin")), "breadcrumbs", array(0 => (isset($context["action"]) ? $context["action"] : $this->getContext($context, "action"))), "method"));
+                $context['_seq'] = twig_ensure_traversable($this->getAttribute((isset($context["admin"]) ? $context["admin"] : null), "breadcrumbs", array(0 => (isset($context["action"]) ? $context["action"] : null)), "method"));
                 $context['loop'] = array(
                   'parent' => $context['_parent'],
                   'index0' => 0,
@@ -112,14 +112,14 @@ class __TwigTemplate_36da2fafe5523482727c44817cefcf4a31c13a87dff97164d14773f7b21
                 foreach ($context['_seq'] as $context["_key"] => $context["menu"]) {
                     // line 88
                     echo "                        ";
-                    if ((!$this->getAttribute((isset($context["loop"]) ? $context["loop"] : $this->getContext($context, "loop")), "first"))) {
+                    if ((!$this->getAttribute((isset($context["loop"]) ? $context["loop"] : null), "first"))) {
                         // line 89
                         echo "                            &gt;
                         ";
                     }
                     // line 91
                     echo "                        ";
-                    echo twig_escape_filter($this->env, $this->getAttribute((isset($context["menu"]) ? $context["menu"] : $this->getContext($context, "menu")), "label"), "html", null, true);
+                    echo twig_escape_filter($this->env, $this->getAttribute((isset($context["menu"]) ? $context["menu"] : null), "label"), "html", null, true);
                     echo "
                     ";
                     ++$context['loop']['index0'];
@@ -164,7 +164,7 @@ class __TwigTemplate_36da2fafe5523482727c44817cefcf4a31c13a87dff97164d14773f7b21
         if (array_key_exists("admin_pool", $context)) {
             // line 110
             echo "                        <div class=\"navbar-text pull-right\">";
-            $template = $this->env->resolveTemplate($this->getAttribute((isset($context["admin_pool"]) ? $context["admin_pool"] : $this->getContext($context, "admin_pool")), "getTemplate", array(0 => "user_block"), "method"));
+            $template = $this->env->resolveTemplate($this->getAttribute((isset($context["admin_pool"]) ? $context["admin_pool"] : null), "getTemplate", array(0 => "user_block"), "method"));
             $template->display($context);
             echo "</div>
 
@@ -233,7 +233,7 @@ class __TwigTemplate_36da2fafe5523482727c44817cefcf4a31c13a87dff97164d14773f7b21
 
             ";
         // line 35
-        if ((array_key_exists("admin_pool", $context) && $this->getAttribute((isset($context["admin_pool"]) ? $context["admin_pool"] : $this->getContext($context, "admin_pool")), "getOption", array(0 => "use_select2"), "method"))) {
+        if ((array_key_exists("admin_pool", $context) && $this->getAttribute((isset($context["admin_pool"]) ? $context["admin_pool"] : null), "getOption", array(0 => "use_select2"), "method"))) {
             // line 36
             echo "                <link rel=\"stylesheet\" href=\"";
             echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/sonataadmin/select2/select2.css"), "html", null, true);
@@ -272,7 +272,7 @@ class __TwigTemplate_36da2fafe5523482727c44817cefcf4a31c13a87dff97164d14773f7b21
                 window.SONATA_CONFIG = {
                     CONFIRM_EXIT: ";
         // line 57
-        if ((array_key_exists("admin_pool", $context) && $this->getAttribute((isset($context["admin_pool"]) ? $context["admin_pool"] : $this->getContext($context, "admin_pool")), "getOption", array(0 => "confirm_exit"), "method"))) {
+        if ((array_key_exists("admin_pool", $context) && $this->getAttribute((isset($context["admin_pool"]) ? $context["admin_pool"] : null), "getOption", array(0 => "confirm_exit"), "method"))) {
             echo "true";
         } else {
             echo "false";
@@ -280,7 +280,7 @@ class __TwigTemplate_36da2fafe5523482727c44817cefcf4a31c13a87dff97164d14773f7b21
         echo ",
                     USE_SELECT2: ";
         // line 58
-        if ((array_key_exists("admin_pool", $context) && $this->getAttribute((isset($context["admin_pool"]) ? $context["admin_pool"] : $this->getContext($context, "admin_pool")), "getOption", array(0 => "use_select2"), "method"))) {
+        if ((array_key_exists("admin_pool", $context) && $this->getAttribute((isset($context["admin_pool"]) ? $context["admin_pool"] : null), "getOption", array(0 => "use_select2"), "method"))) {
             echo "true";
         } else {
             echo "false";
@@ -314,7 +314,7 @@ class __TwigTemplate_36da2fafe5523482727c44817cefcf4a31c13a87dff97164d14773f7b21
 
             ";
         // line 70
-        if ((array_key_exists("admin_pool", $context) && $this->getAttribute((isset($context["admin_pool"]) ? $context["admin_pool"] : $this->getContext($context, "admin_pool")), "getOption", array(0 => "use_select2"), "method"))) {
+        if ((array_key_exists("admin_pool", $context) && $this->getAttribute((isset($context["admin_pool"]) ? $context["admin_pool"] : null), "getOption", array(0 => "use_select2"), "method"))) {
             // line 71
             echo "                <script src=\"";
             echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/sonataadmin/select2/select2.min.js"), "html", null, true);
@@ -329,7 +329,7 @@ class __TwigTemplate_36da2fafe5523482727c44817cefcf4a31c13a87dff97164d14773f7b21
         echo "\" type=\"text/javascript\"></script>
             ";
         // line 75
-        if ((array_key_exists("admin_pool", $context) && $this->getAttribute((isset($context["admin_pool"]) ? $context["admin_pool"] : $this->getContext($context, "admin_pool")), "getOption", array(0 => "confirm_exit"), "method"))) {
+        if ((array_key_exists("admin_pool", $context) && $this->getAttribute((isset($context["admin_pool"]) ? $context["admin_pool"] : null), "getOption", array(0 => "confirm_exit"), "method"))) {
             echo "<script src=\"";
             echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/sonataadmin/jquery/jquery.confirmExit.js"), "html", null, true);
             echo "\" type=\"text/javascript\"></script>";
@@ -345,7 +345,7 @@ class __TwigTemplate_36da2fafe5523482727c44817cefcf4a31c13a87dff97164d14773f7b21
     public function block_body_attributes($context, array $blocks = array())
     {
         echo "class=\"sonata-bc ";
-        if (twig_test_empty((isset($context["_side_menu"]) ? $context["_side_menu"] : $this->getContext($context, "_side_menu")))) {
+        if (twig_test_empty((isset($context["_side_menu"]) ? $context["_side_menu"] : null))) {
             echo "sonata-ba-no-side-menu";
         }
         echo "\"";
@@ -360,13 +360,13 @@ class __TwigTemplate_36da2fafe5523482727c44817cefcf4a31c13a87dff97164d14773f7b21
         echo "\" class=\"brand\">
                                 <img src=\"";
         // line 114
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl($this->getAttribute((isset($context["admin_pool"]) ? $context["admin_pool"] : $this->getContext($context, "admin_pool")), "titlelogo")), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl($this->getAttribute((isset($context["admin_pool"]) ? $context["admin_pool"] : null), "titlelogo")), "html", null, true);
         echo "\"  alt=\"";
-        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["admin_pool"]) ? $context["admin_pool"] : $this->getContext($context, "admin_pool")), "title"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["admin_pool"]) ? $context["admin_pool"] : null), "title"), "html", null, true);
         echo "\" />
                                 ";
         // line 115
-        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["admin_pool"]) ? $context["admin_pool"] : $this->getContext($context, "admin_pool")), "title"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["admin_pool"]) ? $context["admin_pool"] : null), "title"), "html", null, true);
         echo "
                             </a>
                         ";
@@ -415,24 +415,24 @@ class __TwigTemplate_36da2fafe5523482727c44817cefcf4a31c13a87dff97164d14773f7b21
     {
         // line 126
         echo "                                        ";
-        if (($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "security"), "token") && $this->env->getExtension('security')->isGranted("ROLE_SONATA_ADMIN"))) {
+        if (($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : null), "security"), "token") && $this->env->getExtension('security')->isGranted("ROLE_SONATA_ADMIN"))) {
             // line 127
             echo "                                            ";
             $context['_parent'] = (array) $context;
-            $context['_seq'] = twig_ensure_traversable($this->getAttribute((isset($context["admin_pool"]) ? $context["admin_pool"] : $this->getContext($context, "admin_pool")), "dashboardgroups"));
+            $context['_seq'] = twig_ensure_traversable($this->getAttribute((isset($context["admin_pool"]) ? $context["admin_pool"] : null), "dashboardgroups"));
             foreach ($context['_seq'] as $context["_key"] => $context["group"]) {
                 // line 128
                 echo "                                                ";
-                $context["display"] = (twig_test_empty($this->getAttribute((isset($context["group"]) ? $context["group"] : $this->getContext($context, "group")), "roles")) || $this->env->getExtension('security')->isGranted("ROLE_SUPER_ADMIN"));
+                $context["display"] = (twig_test_empty($this->getAttribute((isset($context["group"]) ? $context["group"] : null), "roles")) || $this->env->getExtension('security')->isGranted("ROLE_SUPER_ADMIN"));
                 // line 129
                 echo "                                                ";
                 $context['_parent'] = (array) $context;
-                $context['_seq'] = twig_ensure_traversable($this->getAttribute((isset($context["group"]) ? $context["group"] : $this->getContext($context, "group")), "roles"));
+                $context['_seq'] = twig_ensure_traversable($this->getAttribute((isset($context["group"]) ? $context["group"] : null), "roles"));
                 foreach ($context['_seq'] as $context["_key"] => $context["role"]) {
-                    if ((!(isset($context["display"]) ? $context["display"] : $this->getContext($context, "display")))) {
+                    if ((!(isset($context["display"]) ? $context["display"] : null))) {
                         // line 130
                         echo "                                                    ";
-                        $context["display"] = $this->env->getExtension('security')->isGranted((isset($context["role"]) ? $context["role"] : $this->getContext($context, "role")));
+                        $context["display"] = $this->env->getExtension('security')->isGranted((isset($context["role"]) ? $context["role"] : null));
                         // line 131
                         echo "                                                ";
                     }
@@ -448,19 +448,19 @@ class __TwigTemplate_36da2fafe5523482727c44817cefcf4a31c13a87dff97164d14773f7b21
                 $context["item_count"] = 0;
                 // line 135
                 echo "                                                ";
-                if ((isset($context["display"]) ? $context["display"] : $this->getContext($context, "display"))) {
+                if ((isset($context["display"]) ? $context["display"] : null)) {
                     // line 136
                     echo "                                                    ";
                     $context['_parent'] = (array) $context;
-                    $context['_seq'] = twig_ensure_traversable($this->getAttribute((isset($context["group"]) ? $context["group"] : $this->getContext($context, "group")), "items"));
+                    $context['_seq'] = twig_ensure_traversable($this->getAttribute((isset($context["group"]) ? $context["group"] : null), "items"));
                     foreach ($context['_seq'] as $context["_key"] => $context["admin"]) {
-                        if (((isset($context["item_count"]) ? $context["item_count"] : $this->getContext($context, "item_count")) == 0)) {
+                        if (((isset($context["item_count"]) ? $context["item_count"] : null) == 0)) {
                             // line 137
                             echo "                                                        ";
-                            if (($this->getAttribute((isset($context["admin"]) ? $context["admin"] : $this->getContext($context, "admin")), "hasroute", array(0 => "list"), "method") && $this->getAttribute((isset($context["admin"]) ? $context["admin"] : $this->getContext($context, "admin")), "isGranted", array(0 => "LIST"), "method"))) {
+                            if (($this->getAttribute((isset($context["admin"]) ? $context["admin"] : null), "hasroute", array(0 => "list"), "method") && $this->getAttribute((isset($context["admin"]) ? $context["admin"] : null), "isGranted", array(0 => "LIST"), "method"))) {
                                 // line 138
                                 echo "                                                            ";
-                                $context["item_count"] = ((isset($context["item_count"]) ? $context["item_count"] : $this->getContext($context, "item_count")) + 1);
+                                $context["item_count"] = ((isset($context["item_count"]) ? $context["item_count"] : null) + 1);
                                 // line 139
                                 echo "                                                        ";
                             }
@@ -478,27 +478,27 @@ class __TwigTemplate_36da2fafe5523482727c44817cefcf4a31c13a87dff97164d14773f7b21
                 echo "
                                                 ";
                 // line 143
-                if (((isset($context["display"]) ? $context["display"] : $this->getContext($context, "display")) && ((isset($context["item_count"]) ? $context["item_count"] : $this->getContext($context, "item_count")) > 0))) {
+                if (((isset($context["display"]) ? $context["display"] : null) && ((isset($context["item_count"]) ? $context["item_count"] : null) > 0))) {
                     // line 144
                     echo "                                                <li class=\"dropdown\">
                                                     <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">";
                     // line 145
-                    echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans($this->getAttribute((isset($context["group"]) ? $context["group"] : $this->getContext($context, "group")), "label"), array(), $this->getAttribute((isset($context["group"]) ? $context["group"] : $this->getContext($context, "group")), "label_catalogue")), "html", null, true);
+                    echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans($this->getAttribute((isset($context["group"]) ? $context["group"] : null), "label"), array(), $this->getAttribute((isset($context["group"]) ? $context["group"] : null), "label_catalogue")), "html", null, true);
                     echo " <span class=\"caret\"></span></a>
                                                     <ul class=\"dropdown-menu\">
                                                         ";
                     // line 147
                     $context['_parent'] = (array) $context;
-                    $context['_seq'] = twig_ensure_traversable($this->getAttribute((isset($context["group"]) ? $context["group"] : $this->getContext($context, "group")), "items"));
+                    $context['_seq'] = twig_ensure_traversable($this->getAttribute((isset($context["group"]) ? $context["group"] : null), "items"));
                     foreach ($context['_seq'] as $context["_key"] => $context["admin"]) {
                         // line 148
                         echo "                                                            ";
-                        if (($this->getAttribute((isset($context["admin"]) ? $context["admin"] : $this->getContext($context, "admin")), "hasroute", array(0 => "list"), "method") && $this->getAttribute((isset($context["admin"]) ? $context["admin"] : $this->getContext($context, "admin")), "isGranted", array(0 => "LIST"), "method"))) {
+                        if (($this->getAttribute((isset($context["admin"]) ? $context["admin"] : null), "hasroute", array(0 => "list"), "method") && $this->getAttribute((isset($context["admin"]) ? $context["admin"] : null), "isGranted", array(0 => "LIST"), "method"))) {
                             // line 149
                             echo "                                                                <li><a href=\"";
-                            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["admin"]) ? $context["admin"] : $this->getContext($context, "admin")), "generateUrl", array(0 => "list"), "method"), "html", null, true);
+                            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["admin"]) ? $context["admin"] : null), "generateUrl", array(0 => "list"), "method"), "html", null, true);
                             echo "\">";
-                            echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans($this->getAttribute((isset($context["admin"]) ? $context["admin"] : $this->getContext($context, "admin")), "label"), array(), $this->getAttribute((isset($context["admin"]) ? $context["admin"] : $this->getContext($context, "admin")), "translationdomain")), "html", null, true);
+                            echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans($this->getAttribute((isset($context["admin"]) ? $context["admin"] : null), "label"), array(), $this->getAttribute((isset($context["admin"]) ? $context["admin"] : null), "translationdomain")), "html", null, true);
                             echo "</a></li>
                                                             ";
                         }
@@ -537,7 +537,7 @@ class __TwigTemplate_36da2fafe5523482727c44817cefcf4a31c13a87dff97164d14773f7b21
     {
         // line 162
         echo "                                    ";
-        if (($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "security"), "token") && $this->env->getExtension('security')->isGranted("ROLE_SONATA_ADMIN"))) {
+        if (($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : null), "security"), "token") && $this->env->getExtension('security')->isGranted("ROLE_SONATA_ADMIN"))) {
             // line 163
             echo "                                        <form action=\"";
             echo $this->env->getExtension('routing')->getUrl("sonata_admin_search");
@@ -545,7 +545,7 @@ class __TwigTemplate_36da2fafe5523482727c44817cefcf4a31c13a87dff97164d14773f7b21
                                             <div class=\"input-append\">
                                                 <input type=\"text\" name=\"q\" value=\"";
             // line 165
-            echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "request"), "get", array(0 => "q"), "method"), "html", null, true);
+            echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : null), "request"), "get", array(0 => "q"), "method"), "html", null, true);
             echo "\" class=\"input-large search-query\" placeholder=\"";
             echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("search_placeholder", array(), "SonataAdminBundle"), "html", null, true);
             echo "\"/>
@@ -573,20 +573,20 @@ class __TwigTemplate_36da2fafe5523482727c44817cefcf4a31c13a87dff97164d14773f7b21
                 <div class=\"row-fluid\">
                     ";
         // line 195
-        if (((!twig_test_empty((isset($context["_breadcrumb"]) ? $context["_breadcrumb"] : $this->getContext($context, "_breadcrumb")))) || array_key_exists("action", $context))) {
+        if (((!twig_test_empty((isset($context["_breadcrumb"]) ? $context["_breadcrumb"] : null))) || array_key_exists("action", $context))) {
             // line 196
             echo "                        <div class=\"span6\">
                             <ul class=\"breadcrumb\">
                                 ";
             // line 198
-            if (twig_test_empty((isset($context["_breadcrumb"]) ? $context["_breadcrumb"] : $this->getContext($context, "_breadcrumb")))) {
+            if (twig_test_empty((isset($context["_breadcrumb"]) ? $context["_breadcrumb"] : null))) {
                 // line 199
                 echo "                                    ";
                 if (array_key_exists("action", $context)) {
                     // line 200
                     echo "                                        ";
                     $context['_parent'] = (array) $context;
-                    $context['_seq'] = twig_ensure_traversable($this->getAttribute((isset($context["admin"]) ? $context["admin"] : $this->getContext($context, "admin")), "breadcrumbs", array(0 => (isset($context["action"]) ? $context["action"] : $this->getContext($context, "action"))), "method"));
+                    $context['_seq'] = twig_ensure_traversable($this->getAttribute((isset($context["admin"]) ? $context["admin"] : null), "breadcrumbs", array(0 => (isset($context["action"]) ? $context["action"] : null)), "method"));
                     $context['loop'] = array(
                       'parent' => $context['_parent'],
                       'index0' => 0,
@@ -603,23 +603,23 @@ class __TwigTemplate_36da2fafe5523482727c44817cefcf4a31c13a87dff97164d14773f7b21
                     foreach ($context['_seq'] as $context["_key"] => $context["menu"]) {
                         // line 201
                         echo "                                            ";
-                        if ((!$this->getAttribute((isset($context["loop"]) ? $context["loop"] : $this->getContext($context, "loop")), "last"))) {
+                        if ((!$this->getAttribute((isset($context["loop"]) ? $context["loop"] : null), "last"))) {
                             // line 202
                             echo "                                                <li>
                                                     ";
                             // line 203
-                            if ((!twig_test_empty($this->getAttribute((isset($context["menu"]) ? $context["menu"] : $this->getContext($context, "menu")), "uri")))) {
+                            if ((!twig_test_empty($this->getAttribute((isset($context["menu"]) ? $context["menu"] : null), "uri")))) {
                                 // line 204
                                 echo "                                                        <a href=\"";
-                                echo twig_escape_filter($this->env, $this->getAttribute((isset($context["menu"]) ? $context["menu"] : $this->getContext($context, "menu")), "uri"), "html", null, true);
+                                echo twig_escape_filter($this->env, $this->getAttribute((isset($context["menu"]) ? $context["menu"] : null), "uri"), "html", null, true);
                                 echo "\">";
-                                echo twig_escape_filter($this->env, $this->getAttribute((isset($context["menu"]) ? $context["menu"] : $this->getContext($context, "menu")), "label"), "html", null, true);
+                                echo twig_escape_filter($this->env, $this->getAttribute((isset($context["menu"]) ? $context["menu"] : null), "label"), "html", null, true);
                                 echo "</a>
                                                     ";
                             } else {
                                 // line 206
                                 echo "                                                        ";
-                                echo twig_escape_filter($this->env, $this->getAttribute((isset($context["menu"]) ? $context["menu"] : $this->getContext($context, "menu")), "label"), "html", null, true);
+                                echo twig_escape_filter($this->env, $this->getAttribute((isset($context["menu"]) ? $context["menu"] : null), "label"), "html", null, true);
                                 echo "
                                                     ";
                             }
@@ -630,7 +630,7 @@ class __TwigTemplate_36da2fafe5523482727c44817cefcf4a31c13a87dff97164d14773f7b21
                         } else {
                             // line 211
                             echo "                                                <li class=\"active\">";
-                            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["menu"]) ? $context["menu"] : $this->getContext($context, "menu")), "label"), "html", null, true);
+                            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["menu"]) ? $context["menu"] : null), "label"), "html", null, true);
                             echo "</li>
                                             ";
                         }
@@ -656,7 +656,7 @@ class __TwigTemplate_36da2fafe5523482727c44817cefcf4a31c13a87dff97164d14773f7b21
             } else {
                 // line 216
                 echo "                                    ";
-                echo (isset($context["_breadcrumb"]) ? $context["_breadcrumb"] : $this->getContext($context, "_breadcrumb"));
+                echo (isset($context["_breadcrumb"]) ? $context["_breadcrumb"] : null);
                 echo "
                                 ";
             }
@@ -669,12 +669,12 @@ class __TwigTemplate_36da2fafe5523482727c44817cefcf4a31c13a87dff97164d14773f7b21
         echo "
                     ";
         // line 222
-        if ((!twig_test_empty((isset($context["_actions"]) ? $context["_actions"] : $this->getContext($context, "_actions"))))) {
+        if ((!twig_test_empty((isset($context["_actions"]) ? $context["_actions"] : null)))) {
             // line 223
             echo "                        <div class=\"span4 offset2\">
                             ";
             // line 224
-            echo (isset($context["_actions"]) ? $context["_actions"] : $this->getContext($context, "_actions"));
+            echo (isset($context["_actions"]) ? $context["_actions"] : null);
             echo "
                         </div>
                     ";
@@ -685,12 +685,12 @@ class __TwigTemplate_36da2fafe5523482727c44817cefcf4a31c13a87dff97164d14773f7b21
                 <div class=\"row-fluid\">
                     ";
         // line 230
-        if ((!twig_test_empty((isset($context["_side_menu"]) ? $context["_side_menu"] : $this->getContext($context, "_side_menu"))))) {
+        if ((!twig_test_empty((isset($context["_side_menu"]) ? $context["_side_menu"] : null)))) {
             // line 231
             echo "                        <div class=\"sidebar span2\">
                             <div class=\"well sonata-ba-side-menu\" style=\"padding: 8px 0;\">";
             // line 232
-            echo (isset($context["_side_menu"]) ? $context["_side_menu"] : $this->getContext($context, "_side_menu"));
+            echo (isset($context["_side_menu"]) ? $context["_side_menu"] : null);
             echo "</div>
                         </div>
                     ";
@@ -699,7 +699,7 @@ class __TwigTemplate_36da2fafe5523482727c44817cefcf4a31c13a87dff97164d14773f7b21
         echo "
                     <div class=\"content ";
         // line 236
-        echo (((!twig_test_empty((isset($context["_side_menu"]) ? $context["_side_menu"] : $this->getContext($context, "_side_menu"))))) ? (" span10") : ("span12"));
+        echo (((!twig_test_empty((isset($context["_side_menu"]) ? $context["_side_menu"] : null)))) ? (" span10") : ("span12"));
         echo "\">
                         ";
         // line 237
@@ -725,19 +725,19 @@ class __TwigTemplate_36da2fafe5523482727c44817cefcf4a31c13a87dff97164d14773f7b21
         foreach ($context['_seq'] as $context["_key"] => $context["notice_level"]) {
             // line 185
             echo "                        ";
-            $context["session_var"] = ("sonata_flash_" . (isset($context["notice_level"]) ? $context["notice_level"] : $this->getContext($context, "notice_level")));
+            $context["session_var"] = ("sonata_flash_" . (isset($context["notice_level"]) ? $context["notice_level"] : null));
             // line 186
             echo "                        ";
             $context['_parent'] = (array) $context;
-            $context['_seq'] = twig_ensure_traversable($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "session"), "flashbag"), "get", array(0 => (isset($context["session_var"]) ? $context["session_var"] : $this->getContext($context, "session_var"))), "method"));
+            $context['_seq'] = twig_ensure_traversable($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : null), "session"), "flashbag"), "get", array(0 => (isset($context["session_var"]) ? $context["session_var"] : null)), "method"));
             foreach ($context['_seq'] as $context["_key"] => $context["flash"]) {
                 // line 187
                 echo "                            <div class=\"alert ";
-                echo twig_escape_filter($this->env, ("alert-" . (isset($context["notice_level"]) ? $context["notice_level"] : $this->getContext($context, "notice_level"))), "html", null, true);
+                echo twig_escape_filter($this->env, ("alert-" . (isset($context["notice_level"]) ? $context["notice_level"] : null)), "html", null, true);
                 echo "\">
                                 ";
                 // line 188
-                echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans((isset($context["flash"]) ? $context["flash"] : $this->getContext($context, "flash")), array(), "SonataAdminBundle"), "html", null, true);
+                echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans((isset($context["flash"]) ? $context["flash"] : null), array(), "SonataAdminBundle"), "html", null, true);
                 echo "
                             </div>
                         ";
@@ -762,10 +762,10 @@ class __TwigTemplate_36da2fafe5523482727c44817cefcf4a31c13a87dff97164d14773f7b21
         echo "
                             ";
         // line 239
-        if ((!twig_test_empty((isset($context["_preview"]) ? $context["_preview"] : $this->getContext($context, "_preview"))))) {
+        if ((!twig_test_empty((isset($context["_preview"]) ? $context["_preview"] : null)))) {
             // line 240
             echo "                                <div class=\"sonata-ba-preview\">";
-            echo (isset($context["_preview"]) ? $context["_preview"] : $this->getContext($context, "_preview"));
+            echo (isset($context["_preview"]) ? $context["_preview"] : null);
             echo "</div>
                             ";
         }
@@ -773,10 +773,10 @@ class __TwigTemplate_36da2fafe5523482727c44817cefcf4a31c13a87dff97164d14773f7b21
         echo "
                             ";
         // line 243
-        if ((!twig_test_empty((isset($context["_content"]) ? $context["_content"] : $this->getContext($context, "_content"))))) {
+        if ((!twig_test_empty((isset($context["_content"]) ? $context["_content"] : null)))) {
             // line 244
             echo "                                <div class=\"sonata-ba-content\">";
-            echo (isset($context["_content"]) ? $context["_content"] : $this->getContext($context, "_content"));
+            echo (isset($context["_content"]) ? $context["_content"] : null);
             echo "</div>
                             ";
         }
@@ -784,10 +784,10 @@ class __TwigTemplate_36da2fafe5523482727c44817cefcf4a31c13a87dff97164d14773f7b21
         echo "
                             ";
         // line 247
-        if ((!twig_test_empty((isset($context["_show"]) ? $context["_show"] : $this->getContext($context, "_show"))))) {
+        if ((!twig_test_empty((isset($context["_show"]) ? $context["_show"] : null)))) {
             // line 248
             echo "                                <div class=\"sonata-ba-show\">";
-            echo (isset($context["_show"]) ? $context["_show"] : $this->getContext($context, "_show"));
+            echo (isset($context["_show"]) ? $context["_show"] : null);
             echo "</div>
                             ";
         }
@@ -795,10 +795,10 @@ class __TwigTemplate_36da2fafe5523482727c44817cefcf4a31c13a87dff97164d14773f7b21
         echo "
                             ";
         // line 251
-        if ((!twig_test_empty((isset($context["_form"]) ? $context["_form"] : $this->getContext($context, "_form"))))) {
+        if ((!twig_test_empty((isset($context["_form"]) ? $context["_form"] : null)))) {
             // line 252
             echo "                                <div class=\"sonata-ba-form\">";
-            echo (isset($context["_form"]) ? $context["_form"] : $this->getContext($context, "_form"));
+            echo (isset($context["_form"]) ? $context["_form"] : null);
             echo "</div>
                             ";
         }
@@ -806,19 +806,19 @@ class __TwigTemplate_36da2fafe5523482727c44817cefcf4a31c13a87dff97164d14773f7b21
         echo "
                             ";
         // line 255
-        if (((!twig_test_empty((isset($context["_list_table"]) ? $context["_list_table"] : $this->getContext($context, "_list_table")))) || (!twig_test_empty((isset($context["_list_filters"]) ? $context["_list_filters"] : $this->getContext($context, "_list_filters")))))) {
+        if (((!twig_test_empty((isset($context["_list_table"]) ? $context["_list_table"] : null))) || (!twig_test_empty((isset($context["_list_filters"]) ? $context["_list_filters"] : null))))) {
             // line 256
             echo "                                <div class=\"row-fluid\">
                                     <div class=\"sonata-ba-list span10\">
                                         ";
             // line 258
-            echo (isset($context["_list_table"]) ? $context["_list_table"] : $this->getContext($context, "_list_table"));
+            echo (isset($context["_list_table"]) ? $context["_list_table"] : null);
             echo "
                                     </div>
                                     <div class=\"sonata-ba-filter span2\">
                                         ";
             // line 261
-            echo (isset($context["_list_filters"]) ? $context["_list_filters"] : $this->getContext($context, "_list_filters"));
+            echo (isset($context["_list_filters"]) ? $context["_list_filters"] : null);
             echo "
                                     </div>
                                 </div>
@@ -853,6 +853,6 @@ class __TwigTemplate_36da2fafe5523482727c44817cefcf4a31c13a87dff97164d14773f7b21
 
     public function getDebugInfo()
     {
-        return array (  836 => 271,  833 => 270,  828 => 265,  821 => 261,  815 => 258,  811 => 256,  809 => 255,  806 => 254,  800 => 252,  798 => 251,  795 => 250,  789 => 248,  787 => 247,  784 => 246,  778 => 244,  776 => 243,  773 => 242,  767 => 240,  765 => 239,  762 => 238,  759 => 237,  755 => 192,  749 => 191,  740 => 188,  735 => 187,  730 => 186,  727 => 185,  722 => 184,  719 => 183,  715 => 277,  713 => 270,  708 => 267,  706 => 237,  702 => 236,  699 => 235,  693 => 232,  690 => 231,  688 => 230,  683 => 227,  677 => 224,  674 => 223,  672 => 222,  669 => 221,  664 => 218,  658 => 216,  655 => 215,  652 => 214,  638 => 213,  632 => 211,  627 => 208,  621 => 206,  613 => 204,  611 => 203,  608 => 202,  605 => 201,  587 => 200,  584 => 199,  582 => 198,  578 => 196,  576 => 195,  572 => 193,  569 => 183,  566 => 182,  561 => 174,  557 => 169,  548 => 165,  542 => 163,  539 => 162,  536 => 161,  530 => 158,  526 => 157,  523 => 156,  517 => 155,  512 => 152,  506 => 151,  498 => 149,  495 => 148,  491 => 147,  486 => 145,  483 => 144,  481 => 143,  478 => 142,  475 => 141,  468 => 140,  465 => 139,  462 => 138,  459 => 137,  453 => 136,  450 => 135,  447 => 134,  444 => 132,  437 => 131,  434 => 130,  428 => 129,  425 => 128,  420 => 127,  417 => 126,  414 => 125,  408 => 124,  402 => 170,  400 => 161,  396 => 159,  393 => 158,  390 => 125,  388 => 124,  384 => 122,  381 => 121,  376 => 119,  369 => 115,  363 => 114,  358 => 113,  355 => 112,  345 => 97,  338 => 76,  332 => 75,  328 => 74,  325 => 73,  319 => 71,  317 => 70,  312 => 68,  307 => 66,  303 => 65,  299 => 64,  293 => 61,  289 => 59,  283 => 58,  275 => 57,  271 => 55,  268 => 54,  261 => 50,  257 => 49,  253 => 47,  238 => 36,  236 => 35,  231 => 33,  227 => 32,  222 => 30,  219 => 29,  216 => 28,  210 => 22,  203 => 278,  201 => 182,  194 => 177,  190 => 175,  188 => 174,  185 => 173,  183 => 121,  180 => 120,  178 => 119,  175 => 118,  173 => 112,  166 => 110,  164 => 109,  152 => 99,  148 => 97,  141 => 94,  138 => 93,  121 => 91,  117 => 89,  114 => 88,  94 => 86,  83 => 82,  74 => 78,  72 => 54,  69 => 53,  53 => 20,  51 => 19,  49 => 18,  43 => 15,  41 => 14,  37 => 12,  35 => 11,  159 => 49,  153 => 48,  147 => 46,  144 => 95,  140 => 44,  132 => 43,  129 => 42,  125 => 40,  119 => 39,  113 => 37,  110 => 36,  106 => 35,  103 => 34,  101 => 33,  97 => 87,  91 => 85,  85 => 83,  82 => 27,  78 => 80,  70 => 25,  67 => 28,  61 => 23,  58 => 22,  55 => 21,  52 => 20,  47 => 17,  45 => 16,  42 => 17,  39 => 13,  34 => 15,  28 => 14,);
+        return array (  836 => 271,  833 => 270,  828 => 265,  821 => 261,  815 => 258,  811 => 256,  809 => 255,  806 => 254,  800 => 252,  798 => 251,  795 => 250,  789 => 248,  787 => 247,  784 => 246,  778 => 244,  776 => 243,  773 => 242,  767 => 240,  765 => 239,  762 => 238,  759 => 237,  755 => 192,  749 => 191,  740 => 188,  735 => 187,  730 => 186,  727 => 185,  722 => 184,  719 => 183,  715 => 277,  708 => 267,  706 => 237,  699 => 235,  693 => 232,  690 => 231,  688 => 230,  683 => 227,  677 => 224,  674 => 223,  672 => 222,  664 => 218,  658 => 216,  638 => 213,  632 => 211,  627 => 208,  621 => 206,  611 => 203,  587 => 200,  584 => 199,  582 => 198,  578 => 196,  576 => 195,  569 => 183,  566 => 182,  548 => 165,  526 => 157,  523 => 156,  506 => 151,  495 => 148,  491 => 147,  481 => 143,  478 => 142,  475 => 141,  468 => 140,  459 => 137,  444 => 132,  434 => 130,  420 => 127,  402 => 170,  396 => 159,  393 => 158,  390 => 125,  381 => 121,  376 => 119,  363 => 114,  345 => 97,  328 => 74,  325 => 73,  317 => 70,  303 => 65,  299 => 64,  261 => 50,  253 => 47,  231 => 33,  222 => 30,  210 => 22,  194 => 177,  713 => 270,  707 => 211,  704 => 210,  702 => 236,  696 => 206,  686 => 205,  681 => 203,  669 => 221,  666 => 200,  663 => 199,  655 => 215,  652 => 214,  635 => 191,  618 => 190,  613 => 204,  608 => 202,  605 => 201,  602 => 185,  596 => 181,  592 => 179,  590 => 178,  585 => 177,  568 => 175,  551 => 174,  547 => 173,  542 => 163,  539 => 162,  533 => 169,  528 => 167,  525 => 166,  516 => 161,  512 => 152,  510 => 158,  507 => 157,  505 => 156,  502 => 155,  498 => 149,  486 => 145,  483 => 144,  473 => 150,  465 => 139,  462 => 138,  456 => 143,  451 => 141,  428 => 129,  425 => 128,  414 => 125,  409 => 124,  400 => 161,  398 => 119,  371 => 113,  358 => 113,  349 => 103,  342 => 101,  339 => 100,  336 => 99,  329 => 95,  326 => 93,  311 => 89,  297 => 84,  289 => 59,  286 => 80,  263 => 71,  250 => 67,  247 => 66,  236 => 35,  233 => 62,  228 => 59,  200 => 55,  191 => 50,  175 => 118,  146 => 34,  344 => 97,  338 => 76,  335 => 93,  321 => 91,  312 => 68,  292 => 87,  259 => 70,  252 => 68,  215 => 54,  190 => 175,  184 => 47,  181 => 47,  178 => 119,  161 => 38,  90 => 27,  114 => 88,  572 => 193,  561 => 174,  557 => 169,  549 => 174,  544 => 172,  538 => 170,  536 => 161,  530 => 158,  521 => 162,  517 => 155,  511 => 160,  508 => 159,  504 => 158,  499 => 156,  492 => 132,  487 => 152,  480 => 128,  477 => 150,  474 => 149,  470 => 135,  460 => 132,  457 => 131,  453 => 136,  449 => 123,  446 => 139,  441 => 105,  430 => 137,  426 => 102,  415 => 97,  410 => 96,  407 => 95,  395 => 84,  392 => 83,  388 => 124,  386 => 95,  382 => 93,  380 => 83,  377 => 115,  374 => 114,  369 => 115,  357 => 125,  333 => 117,  307 => 66,  300 => 113,  291 => 82,  285 => 84,  282 => 79,  275 => 57,  272 => 76,  264 => 72,  226 => 67,  220 => 56,  214 => 61,  205 => 59,  197 => 54,  186 => 54,  172 => 52,  148 => 97,  127 => 34,  367 => 131,  361 => 107,  355 => 112,  352 => 121,  346 => 92,  343 => 91,  340 => 95,  330 => 87,  327 => 86,  320 => 84,  313 => 82,  310 => 81,  302 => 114,  296 => 111,  287 => 72,  283 => 58,  280 => 82,  277 => 78,  271 => 55,  265 => 64,  260 => 62,  249 => 67,  241 => 31,  223 => 58,  216 => 28,  185 => 173,  180 => 120,  174 => 53,  137 => 27,  77 => 25,  23 => 13,  84 => 16,  12 => 34,  160 => 48,  152 => 99,  150 => 58,  20 => 11,  118 => 28,  129 => 24,  97 => 87,  70 => 23,  126 => 55,  113 => 46,  104 => 23,  153 => 35,  124 => 23,  110 => 25,  100 => 43,  65 => 5,  34 => 53,  81 => 26,  76 => 13,  58 => 22,  53 => 20,  490 => 171,  484 => 170,  479 => 167,  471 => 164,  467 => 148,  463 => 133,  454 => 158,  450 => 135,  447 => 134,  445 => 155,  440 => 153,  437 => 131,  433 => 151,  423 => 128,  419 => 98,  417 => 126,  412 => 139,  408 => 124,  403 => 121,  397 => 131,  394 => 118,  391 => 129,  389 => 128,  384 => 122,  378 => 121,  375 => 120,  372 => 119,  370 => 100,  365 => 115,  351 => 114,  347 => 102,  332 => 75,  324 => 92,  322 => 107,  319 => 71,  315 => 90,  308 => 100,  304 => 79,  295 => 88,  293 => 61,  288 => 85,  278 => 94,  274 => 77,  268 => 54,  262 => 63,  257 => 49,  251 => 86,  245 => 83,  239 => 82,  234 => 80,  218 => 77,  192 => 55,  188 => 174,  177 => 65,  169 => 51,  140 => 28,  132 => 57,  128 => 47,  107 => 24,  61 => 26,  273 => 96,  269 => 75,  254 => 68,  243 => 65,  240 => 86,  238 => 36,  235 => 83,  230 => 79,  227 => 32,  224 => 78,  221 => 77,  219 => 29,  217 => 75,  208 => 57,  204 => 72,  179 => 72,  159 => 49,  143 => 29,  135 => 48,  119 => 44,  102 => 17,  71 => 29,  67 => 28,  63 => 22,  59 => 165,  38 => 7,  94 => 86,  89 => 34,  85 => 83,  75 => 31,  68 => 6,  56 => 81,  87 => 17,  21 => 11,  26 => 14,  93 => 39,  88 => 33,  78 => 80,  46 => 19,  27 => 16,  44 => 21,  31 => 17,  28 => 14,  201 => 182,  196 => 52,  183 => 121,  171 => 61,  166 => 110,  163 => 49,  158 => 37,  156 => 36,  151 => 45,  142 => 42,  138 => 93,  136 => 39,  121 => 91,  117 => 89,  105 => 44,  91 => 85,  62 => 166,  49 => 18,  24 => 3,  25 => 12,  19 => 11,  79 => 31,  72 => 54,  69 => 53,  47 => 17,  40 => 44,  37 => 12,  22 => 11,  246 => 69,  157 => 41,  145 => 53,  139 => 31,  131 => 25,  123 => 30,  120 => 46,  115 => 27,  111 => 40,  108 => 45,  101 => 37,  98 => 36,  96 => 40,  83 => 82,  74 => 78,  66 => 23,  55 => 21,  52 => 17,  50 => 78,  43 => 15,  41 => 14,  35 => 11,  32 => 21,  29 => 16,  209 => 24,  203 => 278,  199 => 53,  193 => 51,  189 => 71,  187 => 49,  182 => 70,  176 => 45,  173 => 112,  168 => 72,  164 => 109,  162 => 57,  154 => 46,  149 => 36,  147 => 46,  144 => 95,  141 => 94,  133 => 49,  130 => 35,  125 => 46,  122 => 45,  116 => 43,  112 => 26,  109 => 45,  106 => 35,  103 => 38,  99 => 30,  95 => 20,  92 => 19,  86 => 33,  82 => 10,  80 => 9,  73 => 24,  64 => 184,  60 => 26,  57 => 155,  54 => 154,  51 => 19,  48 => 67,  45 => 16,  42 => 13,  39 => 13,  36 => 17,  33 => 16,  30 => 17,);
     }
 }

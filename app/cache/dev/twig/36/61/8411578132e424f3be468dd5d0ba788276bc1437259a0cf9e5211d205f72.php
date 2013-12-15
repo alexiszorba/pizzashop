@@ -14,7 +14,7 @@ class __TwigTemplate_36618411578132e424f3be468dd5d0ba788276bc1437259a0cf9e5211d2
 
     protected function doGetParent(array $context)
     {
-        return $this->env->resolveTemplate($this->getAttribute((isset($context["admin"]) ? $context["admin"] : $this->getContext($context, "admin")), "getTemplate", array(0 => "base_list_field"), "method"));
+        return $this->env->resolveTemplate($this->getAttribute((isset($context["admin"]) ? $context["admin"] : null), "getTemplate", array(0 => "base_list_field"), "method"));
     }
 
     protected function doDisplay(array $context, array $blocks = array())
@@ -27,12 +27,12 @@ class __TwigTemplate_36618411578132e424f3be468dd5d0ba788276bc1437259a0cf9e5211d2
     {
         // line 15
         echo "    ";
-        if ((!(null === (isset($context["value"]) ? $context["value"] : $this->getContext($context, "value"))))) {
+        if ((!(null === (isset($context["value"]) ? $context["value"] : null)))) {
             // line 16
             echo "        ";
-            echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["field_description"]) ? $context["field_description"] : $this->getContext($context, "field_description")), "options"), "currency"), "html", null, true);
+            echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["field_description"]) ? $context["field_description"] : null), "options"), "currency"), "html", null, true);
             echo " ";
-            echo twig_escape_filter($this->env, (isset($context["value"]) ? $context["value"] : $this->getContext($context, "value")), "html", null, true);
+            echo twig_escape_filter($this->env, (isset($context["value"]) ? $context["value"] : null), "html", null, true);
             echo "
     ";
         }

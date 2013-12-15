@@ -31,7 +31,7 @@ class __TwigTemplate_a506292a5620cac1cdb61607aee5e404a364d8f7ba3a7008d337b8f105c
         ob_start();
         // line 16
         echo "    ";
-        if ((isset($context["value"]) ? $context["value"] : $this->getContext($context, "value"))) {
+        if ((isset($context["value"]) ? $context["value"] : null)) {
             // line 17
             echo "        <i class=\"icon-ok-circle\"></i>";
             // line 18

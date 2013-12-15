@@ -3,12 +3,12 @@
     <head>
         <title>
             {% block title %}
-                Alex Pizza Shop
+            Alex Pizza Shop
             {% endblock %}
         </title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         {% block stylesheets %}
-            <link rel="stylesheet" href="{{ asset('bundles/alexpizza/css/main.css') }}" type="text/css" media="all" />
+        <link rel="stylesheet" href="{{ asset('bundles/alexpizza/css/main.css') }}" type="text/css" media="all" />
         {% endblock %}
         {% block javascripts %}
         <script type="text/javascript" src="{{ asset('bundles/ibwjobeet/js/jquery-2.0.3.min.js') }}"></script>
@@ -20,66 +20,67 @@
             <div id="header">
                 <div class="content">
                     <h1><a href="{{ path('pizza') }}">
-                        <img src="{{ asset('bundles/alexpizza/images/logo.jpg') }}" alt="Alex Pizza Shop" />                        
-                    </a></h1>
- 
+                            <img src="{{ asset('bundles/alexpizza/images/logo.jpg') }}" alt="Alex Pizza Shop" />                        
+                        </a></h1>
+                   
                     <div id="sub_header">
-                        <div class="post">
-                            <h2>To The Shop</h2>
-                            <div>
-                                <a href="{{ path('pizza') }}">Shop</a>
-                            </div>
-                        </div>
- 
                         <div class="search">
-                            <h2>Search Our Site</h2>
+                            <h2>Doorzoek Onze Site</h2>
                             <form action="" method="get">
                                 <input type="text" name="keywords" id="search_keywords" />
                                 <input type="submit" value="search" />
                                 <div class="help">
-                                    Enter some keywords (pizza, extras, delivery, ...)
+                                    Geef zoekternen (pizza, extras, levering, map ...)
                                 </div>
                             </form>
                         </div>
                     </div>
+                     <div id='menu'>
+                        <div class="menu">
+                            <h2>Menu</h2>
+                            <div>
+                                {{ knp_menu_render('AlexPizzaBundle:Builder:mainMenu') }}
+                                
+                            </div>
+                        </div> 
+                    </div>
                 </div>
             </div>
- 
-           <div id="content">
+
+            <div id="content">
                {% for flashMessage in app.session.flashbag.get('notice') %}
-                   <div class="flash_notice">
+                <div class="flash_notice">
                        {{ flashMessage }}
-                   </div>
+                </div>
                {% endfor %}
- 
+
                {% for flashMessage in app.session.flashbag.get('error') %}
-                   <div class="flash_error">
+                <div class="flash_error">
                        {{ flashMessage }}
-                   </div>
+                </div>
                {% endfor %}
- 
-               <div class="content">
+ {#<------------------------------- hier begint content block ------------------------------------>#}
+                <div class="content">
                    {% block content %}
                    {% endblock %}
-               </div>
-           </div>
- 
-           <div id="footer">
-               <div class="content">
-                   <span class="symfony">
-                       <img src="{{ asset('bundles/alexpizza/images/jobeet-mini.png') }}" />
-                           powered by <a href="http://www.symfony.com/">
-                           <img src="{{ asset('bundles/alexpizza/images/symfony.gif') }}" alt="symfony framework" />
-                       </a>
-                   </span>
-                   <ul>
-                       <li><a href="">About Us</a></li>
-                       <li class="feed"><a href="">Full feed</a></li>
-                       <li><a href="">Map</a></li>
-                       <li class="last"><a href="">Contact</a></li>
-                   </ul>
-               </div>
-           </div>
-       </div>
-   </body>
+                </div>
+            </div>
+
+            <div id="footer">
+                <div class="content">
+                    <span class="symfony">
+                        <img src="{{ asset('bundles/alexpizza/images/jobeet-mini.png') }}" />
+                        powered by <a href="http://www.symfony.com/">
+                            <img src="{{ asset('bundles/alexpizza/images/symfony.gif') }}" alt="symfony framework" />
+                        </a>
+                    </span>
+                    <ul>
+                        <li><a href="">Over Ons</a></li>
+                        <li><a href="">Levering Map</a></li>
+                        <li class="last"><a href="">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </body>
 </html>

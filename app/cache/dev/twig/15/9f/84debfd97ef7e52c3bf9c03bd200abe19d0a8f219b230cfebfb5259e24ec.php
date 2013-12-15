@@ -67,19 +67,19 @@ class __TwigTemplate_159f84debfd97ef7e52c3bf9c03bd200abe19d0a8f219b230cfebfb5259
         ";
         // line 33
         $context['_parent'] = (array) $context;
-        $context['_seq'] = twig_ensure_traversable($this->getAttribute((isset($context["admin"]) ? $context["admin"] : $this->getContext($context, "admin")), "showgroups"));
+        $context['_seq'] = twig_ensure_traversable($this->getAttribute((isset($context["admin"]) ? $context["admin"] : null), "showgroups"));
         foreach ($context['_seq'] as $context["name"] => $context["view_group"]) {
             // line 34
             echo "            <table class=\"table table-bordered\">
                 ";
             // line 35
-            if ((isset($context["name"]) ? $context["name"] : $this->getContext($context, "name"))) {
+            if ((isset($context["name"]) ? $context["name"] : null)) {
                 // line 36
                 echo "                    <tr class=\"sonata-ba-view-title\">
                         <td colspan=\"2\">
                             ";
                 // line 38
-                echo twig_escape_filter($this->env, $this->getAttribute((isset($context["admin"]) ? $context["admin"] : $this->getContext($context, "admin")), "trans", array(0 => (isset($context["name"]) ? $context["name"] : $this->getContext($context, "name"))), "method"), "html", null, true);
+                echo twig_escape_filter($this->env, $this->getAttribute((isset($context["admin"]) ? $context["admin"] : null), "trans", array(0 => (isset($context["name"]) ? $context["name"] : null)), "method"), "html", null, true);
                 echo "
                         </td>
                     </tr>
@@ -90,16 +90,16 @@ class __TwigTemplate_159f84debfd97ef7e52c3bf9c03bd200abe19d0a8f219b230cfebfb5259
                 ";
             // line 43
             $context['_parent'] = (array) $context;
-            $context['_seq'] = twig_ensure_traversable($this->getAttribute((isset($context["view_group"]) ? $context["view_group"] : $this->getContext($context, "view_group")), "fields"));
+            $context['_seq'] = twig_ensure_traversable($this->getAttribute((isset($context["view_group"]) ? $context["view_group"] : null), "fields"));
             foreach ($context['_seq'] as $context["_key"] => $context["field_name"]) {
                 // line 44
                 echo "                    <tr class=\"sonata-ba-view-container\">
                         ";
                 // line 45
-                if ($this->getAttribute($this->getAttribute((isset($context["admin"]) ? $context["admin"] : null), "show", array(), "any", false, true), (isset($context["field_name"]) ? $context["field_name"] : $this->getContext($context, "field_name")), array(), "array", true, true)) {
+                if ($this->getAttribute($this->getAttribute((isset($context["admin"]) ? $context["admin"] : null), "show", array(), "any", false, true), (isset($context["field_name"]) ? $context["field_name"] : null), array(), "array", true, true)) {
                     // line 46
                     echo "                            ";
-                    echo $this->env->getExtension('sonata_admin')->renderViewElement($this->getAttribute($this->getAttribute((isset($context["admin"]) ? $context["admin"] : $this->getContext($context, "admin")), "show"), (isset($context["field_name"]) ? $context["field_name"] : $this->getContext($context, "field_name")), array(), "array"), (isset($context["object"]) ? $context["object"] : $this->getContext($context, "object")));
+                    echo $this->env->getExtension('sonata_admin')->renderViewElement($this->getAttribute($this->getAttribute((isset($context["admin"]) ? $context["admin"] : null), "show"), (isset($context["field_name"]) ? $context["field_name"] : null), array(), "array"), (isset($context["object"]) ? $context["object"] : null));
                     echo "
                         ";
                 }

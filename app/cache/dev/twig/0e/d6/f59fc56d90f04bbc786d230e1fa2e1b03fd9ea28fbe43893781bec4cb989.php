@@ -28,15 +28,15 @@ class __TwigTemplate_0ed6f59fc56d90f04bbc786d230e1fa2e1b03fd9ea28fbe43893781bec4
     public function block_field($context, array $blocks = array())
     {
         // line 15
-        if (twig_test_empty((isset($context["value"]) ? $context["value"] : $this->getContext($context, "value")))) {
+        if (twig_test_empty((isset($context["value"]) ? $context["value"] : null))) {
             // line 16
             echo "&nbsp;";
         } elseif ($this->getAttribute($this->getAttribute((isset($context["field_description"]) ? $context["field_description"] : null), "options", array(), "any", false, true), "format", array(), "any", true, true)) {
             // line 18
-            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, (isset($context["value"]) ? $context["value"] : $this->getContext($context, "value")), $this->getAttribute($this->getAttribute((isset($context["field_description"]) ? $context["field_description"] : $this->getContext($context, "field_description")), "options"), "format")), "html", null, true);
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, (isset($context["value"]) ? $context["value"] : null), $this->getAttribute($this->getAttribute((isset($context["field_description"]) ? $context["field_description"] : null), "options"), "format")), "html", null, true);
         } else {
             // line 20
-            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, (isset($context["value"]) ? $context["value"] : $this->getContext($context, "value")), "F j, Y"), "html", null, true);
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, (isset($context["value"]) ? $context["value"] : null), "F j, Y"), "html", null, true);
         }
     }
 

@@ -16,7 +16,7 @@ class __TwigTemplate_ecf6e85a834cbb764dfc828099159c097c3bdd56baab14e428a6406157f
 
     protected function doGetParent(array $context)
     {
-        return $this->env->resolveTemplate((isset($context["base_template"]) ? $context["base_template"] : $this->getContext($context, "base_template")));
+        return $this->env->resolveTemplate((isset($context["base_template"]) ? $context["base_template"] : null));
     }
 
     protected function doDisplay(array $context, array $blocks = array())
@@ -43,7 +43,7 @@ class __TwigTemplate_ecf6e85a834cbb764dfc828099159c097c3bdd56baab14e428a6406157f
     // line 21
     public function block_side_menu($context, array $blocks = array())
     {
-        echo $this->env->getExtension('knp_menu')->render($this->getAttribute((isset($context["admin"]) ? $context["admin"] : $this->getContext($context, "admin")), "sidemenu", array(0 => (isset($context["action"]) ? $context["action"] : $this->getContext($context, "action"))), "method"), array("currentClass" => "active"), "list");
+        echo $this->env->getExtension('knp_menu')->render($this->getAttribute((isset($context["admin"]) ? $context["admin"] : null), "sidemenu", array(0 => (isset($context["action"]) ? $context["action"] : null)), "method"), array("currentClass" => "active"), "list");
     }
 
     // line 23
@@ -58,7 +58,7 @@ class __TwigTemplate_ecf6e85a834cbb764dfc828099159c097c3bdd56baab14e428a6406157f
 
         ";
         // line 27
-        if ($this->getAttribute((isset($context["data"]) ? $context["data"] : $this->getContext($context, "data")), "all_elements")) {
+        if ($this->getAttribute((isset($context["data"]) ? $context["data"] : null), "all_elements")) {
             // line 28
             echo "            ";
             echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("message_batch_all_confirmation", array(), "SonataAdminBundle"), "html", null, true);
@@ -67,7 +67,7 @@ class __TwigTemplate_ecf6e85a834cbb764dfc828099159c097c3bdd56baab14e428a6406157f
         } else {
             // line 30
             echo "            ";
-            echo $this->env->getExtension('translator')->getTranslator()->transChoice("message_batch_confirmation", twig_length_filter($this->env, $this->getAttribute((isset($context["data"]) ? $context["data"] : $this->getContext($context, "data")), "idx")), array("%count%" => twig_length_filter($this->env, $this->getAttribute((isset($context["data"]) ? $context["data"] : $this->getContext($context, "data")), "idx"))), "SonataAdminBundle");
+            echo $this->env->getExtension('translator')->getTranslator()->transChoice("message_batch_confirmation", twig_length_filter($this->env, $this->getAttribute((isset($context["data"]) ? $context["data"] : null), "idx")), array("%count%" => twig_length_filter($this->env, $this->getAttribute((isset($context["data"]) ? $context["data"] : null), "idx"))), "SonataAdminBundle");
             // line 31
             echo "        ";
         }
@@ -76,22 +76,22 @@ class __TwigTemplate_ecf6e85a834cbb764dfc828099159c097c3bdd56baab14e428a6406157f
         <div class=\"well well-small form-actions\">
             <form action=\"";
         // line 34
-        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["admin"]) ? $context["admin"] : $this->getContext($context, "admin")), "generateUrl", array(0 => "batch", 1 => array("filter" => $this->getAttribute((isset($context["admin"]) ? $context["admin"] : $this->getContext($context, "admin")), "filterParameters"))), "method"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["admin"]) ? $context["admin"] : null), "generateUrl", array(0 => "batch", 1 => array("filter" => $this->getAttribute((isset($context["admin"]) ? $context["admin"] : null), "filterParameters"))), "method"), "html", null, true);
         echo "\" method=\"POST\" >
                 <input type=\"hidden\" name=\"confirmation\" value=\"ok\" />
                 <input type=\"hidden\" name=\"data\" value=\"";
         // line 36
-        echo twig_escape_filter($this->env, twig_jsonencode_filter((isset($context["data"]) ? $context["data"] : $this->getContext($context, "data"))), "html", null, true);
+        echo twig_escape_filter($this->env, twig_jsonencode_filter((isset($context["data"]) ? $context["data"] : null)), "html", null, true);
         echo "\" />
                 <input type=\"hidden\" name=\"_sonata_csrf_token\" value=\"";
         // line 37
-        echo twig_escape_filter($this->env, (isset($context["csrf_token"]) ? $context["csrf_token"] : $this->getContext($context, "csrf_token")), "html", null, true);
+        echo twig_escape_filter($this->env, (isset($context["csrf_token"]) ? $context["csrf_token"] : null), "html", null, true);
         echo "\" />
 
                 <div style=\"display: none\">
                     ";
         // line 40
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'rest');
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : null), 'rest');
         echo "
                 </div>
 
@@ -102,7 +102,7 @@ class __TwigTemplate_ecf6e85a834cbb764dfc828099159c097c3bdd56baab14e428a6406157f
 
                 ";
         // line 45
-        if (($this->getAttribute((isset($context["admin"]) ? $context["admin"] : $this->getContext($context, "admin")), "hasRoute", array(0 => "list"), "method") && $this->getAttribute((isset($context["admin"]) ? $context["admin"] : $this->getContext($context, "admin")), "isGranted", array(0 => "LIST"), "method"))) {
+        if (($this->getAttribute((isset($context["admin"]) ? $context["admin"] : null), "hasRoute", array(0 => "list"), "method") && $this->getAttribute((isset($context["admin"]) ? $context["admin"] : null), "isGranted", array(0 => "LIST"), "method"))) {
             // line 46
             echo "                    ";
             echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("delete_or", array(), "SonataAdminBundle"), "html", null, true);
@@ -110,7 +110,7 @@ class __TwigTemplate_ecf6e85a834cbb764dfc828099159c097c3bdd56baab14e428a6406157f
 
                     <a class=\"btn btn-success\" href=\"";
             // line 48
-            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["admin"]) ? $context["admin"] : $this->getContext($context, "admin")), "generateUrl", array(0 => "list"), "method"), "html", null, true);
+            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["admin"]) ? $context["admin"] : null), "generateUrl", array(0 => "list"), "method"), "html", null, true);
             echo "\">
                         <i class=\"icon-th-list icon-white\"></i> ";
             // line 49

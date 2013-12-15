@@ -14,7 +14,7 @@ class __TwigTemplate_3379c3590dd2b130c80eaf64ff9c1da3695bd43b939377eede68fe2b3e7
 
     protected function doGetParent(array $context)
     {
-        return $this->env->resolveTemplate($this->getAttribute($this->getAttribute((isset($context["sonata_block"]) ? $context["sonata_block"] : $this->getContext($context, "sonata_block")), "templates"), "block_base"));
+        return $this->env->resolveTemplate($this->getAttribute($this->getAttribute((isset($context["sonata_block"]) ? $context["sonata_block"] : null), "templates"), "block_base"));
     }
 
     protected function doDisplay(array $context, array $blocks = array())
@@ -27,29 +27,29 @@ class __TwigTemplate_3379c3590dd2b130c80eaf64ff9c1da3695bd43b939377eede68fe2b3e7
     {
         // line 14
         echo "    <h3 class=\"sonata-feed-title\">";
-        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["settings"]) ? $context["settings"] : $this->getContext($context, "settings")), "title"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["settings"]) ? $context["settings"] : null), "title"), "html", null, true);
         echo "</h3>
 
     <div class=\"sonata-feeds-container\">
         ";
         // line 17
         $context['_parent'] = (array) $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["feeds"]) ? $context["feeds"] : $this->getContext($context, "feeds")));
+        $context['_seq'] = twig_ensure_traversable((isset($context["feeds"]) ? $context["feeds"] : null));
         $context['_iterated'] = false;
         foreach ($context['_seq'] as $context["_key"] => $context["feed"]) {
             // line 18
             echo "            <div>
                 <strong><a href=\"";
             // line 19
-            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["feed"]) ? $context["feed"] : $this->getContext($context, "feed")), "link"), "html", null, true);
+            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["feed"]) ? $context["feed"] : null), "link"), "html", null, true);
             echo "\" rel=\"nofollow\" title=\"";
-            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["feed"]) ? $context["feed"] : $this->getContext($context, "feed")), "title"), "html", null, true);
+            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["feed"]) ? $context["feed"] : null), "title"), "html", null, true);
             echo "\">";
-            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["feed"]) ? $context["feed"] : $this->getContext($context, "feed")), "title"), "html", null, true);
+            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["feed"]) ? $context["feed"] : null), "title"), "html", null, true);
             echo "</a></strong>
                 <div>";
             // line 20
-            echo $this->getAttribute((isset($context["feed"]) ? $context["feed"] : $this->getContext($context, "feed")), "description");
+            echo $this->getAttribute((isset($context["feed"]) ? $context["feed"] : null), "description");
             echo "</div>
             </div>
         ";

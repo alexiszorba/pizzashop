@@ -29,7 +29,7 @@ class __TwigTemplate_c1210366ae4206e065e27ace0b1390ef745e46fbfb41f2294e6f04c52f5
     {
         // line 6
         echo "    <p>";
-        echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("registration.check_email", array("%email%" => $this->getAttribute((isset($context["user"]) ? $context["user"] : $this->getContext($context, "user")), "email")), "FOSUserBundle"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("registration.check_email", array("%email%" => $this->getAttribute((isset($context["user"]) ? $context["user"] : null), "email")), "FOSUserBundle"), "html", null, true);
         echo "</p>
 ";
     }

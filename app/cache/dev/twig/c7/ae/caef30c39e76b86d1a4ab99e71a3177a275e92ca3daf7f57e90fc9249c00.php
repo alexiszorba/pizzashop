@@ -21,11 +21,11 @@ class __TwigTemplate_c7aecaef30c39e76b86d1a4ab99e71a3177a275e92ca3daf7f57e90fc92
         // line 3
         echo $this->env->getExtension('routing')->getPath("fos_user_registration_register");
         echo "\" ";
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'enctype');
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : null), 'enctype');
         echo " method=\"POST\" class=\"fos_user_registration_register\">
     ";
         // line 4
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'widget');
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : null), 'widget');
         echo "
     <div>
         <input type=\"submit\" value=\"";

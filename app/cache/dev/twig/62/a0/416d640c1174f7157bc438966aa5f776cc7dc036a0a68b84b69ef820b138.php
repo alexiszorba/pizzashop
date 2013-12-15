@@ -14,7 +14,7 @@ class __TwigTemplate_62a0416d640c1174f7157bc438966aa5f776cc7dc036a0a68b84b69ef82
 
     protected function doGetParent(array $context)
     {
-        return $this->env->resolveTemplate($this->getAttribute($this->getAttribute((isset($context["sonata_block"]) ? $context["sonata_block"] : $this->getContext($context, "sonata_block")), "templates"), "block_base"));
+        return $this->env->resolveTemplate($this->getAttribute($this->getAttribute((isset($context["sonata_block"]) ? $context["sonata_block"] : null), "templates"), "block_base"));
     }
 
     protected function doDisplay(array $context, array $blocks = array())
@@ -29,11 +29,11 @@ class __TwigTemplate_62a0416d640c1174f7157bc438966aa5f776cc7dc036a0a68b84b69ef82
         echo "    <div class=\"cms-block-exception\">
         <h2>";
         // line 16
-        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["block"]) ? $context["block"] : $this->getContext($context, "block")), "name"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["block"]) ? $context["block"] : null), "name"), "html", null, true);
         echo "</h2>
         <h3>";
         // line 17
-        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["exception"]) ? $context["exception"] : $this->getContext($context, "exception")), "message"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["exception"]) ? $context["exception"] : null), "message"), "html", null, true);
         echo "</h3>
     </div>
 ";

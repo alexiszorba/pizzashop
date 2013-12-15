@@ -28,12 +28,12 @@ class __TwigTemplate_d63cabbbb1ff330b1fad0dd8c7f11e574471cb468d0293e1bd219b29369
     public function block_field($context, array $blocks = array())
     {
         // line 15
-        if (twig_test_empty((isset($context["value"]) ? $context["value"] : $this->getContext($context, "value")))) {
+        if (twig_test_empty((isset($context["value"]) ? $context["value"] : null))) {
             // line 16
             echo "&nbsp;";
         } else {
             // line 18
-            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, (isset($context["value"]) ? $context["value"] : $this->getContext($context, "value")), "H:i:s"), "html", null, true);
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, (isset($context["value"]) ? $context["value"] : null), "H:i:s"), "html", null, true);
         }
     }
 

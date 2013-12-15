@@ -29,12 +29,12 @@ class __TwigTemplate_7e23524ad80876c21fd0f86ebf900d55430febb7400f28b81c471c6781d
     {
         // line 15
         echo "    ";
-        if ((!(null === (isset($context["value"]) ? $context["value"] : $this->getContext($context, "value"))))) {
+        if ((!(null === (isset($context["value"]) ? $context["value"] : null)))) {
             // line 16
             echo "        ";
-            echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["field_description"]) ? $context["field_description"] : $this->getContext($context, "field_description")), "options"), "currency"), "html", null, true);
+            echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["field_description"]) ? $context["field_description"] : null), "options"), "currency"), "html", null, true);
             echo " ";
-            echo twig_escape_filter($this->env, (isset($context["value"]) ? $context["value"] : $this->getContext($context, "value")), "html", null, true);
+            echo twig_escape_filter($this->env, (isset($context["value"]) ? $context["value"] : null), "html", null, true);
             echo "
     ";
         }

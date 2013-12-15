@@ -5,7 +5,7 @@ class __TwigTemplate_4808a8ab042553b747c039b7b85202828f6d855dea47e81d43b357bd48b
 {
     protected function doGetParent(array $context)
     {
-        return $this->env->resolveTemplate((isset($context["base_template"]) ? $context["base_template"] : $this->getContext($context, "base_template")));
+        return $this->env->resolveTemplate((isset($context["base_template"]) ? $context["base_template"] : null));
     }
 
     protected function doDisplay(array $context, array $blocks = array())

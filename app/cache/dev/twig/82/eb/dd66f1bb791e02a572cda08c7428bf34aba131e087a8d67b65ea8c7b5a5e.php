@@ -16,7 +16,7 @@ class __TwigTemplate_82ebdd66f1bb791e02a572cda08c7428bf34aba131e087a8d67b65ea8c7
 
     protected function doGetParent(array $context)
     {
-        return $this->env->resolveTemplate($this->getAttribute((isset($context["admin"]) ? $context["admin"] : $this->getContext($context, "admin")), "getTemplate", array(0 => "base_list_field"), "method"));
+        return $this->env->resolveTemplate($this->getAttribute((isset($context["admin"]) ? $context["admin"] : null), "getTemplate", array(0 => "base_list_field"), "method"));
     }
 
     protected function doDisplay(array $context, array $blocks = array())
@@ -29,11 +29,11 @@ class __TwigTemplate_82ebdd66f1bb791e02a572cda08c7428bf34aba131e087a8d67b65ea8c7
     {
         // line 15
         echo "    ";
-        if (($this->getAttribute((isset($context["field_description"]) ? $context["field_description"] : $this->getContext($context, "field_description")), "hasassociationadmin") && $this->getAttribute($this->getAttribute((isset($context["field_description"]) ? $context["field_description"] : $this->getContext($context, "field_description")), "associationadmin"), "hasRoute", array(0 => "EDIT"), "method"))) {
+        if (($this->getAttribute((isset($context["field_description"]) ? $context["field_description"] : null), "hasassociationadmin") && $this->getAttribute($this->getAttribute((isset($context["field_description"]) ? $context["field_description"] : null), "associationadmin"), "hasRoute", array(0 => "EDIT"), "method"))) {
             // line 16
             echo "        ";
             $context['_parent'] = (array) $context;
-            $context['_seq'] = twig_ensure_traversable((isset($context["value"]) ? $context["value"] : $this->getContext($context, "value")));
+            $context['_seq'] = twig_ensure_traversable((isset($context["value"]) ? $context["value"] : null));
             $context['loop'] = array(
               'parent' => $context['_parent'],
               'index0' => 0,
@@ -49,7 +49,7 @@ class __TwigTemplate_82ebdd66f1bb791e02a572cda08c7428bf34aba131e087a8d67b65ea8c7
             }
             foreach ($context['_seq'] as $context["_key"] => $context["element"]) {
                 // line 17
-                if ($this->getAttribute($this->getAttribute((isset($context["field_description"]) ? $context["field_description"] : $this->getContext($context, "field_description")), "associationadmin"), "isGranted", array(0 => "edit", 1 => (isset($context["value"]) ? $context["value"] : $this->getContext($context, "value"))), "method")) {
+                if ($this->getAttribute($this->getAttribute((isset($context["field_description"]) ? $context["field_description"] : null), "associationadmin"), "isGranted", array(0 => "edit", 1 => (isset($context["value"]) ? $context["value"] : null)), "method")) {
                     // line 18
                     $this->displayBlock("relation_link", $context, $blocks);
                 } else {
@@ -57,7 +57,7 @@ class __TwigTemplate_82ebdd66f1bb791e02a572cda08c7428bf34aba131e087a8d67b65ea8c7
                     $this->displayBlock("relation_value", $context, $blocks);
                 }
                 // line 22
-                if ((!$this->getAttribute((isset($context["loop"]) ? $context["loop"] : $this->getContext($context, "loop")), "last"))) {
+                if ((!$this->getAttribute((isset($context["loop"]) ? $context["loop"] : null), "last"))) {
                     echo ", ";
                 }
                 // line 23
@@ -80,7 +80,7 @@ class __TwigTemplate_82ebdd66f1bb791e02a572cda08c7428bf34aba131e087a8d67b65ea8c7
             // line 25
             echo "        ";
             $context['_parent'] = (array) $context;
-            $context['_seq'] = twig_ensure_traversable((isset($context["value"]) ? $context["value"] : $this->getContext($context, "value")));
+            $context['_seq'] = twig_ensure_traversable((isset($context["value"]) ? $context["value"] : null));
             $context['loop'] = array(
               'parent' => $context['_parent'],
               'index0' => 0,
@@ -98,7 +98,7 @@ class __TwigTemplate_82ebdd66f1bb791e02a572cda08c7428bf34aba131e087a8d67b65ea8c7
                 // line 26
                 echo "            ";
                 $this->displayBlock("relation_value", $context, $blocks);
-                if ((!$this->getAttribute((isset($context["loop"]) ? $context["loop"] : $this->getContext($context, "loop")), "last"))) {
+                if ((!$this->getAttribute((isset($context["loop"]) ? $context["loop"] : null), "last"))) {
                     echo ", ";
                 }
                 // line 27
@@ -125,9 +125,9 @@ class __TwigTemplate_82ebdd66f1bb791e02a572cda08c7428bf34aba131e087a8d67b65ea8c7
     {
         // line 32
         echo "<a href=\"";
-        echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["field_description"]) ? $context["field_description"] : $this->getContext($context, "field_description")), "associationadmin"), "generateObjectUrl", array(0 => $this->getAttribute($this->getAttribute($this->getAttribute((isset($context["field_description"]) ? $context["field_description"] : $this->getContext($context, "field_description")), "options"), "route"), "name"), 1 => (isset($context["element"]) ? $context["element"] : $this->getContext($context, "element")), 2 => $this->getAttribute($this->getAttribute($this->getAttribute((isset($context["field_description"]) ? $context["field_description"] : $this->getContext($context, "field_description")), "options"), "route"), "parameters")), "method"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["field_description"]) ? $context["field_description"] : null), "associationadmin"), "generateObjectUrl", array(0 => $this->getAttribute($this->getAttribute($this->getAttribute((isset($context["field_description"]) ? $context["field_description"] : null), "options"), "route"), "name"), 1 => (isset($context["element"]) ? $context["element"] : null), 2 => $this->getAttribute($this->getAttribute($this->getAttribute((isset($context["field_description"]) ? $context["field_description"] : null), "options"), "route"), "parameters")), "method"), "html", null, true);
         echo "\">";
-        echo twig_escape_filter($this->env, $this->env->getExtension('sonata_admin')->renderRelationElement((isset($context["element"]) ? $context["element"] : $this->getContext($context, "element")), (isset($context["field_description"]) ? $context["field_description"] : $this->getContext($context, "field_description"))), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('sonata_admin')->renderRelationElement((isset($context["element"]) ? $context["element"] : null), (isset($context["field_description"]) ? $context["field_description"] : null)), "html", null, true);
         echo "</a>";
     }
 
@@ -135,7 +135,7 @@ class __TwigTemplate_82ebdd66f1bb791e02a572cda08c7428bf34aba131e087a8d67b65ea8c7
     public function block_relation_value($context, array $blocks = array())
     {
         // line 36
-        echo twig_escape_filter($this->env, $this->env->getExtension('sonata_admin')->renderRelationElement((isset($context["element"]) ? $context["element"] : $this->getContext($context, "element")), (isset($context["field_description"]) ? $context["field_description"] : $this->getContext($context, "field_description"))), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('sonata_admin')->renderRelationElement((isset($context["element"]) ? $context["element"] : null), (isset($context["field_description"]) ? $context["field_description"] : null)), "html", null, true);
     }
 
     public function getTemplateName()

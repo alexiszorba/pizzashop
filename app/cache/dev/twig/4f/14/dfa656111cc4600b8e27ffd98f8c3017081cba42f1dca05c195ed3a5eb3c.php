@@ -21,11 +21,11 @@ class __TwigTemplate_4f14dfa656111cc4600b8e27ffd98f8c3017081cba42f1dca05c195ed3a
         // line 3
         echo $this->env->getExtension('routing')->getPath("fos_user_profile_edit");
         echo "\" ";
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'enctype');
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : null), 'enctype');
         echo " method=\"POST\" class=\"fos_user_profile_edit\">
     ";
         // line 4
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'widget');
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : null), 'widget');
         echo "
     <div>
         <input type=\"submit\" value=\"";

@@ -14,7 +14,7 @@ class __TwigTemplate_28c9867f450f5c5a24ae3673f33f15b0d838608072048c220f410311625
 
     protected function doGetParent(array $context)
     {
-        return $this->env->resolveTemplate($this->getAttribute((isset($context["admin"]) ? $context["admin"] : $this->getContext($context, "admin")), "getTemplate", array(0 => "base_list_field"), "method"));
+        return $this->env->resolveTemplate($this->getAttribute((isset($context["admin"]) ? $context["admin"] : null), "getTemplate", array(0 => "base_list_field"), "method"));
     }
 
     protected function doDisplay(array $context, array $blocks = array())
@@ -28,13 +28,13 @@ class __TwigTemplate_28c9867f450f5c5a24ae3673f33f15b0d838608072048c220f410311625
         // line 15
         echo "    ";
         $context['_parent'] = (array) $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["value"]) ? $context["value"] : $this->getContext($context, "value")));
+        $context['_seq'] = twig_ensure_traversable((isset($context["value"]) ? $context["value"] : null));
         foreach ($context['_seq'] as $context["key"] => $context["val"]) {
             // line 16
             echo "        [";
-            echo twig_escape_filter($this->env, (isset($context["key"]) ? $context["key"] : $this->getContext($context, "key")), "html", null, true);
+            echo twig_escape_filter($this->env, (isset($context["key"]) ? $context["key"] : null), "html", null, true);
             echo " => ";
-            echo twig_escape_filter($this->env, (isset($context["val"]) ? $context["val"] : $this->getContext($context, "val")), "html", null, true);
+            echo twig_escape_filter($this->env, (isset($context["val"]) ? $context["val"] : null), "html", null, true);
             echo "]
     ";
         }

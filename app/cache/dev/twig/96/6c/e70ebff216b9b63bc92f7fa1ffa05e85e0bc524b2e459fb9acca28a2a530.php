@@ -14,7 +14,7 @@ class __TwigTemplate_966ce70ebff216b9b63bc92f7fa1ffa05e85e0bc524b2e459fb9acca28a
 
     protected function doGetParent(array $context)
     {
-        return $this->env->resolveTemplate((isset($context["base_template"]) ? $context["base_template"] : $this->getContext($context, "base_template")));
+        return $this->env->resolveTemplate((isset($context["base_template"]) ? $context["base_template"] : null));
     }
 
     protected function doDisplay(array $context, array $blocks = array())
@@ -29,7 +29,7 @@ class __TwigTemplate_966ce70ebff216b9b63bc92f7fa1ffa05e85e0bc524b2e459fb9acca28a
         echo "    <span class=\"edit\">
         ";
         // line 16
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["field_element"]) ? $context["field_element"] : $this->getContext($context, "field_element")), 'widget', array("attr" => array("class" => "title")));
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["field_element"]) ? $context["field_element"] : null), 'widget', array("attr" => array("class" => "title")));
         echo "
     </span>
 ";

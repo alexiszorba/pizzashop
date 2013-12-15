@@ -14,7 +14,7 @@ class __TwigTemplate_26daf882aca5c152c081be5cd4d56ff7771339560eb67ccb1de05b4cf90
 
     protected function doGetParent(array $context)
     {
-        return $this->env->resolveTemplate($this->getAttribute($this->getAttribute((isset($context["sonata_block"]) ? $context["sonata_block"] : $this->getContext($context, "sonata_block")), "templates"), "block_base"));
+        return $this->env->resolveTemplate($this->getAttribute($this->getAttribute((isset($context["sonata_block"]) ? $context["sonata_block"] : null), "templates"), "block_base"));
     }
 
     protected function doDisplay(array $context, array $blocks = array())
@@ -27,7 +27,7 @@ class __TwigTemplate_26daf882aca5c152c081be5cd4d56ff7771339560eb67ccb1de05b4cf90
     {
         // line 15
         echo "    <div class=\"cms-block-exception\" ";
-        if ((isset($context["forceStyle"]) ? $context["forceStyle"] : $this->getContext($context, "forceStyle"))) {
+        if ((isset($context["forceStyle"]) ? $context["forceStyle"] : null)) {
             echo "style=\"overflow-y: scroll; min-width: 300px; max-height: 300px;\"";
         }
         echo ">
@@ -35,7 +35,7 @@ class __TwigTemplate_26daf882aca5c152c081be5cd4d56ff7771339560eb67ccb1de05b4cf90
         ";
         // line 18
         echo "        ";
-        if ((isset($context["forceStyle"]) ? $context["forceStyle"] : $this->getContext($context, "forceStyle"))) {
+        if ((isset($context["forceStyle"]) ? $context["forceStyle"] : null)) {
             // line 19
             echo "            <link href=\"";
             echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/framework/css/exception_layout.css"), "html", null, true);

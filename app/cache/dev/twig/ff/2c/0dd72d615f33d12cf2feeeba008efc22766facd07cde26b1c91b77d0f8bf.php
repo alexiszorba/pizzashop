@@ -36,7 +36,7 @@ class __TwigTemplate_ff2c0dd72d615f33d12cf2feeeba008efc22766facd07cde26b1c91b77d
         // line 13
         echo "        ";
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 15
+        // line 16
         echo "        <link rel=\"shortcut icon\" href=\"";
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/alexpizza/images/favicon.ico"), "html", null, true);
         echo "\" />
@@ -46,111 +46,113 @@ class __TwigTemplate_ff2c0dd72d615f33d12cf2feeeba008efc22766facd07cde26b1c91b77d
             <div id=\"header\">
                 <div class=\"content\">
                     <h1><a href=\"";
-        // line 21
+        // line 22
         echo $this->env->getExtension('routing')->getPath("pizza");
         echo "\">
-                        <img src=\"";
-        // line 22
+                            <img src=\"";
+        // line 23
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/alexpizza/images/logo.jpg"), "html", null, true);
         echo "\" alt=\"Alex Pizza Shop\" />                        
-                    </a></h1>
- 
+                        </a></h1>
+                   
                     <div id=\"sub_header\">
-                        <div class=\"post\">
-                            <h2>To The Shop</h2>
-                            <div>
-                                <a href=\"";
-        // line 29
-        echo $this->env->getExtension('routing')->getPath("pizza");
-        echo "\">Shop</a>
-                            </div>
-                        </div>
- 
                         <div class=\"search\">
-                            <h2>Search Our Site</h2>
+                            <h2>Doorzoek Onze Site</h2>
                             <form action=\"\" method=\"get\">
                                 <input type=\"text\" name=\"keywords\" id=\"search_keywords\" />
                                 <input type=\"submit\" value=\"search\" />
                                 <div class=\"help\">
-                                    Enter some keywords (pizza, extras, delivery, ...)
+                                    Geef zoekternen (pizza, extras, levering, map ...)
                                 </div>
                             </form>
                         </div>
                     </div>
+                     <div id='menu'>
+                        <div class=\"menu\">
+                            <h2>Menu</h2>
+                            <div>
+                                ";
+        // line 42
+        echo $this->env->getExtension('knp_menu')->render("AlexPizzaBundle:Builder:mainMenu");
+        echo "
+                                
+                            </div>
+                        </div> 
+                    </div>
                 </div>
             </div>
- 
-           <div id=\"content\">
+
+            <div id=\"content\">
                ";
-        // line 48
+        // line 51
         $context['_parent'] = (array) $context;
         $context['_seq'] = twig_ensure_traversable($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "session"), "flashbag"), "get", array(0 => "notice"), "method"));
         foreach ($context['_seq'] as $context["_key"] => $context["flashMessage"]) {
-            // line 49
-            echo "                   <div class=\"flash_notice\">
+            // line 52
+            echo "                <div class=\"flash_notice\">
                        ";
-            // line 50
+            // line 53
             echo twig_escape_filter($this->env, (isset($context["flashMessage"]) ? $context["flashMessage"] : $this->getContext($context, "flashMessage")), "html", null, true);
             echo "
-                   </div>
+                </div>
                ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['flashMessage'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 53
-        echo " 
+        // line 56
+        echo "
                ";
-        // line 54
+        // line 57
         $context['_parent'] = (array) $context;
         $context['_seq'] = twig_ensure_traversable($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "session"), "flashbag"), "get", array(0 => "error"), "method"));
         foreach ($context['_seq'] as $context["_key"] => $context["flashMessage"]) {
-            // line 55
-            echo "                   <div class=\"flash_error\">
+            // line 58
+            echo "                <div class=\"flash_error\">
                        ";
-            // line 56
+            // line 59
             echo twig_escape_filter($this->env, (isset($context["flashMessage"]) ? $context["flashMessage"] : $this->getContext($context, "flashMessage")), "html", null, true);
             echo "
-                   </div>
+                </div>
                ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['flashMessage'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 59
-        echo " 
-               <div class=\"content\">
-                   ";
-        // line 61
-        $this->displayBlock('content', $context, $blocks);
+        // line 62
+        echo " ";
         // line 63
-        echo "               </div>
-           </div>
- 
-           <div id=\"footer\">
-               <div class=\"content\">
-                   <span class=\"symfony\">
-                       <img src=\"";
-        // line 69
+        echo "                <div class=\"content\">
+                   ";
+        // line 64
+        $this->displayBlock('content', $context, $blocks);
+        // line 66
+        echo "                </div>
+            </div>
+
+            <div id=\"footer\">
+                <div class=\"content\">
+                    <span class=\"symfony\">
+                        <img src=\"";
+        // line 72
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/alexpizza/images/jobeet-mini.png"), "html", null, true);
         echo "\" />
-                           powered by <a href=\"http://www.symfony.com/\">
-                           <img src=\"";
-        // line 71
+                        powered by <a href=\"http://www.symfony.com/\">
+                            <img src=\"";
+        // line 74
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/alexpizza/images/symfony.gif"), "html", null, true);
         echo "\" alt=\"symfony framework\" />
-                       </a>
-                   </span>
-                   <ul>
-                       <li><a href=\"\">About Alex Pizza Shop</a></li>
-                       <li class=\"feed\"><a href=\"\">Full feed</a></li>
-                       <li><a href=\"\">Map</a></li>
-                       <li class=\"last\"><a href=\"\">Contact</a></li>
-                   </ul>
-               </div>
-           </div>
-       </div>
-   </body>
+                        </a>
+                    </span>
+                    <ul>
+                        <li><a href=\"\">Over Ons</a></li>
+                        <li><a href=\"\">Levering Map</a></li>
+                        <li class=\"last\"><a href=\"\">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </body>
 </html>";
     }
 
@@ -158,7 +160,7 @@ class __TwigTemplate_ff2c0dd72d615f33d12cf2feeeba008efc22766facd07cde26b1c91b77d
     public function block_title($context, array $blocks = array())
     {
         // line 6
-        echo "                Alex Pizza Shop
+        echo "            Alex Pizza Shop
             ";
     }
 
@@ -166,7 +168,7 @@ class __TwigTemplate_ff2c0dd72d615f33d12cf2feeeba008efc22766facd07cde26b1c91b77d
     public function block_stylesheets($context, array $blocks = array())
     {
         // line 11
-        echo "            <link rel=\"stylesheet\" href=\"";
+        echo "        <link rel=\"stylesheet\" href=\"";
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/alexpizza/css/main.css"), "html", null, true);
         echo "\" type=\"text/css\" media=\"all\" />
         ";
@@ -176,13 +178,16 @@ class __TwigTemplate_ff2c0dd72d615f33d12cf2feeeba008efc22766facd07cde26b1c91b77d
     public function block_javascripts($context, array $blocks = array())
     {
         // line 14
-        echo "        ";
+        echo "        <script type=\"text/javascript\" src=\"";
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/ibwjobeet/js/jquery-2.0.3.min.js"), "html", null, true);
+        echo "\"></script>
+    ";
     }
 
-    // line 61
+    // line 64
     public function block_content($context, array $blocks = array())
     {
-        // line 62
+        // line 65
         echo "                   ";
     }
 
@@ -198,6 +203,6 @@ class __TwigTemplate_ff2c0dd72d615f33d12cf2feeeba008efc22766facd07cde26b1c91b77d
 
     public function getDebugInfo()
     {
-        return array (  186 => 62,  183 => 61,  179 => 14,  176 => 13,  169 => 11,  166 => 10,  161 => 6,  158 => 5,  140 => 71,  135 => 69,  127 => 63,  125 => 61,  121 => 59,  112 => 56,  109 => 55,  105 => 54,  102 => 53,  93 => 50,  90 => 49,  86 => 48,  64 => 29,  54 => 22,  50 => 21,  40 => 15,  37 => 13,  35 => 10,  31 => 8,  29 => 5,  23 => 1,);
+        return array (  191 => 65,  188 => 64,  181 => 14,  178 => 13,  171 => 11,  168 => 10,  163 => 6,  160 => 5,  143 => 74,  138 => 72,  130 => 66,  128 => 64,  125 => 63,  123 => 62,  114 => 59,  111 => 58,  107 => 57,  104 => 56,  95 => 53,  92 => 52,  88 => 51,  76 => 42,  54 => 23,  50 => 22,  40 => 16,  37 => 13,  35 => 10,  31 => 8,  29 => 5,  23 => 1,);
     }
 }
