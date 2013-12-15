@@ -23,7 +23,7 @@ class PizzaController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $entities = $em->getRepository('AlexPizzaBundle:Pizza')->findAll();
+        $entities = $em->getRepository('AlexPizzaBundle:Pizza')->findAllOrderedByPrice();
          if (!$entities) {
         throw $this->createNotFoundException('Unable to find pizzas entity. Add the pizzas to the database.');
     }
