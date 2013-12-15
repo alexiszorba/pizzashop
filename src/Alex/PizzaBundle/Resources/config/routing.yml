@@ -6,9 +6,9 @@ alex_pizza_shop:
     path: /shop
     defaults: { _controller: AlexPizzaBundle:Pizza:shop }   
     
-alex_pizza_map:
-    path: /map
-    defaults: { _controller: AlexPizzaBundle:Pizza:map }  
+alex_pizza_overons:
+    path: /overons
+    defaults: { _controller: AlexPizzaBundle:Overons:index }  
     
 AlexPizzaBundle_bestelling:
         resource: "@AlexPizzaBundle/Resources/config/routing/bestelling.yml"

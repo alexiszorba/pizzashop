@@ -13,8 +13,8 @@ class Builder extends ContainerAware {
         $menu = $factory->createItem('root');
 
         $menu->addChild('Home', array('route' => 'pizza'));
-        $menu->addChild('Over Ons', array('route' => 'pizza'));
-        $menu->addChild('Bestel', array('route' => 'pizza'));
+        $menu->addChild('Over Ons', array('route' => 'bestelling'));
+        $menu->addChild('Delivery', array('route' => 'pizza'));
         $menu->addChild('Voorwaarden', array('route' => 'pizza'));
         $menu->addChild('Contact', array('route' => 'pizza'));
         // ... add more children
