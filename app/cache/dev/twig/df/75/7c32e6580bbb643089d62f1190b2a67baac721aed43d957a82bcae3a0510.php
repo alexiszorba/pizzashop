@@ -25,7 +25,7 @@ class __TwigTemplate_df757c32e6580bbb643089d62f1190b2a67baac721aed43d957a82bcae3
     protected function doDisplay(array $context, array $blocks = array())
     {
         // line 3
-        $context["__internal_40333f9e991a6e81f871f7d60d52aa6187a903a471919db1dcfdab2d5e3aacb8"] = $this;
+        $context["__internal_5700348de4e625eceb40d3887e4190dae3336f4014877998c3979eaa6612140d"] = $this;
         // line 5
         if ((!array_key_exists("colors", $context))) {
             // line 6
@@ -155,7 +155,7 @@ class __TwigTemplate_df757c32e6580bbb643089d62f1190b2a67baac721aed43d957a82bcae3
 
     ";
         // line 80
-        echo $context["__internal_40333f9e991a6e81f871f7d60d52aa6187a903a471919db1dcfdab2d5e3aacb8"]->getdisplay_timeline(("timeline_" . (isset($context["token"]) ? $context["token"] : $this->getContext($context, "token"))), $this->getAttribute((isset($context["collector"]) ? $context["collector"] : $this->getContext($context, "collector")), "events"), (isset($context["colors"]) ? $context["colors"] : $this->getContext($context, "colors")));
+        echo $context["__internal_5700348de4e625eceb40d3887e4190dae3336f4014877998c3979eaa6612140d"]->getdisplay_timeline(("timeline_" . (isset($context["token"]) ? $context["token"] : $this->getContext($context, "token"))), $this->getAttribute((isset($context["collector"]) ? $context["collector"] : $this->getContext($context, "collector")), "events"), (isset($context["colors"]) ? $context["colors"] : $this->getContext($context, "colors")));
         echo "
 
     ";
@@ -185,7 +185,7 @@ class __TwigTemplate_df757c32e6580bbb643089d62f1190b2a67baac721aed43d957a82bcae3
 
             ";
                 // line 90
-                echo $context["__internal_40333f9e991a6e81f871f7d60d52aa6187a903a471919db1dcfdab2d5e3aacb8"]->getdisplay_timeline(("timeline_" . $this->getAttribute((isset($context["child"]) ? $context["child"] : $this->getContext($context, "child")), "token")), (isset($context["events"]) ? $context["events"] : $this->getContext($context, "events")), (isset($context["colors"]) ? $context["colors"] : $this->getContext($context, "colors")));
+                echo $context["__internal_5700348de4e625eceb40d3887e4190dae3336f4014877998c3979eaa6612140d"]->getdisplay_timeline(("timeline_" . $this->getAttribute((isset($context["child"]) ? $context["child"] : $this->getContext($context, "child")), "token")), (isset($context["events"]) ? $context["events"] : $this->getContext($context, "events")), (isset($context["colors"]) ? $context["colors"] : $this->getContext($context, "colors")));
                 echo "
         ";
             }
@@ -519,7 +519,7 @@ class __TwigTemplate_df757c32e6580bbb643089d62f1190b2a67baac721aed43d957a82bcae3
             \"requests\": [
 ";
         // line 406
-        echo $context["__internal_40333f9e991a6e81f871f7d60d52aa6187a903a471919db1dcfdab2d5e3aacb8"]->getdump_request_data((isset($context["token"]) ? $context["token"] : $this->getContext($context, "token")), (isset($context["profile"]) ? $context["profile"] : $this->getContext($context, "profile")), $this->getAttribute((isset($context["collector"]) ? $context["collector"] : $this->getContext($context, "collector")), "events"), $this->getAttribute($this->getAttribute($this->getAttribute((isset($context["collector"]) ? $context["collector"] : $this->getContext($context, "collector")), "events"), "__section__"), "origin"));
+        echo $context["__internal_5700348de4e625eceb40d3887e4190dae3336f4014877998c3979eaa6612140d"]->getdump_request_data((isset($context["token"]) ? $context["token"] : $this->getContext($context, "token")), (isset($context["profile"]) ? $context["profile"] : $this->getContext($context, "profile")), $this->getAttribute((isset($context["collector"]) ? $context["collector"] : $this->getContext($context, "collector")), "events"), $this->getAttribute($this->getAttribute($this->getAttribute((isset($context["collector"]) ? $context["collector"] : $this->getContext($context, "collector")), "events"), "__section__"), "origin"));
         echo "
 
 ";
@@ -546,7 +546,7 @@ class __TwigTemplate_df757c32e6580bbb643089d62f1190b2a67baac721aed43d957a82bcae3
             }
             foreach ($context['_seq'] as $context["_key"] => $context["child"]) {
                 // line 411
-                echo $context["__internal_40333f9e991a6e81f871f7d60d52aa6187a903a471919db1dcfdab2d5e3aacb8"]->getdump_request_data($this->getAttribute((isset($context["child"]) ? $context["child"] : $this->getContext($context, "child")), "token"), (isset($context["child"]) ? $context["child"] : $this->getContext($context, "child")), $this->getAttribute($this->getAttribute((isset($context["child"]) ? $context["child"] : $this->getContext($context, "child")), "getcollector", array(0 => "time"), "method"), "events"), $this->getAttribute($this->getAttribute($this->getAttribute((isset($context["collector"]) ? $context["collector"] : $this->getContext($context, "collector")), "events"), "__section__"), "origin"));
+                echo $context["__internal_5700348de4e625eceb40d3887e4190dae3336f4014877998c3979eaa6612140d"]->getdump_request_data($this->getAttribute((isset($context["child"]) ? $context["child"] : $this->getContext($context, "child")), "token"), (isset($context["child"]) ? $context["child"] : $this->getContext($context, "child")), $this->getAttribute($this->getAttribute((isset($context["child"]) ? $context["child"] : $this->getContext($context, "child")), "getcollector", array(0 => "time"), "method"), "events"), $this->getAttribute($this->getAttribute($this->getAttribute((isset($context["collector"]) ? $context["collector"] : $this->getContext($context, "collector")), "events"), "__section__"), "origin"));
                 echo (($this->getAttribute((isset($context["loop"]) ? $context["loop"] : $this->getContext($context, "loop")), "last")) ? ("") : (","));
                 echo "
 ";
@@ -617,7 +617,7 @@ class __TwigTemplate_df757c32e6580bbb643089d62f1190b2a67baac721aed43d957a82bcae3
         ob_start();
         try {
             // line 451
-            $context["__internal_ab0e047f35db60e2cad39b74b2c6d83565e53efd22ee9b11b61545120d122a25"] = $this;
+            $context["__internal_55bc4dac4d0e9beeb571d8ddc4b2b68a5978c5411c688de24060d44441b38a72"] = $this;
             // line 452
             echo "                {
                     \"id\": \"";
@@ -631,7 +631,7 @@ class __TwigTemplate_df757c32e6580bbb643089d62f1190b2a67baac721aed43d957a82bcae3
                     \"events\": [
 ";
             // line 456
-            echo $context["__internal_ab0e047f35db60e2cad39b74b2c6d83565e53efd22ee9b11b61545120d122a25"]->getdump_events((isset($context["events"]) ? $context["events"] : $this->getContext($context, "events")));
+            echo $context["__internal_55bc4dac4d0e9beeb571d8ddc4b2b68a5978c5411c688de24060d44441b38a72"]->getdump_events((isset($context["events"]) ? $context["events"] : $this->getContext($context, "events")));
             echo "
                     ]
                 }

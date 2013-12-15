@@ -30,24 +30,24 @@ class __TwigTemplate_4f1eb1374c510a68c872b542a87dd223a32c31e7403695c4829c9080e53
         // line 15
         echo "    ";
         $context['_parent'] = (array) $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["value"]) ? $context["value"] : $this->getContext($context, "value")));
+        $context['_seq'] = twig_ensure_traversable((isset($context["value"]) ? $context["value"] : null));
         foreach ($context['_seq'] as $context["key"] => $context["val"]) {
             // line 16
             echo "        ";
-            if ($this->getAttribute($this->getAttribute((isset($context["field_description"]) ? $context["field_description"] : $this->getContext($context, "field_description")), "options"), "safe")) {
+            if ($this->getAttribute($this->getAttribute((isset($context["field_description"]) ? $context["field_description"] : null), "options"), "safe")) {
                 // line 17
                 echo "            [";
-                echo twig_escape_filter($this->env, (isset($context["key"]) ? $context["key"] : $this->getContext($context, "key")), "html", null, true);
+                echo twig_escape_filter($this->env, (isset($context["key"]) ? $context["key"] : null), "html", null, true);
                 echo " => ";
-                echo (isset($context["val"]) ? $context["val"] : $this->getContext($context, "val"));
+                echo (isset($context["val"]) ? $context["val"] : null);
                 echo "]
         ";
             } else {
                 // line 19
                 echo "            [";
-                echo twig_escape_filter($this->env, (isset($context["key"]) ? $context["key"] : $this->getContext($context, "key")), "html", null, true);
+                echo twig_escape_filter($this->env, (isset($context["key"]) ? $context["key"] : null), "html", null, true);
                 echo " => ";
-                echo twig_escape_filter($this->env, (isset($context["val"]) ? $context["val"] : $this->getContext($context, "val")), "html", null, true);
+                echo twig_escape_filter($this->env, (isset($context["val"]) ? $context["val"] : null), "html", null, true);
                 echo "]
         ";
             }

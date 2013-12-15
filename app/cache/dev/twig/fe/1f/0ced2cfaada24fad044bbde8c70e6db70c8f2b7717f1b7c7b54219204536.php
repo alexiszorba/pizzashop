@@ -45,7 +45,7 @@ class __TwigTemplate_fe1f0ced2cfaada24fad044bbde8c70e6db70c8f2b7717f1b7c7b542192
 
     ";
         // line 8
-        echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["edit_form"]) ? $context["edit_form"] : $this->getContext($context, "edit_form")), 'form');
+        echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["edit_form"]) ? $context["edit_form"] : null), 'form');
         echo "
 
         <ul class=\"record_actions\">
@@ -59,7 +59,7 @@ class __TwigTemplate_fe1f0ced2cfaada24fad044bbde8c70e6db70c8f2b7717f1b7c7b542192
     </li>
     <li>";
         // line 16
-        echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["delete_form"]) ? $context["delete_form"] : $this->getContext($context, "delete_form")), 'form');
+        echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["delete_form"]) ? $context["delete_form"] : null), 'form');
         echo "</li>
 </ul>
 ";

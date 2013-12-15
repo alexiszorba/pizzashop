@@ -32,13 +32,13 @@ class __TwigTemplate_78d7f961a5b1475b46e7a335835a76975b1db93bac1f42f0843c893cfe9
         if ((!$this->getAttribute($this->getAttribute((isset($context["field_description"]) ? $context["field_description"] : null), "options", array(), "any", false, true), "catalogue", array(), "any", true, true))) {
             // line 15
             echo "        ";
-            $context["value"] = $this->env->getExtension('translator')->trans((isset($context["value"]) ? $context["value"] : $this->getContext($context, "value")));
+            $context["value"] = $this->env->getExtension('translator')->trans((isset($context["value"]) ? $context["value"] : null));
             // line 16
             echo "    ";
         } else {
             // line 17
             echo "        ";
-            $context["value"] = $this->env->getExtension('translator')->trans((isset($context["value"]) ? $context["value"] : $this->getContext($context, "value")), array(), $this->getAttribute($this->getAttribute((isset($context["field_description"]) ? $context["field_description"] : $this->getContext($context, "field_description")), "options"), "catalogue"));
+            $context["value"] = $this->env->getExtension('translator')->trans((isset($context["value"]) ? $context["value"] : null), array(), $this->getAttribute($this->getAttribute((isset($context["field_description"]) ? $context["field_description"] : null), "options"), "catalogue"));
             // line 18
             echo "    ";
         }
@@ -46,16 +46,16 @@ class __TwigTemplate_78d7f961a5b1475b46e7a335835a76975b1db93bac1f42f0843c893cfe9
         echo "
     ";
         // line 20
-        if ($this->getAttribute($this->getAttribute((isset($context["field_description"]) ? $context["field_description"] : $this->getContext($context, "field_description")), "options"), "safe")) {
+        if ($this->getAttribute($this->getAttribute((isset($context["field_description"]) ? $context["field_description"] : null), "options"), "safe")) {
             // line 21
             echo "        ";
-            echo (isset($context["value"]) ? $context["value"] : $this->getContext($context, "value"));
+            echo (isset($context["value"]) ? $context["value"] : null);
             echo "
     ";
         } else {
             // line 23
             echo "        ";
-            echo twig_escape_filter($this->env, (isset($context["value"]) ? $context["value"] : $this->getContext($context, "value")), "html", null, true);
+            echo twig_escape_filter($this->env, (isset($context["value"]) ? $context["value"] : null), "html", null, true);
             echo "
     ";
         }

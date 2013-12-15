@@ -29,10 +29,10 @@ class __TwigTemplate_1c0ed27a1ad55a81c0db7686f18be624ea29617381b5b562228bfb9dd2a
     {
         // line 15
         echo "    ";
-        $context["value"] = ((isset($context["value"]) ? $context["value"] : $this->getContext($context, "value")) * 100);
+        $context["value"] = ((isset($context["value"]) ? $context["value"] : null) * 100);
         // line 16
         echo "    ";
-        echo twig_escape_filter($this->env, (isset($context["value"]) ? $context["value"] : $this->getContext($context, "value")), "html", null, true);
+        echo twig_escape_filter($this->env, (isset($context["value"]) ? $context["value"] : null), "html", null, true);
         echo " %
 ";
     }

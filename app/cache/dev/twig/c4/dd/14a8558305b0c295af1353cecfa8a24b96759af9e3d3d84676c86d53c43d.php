@@ -24,11 +24,11 @@ class __TwigTemplate_c4dd14a8558305b0c295af1353cecfa8a24b96759af9e3d3d84676c86d5
             ";
         // line 6
         $context['_parent'] = (array) $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_array_keys_filter($this->getAttribute((isset($context["data"]) ? $context["data"] : $this->getContext($context, "data")), 0, array(), "array")));
+        $context['_seq'] = twig_ensure_traversable(twig_get_array_keys_filter($this->getAttribute((isset($context["data"]) ? $context["data"] : null), 0, array(), "array")));
         foreach ($context['_seq'] as $context["_key"] => $context["label"]) {
             // line 7
             echo "                <th>";
-            echo twig_escape_filter($this->env, (isset($context["label"]) ? $context["label"] : $this->getContext($context, "label")), "html", null, true);
+            echo twig_escape_filter($this->env, (isset($context["label"]) ? $context["label"] : null), "html", null, true);
             echo "</th>
             ";
         }
@@ -42,18 +42,18 @@ class __TwigTemplate_c4dd14a8558305b0c295af1353cecfa8a24b96759af9e3d3d84676c86d5
         ";
         // line 12
         $context['_parent'] = (array) $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["data"]) ? $context["data"] : $this->getContext($context, "data")));
+        $context['_seq'] = twig_ensure_traversable((isset($context["data"]) ? $context["data"] : null));
         foreach ($context['_seq'] as $context["_key"] => $context["row"]) {
             // line 13
             echo "        <tr>
             ";
             // line 14
             $context['_parent'] = (array) $context;
-            $context['_seq'] = twig_ensure_traversable((isset($context["row"]) ? $context["row"] : $this->getContext($context, "row")));
+            $context['_seq'] = twig_ensure_traversable((isset($context["row"]) ? $context["row"] : null));
             foreach ($context['_seq'] as $context["key"] => $context["item"]) {
                 // line 15
                 echo "                <td>";
-                echo twig_escape_filter($this->env, ((("possible_keys" == (isset($context["key"]) ? $context["key"] : $this->getContext($context, "key")))) ? (strtr((isset($context["item"]) ? $context["item"] : $this->getContext($context, "item")), array("," => ", "))) : ((isset($context["item"]) ? $context["item"] : $this->getContext($context, "item")))), "html", null, true);
+                echo twig_escape_filter($this->env, ((("possible_keys" == (isset($context["key"]) ? $context["key"] : null))) ? (strtr((isset($context["item"]) ? $context["item"] : null), array("," => ", "))) : ((isset($context["item"]) ? $context["item"] : null))), "html", null, true);
                 echo "</td>
             ";
             }

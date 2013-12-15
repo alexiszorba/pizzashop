@@ -14,7 +14,7 @@ class __TwigTemplate_39c3e007ab5f08367d9c518a5f7e73ea8e81f41113663b32365bba55c14
 
     protected function doGetParent(array $context)
     {
-        return $this->env->resolveTemplate((isset($context["base_template"]) ? $context["base_template"] : $this->getContext($context, "base_template")));
+        return $this->env->resolveTemplate((isset($context["base_template"]) ? $context["base_template"] : null));
     }
 
     protected function doDisplay(array $context, array $blocks = array())
@@ -25,7 +25,7 @@ class __TwigTemplate_39c3e007ab5f08367d9c518a5f7e73ea8e81f41113663b32365bba55c14
     // line 14
     public function block_field($context, array $blocks = array())
     {
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["field_element"]) ? $context["field_element"] : $this->getContext($context, "field_element")), 'widget', array("attr" => array("class" => "title")));
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["field_element"]) ? $context["field_element"] : null), 'widget', array("attr" => array("class" => "title")));
     }
 
     public function getTemplateName()

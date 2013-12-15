@@ -14,7 +14,7 @@ class __TwigTemplate_7f40fa1b4c1223446939e014a47db2c45190f59779f7361c4a3c721f3be
 
     protected function doGetParent(array $context)
     {
-        return $this->env->resolveTemplate($this->getAttribute((isset($context["admin"]) ? $context["admin"] : $this->getContext($context, "admin")), "getTemplate", array(0 => "base_list_field"), "method"));
+        return $this->env->resolveTemplate($this->getAttribute((isset($context["admin"]) ? $context["admin"] : null), "getTemplate", array(0 => "base_list_field"), "method"));
     }
 
     protected function doDisplay(array $context, array $blocks = array())
@@ -32,7 +32,7 @@ class __TwigTemplate_7f40fa1b4c1223446939e014a47db2c45190f59779f7361c4a3c721f3be
         if ($this->getAttribute($this->getAttribute((isset($context["field_description"]) ? $context["field_description"] : null), "options", array(), "any", false, true), "choices", array(), "any", true, true)) {
             // line 17
             echo "        ";
-            if ((($this->getAttribute($this->getAttribute((isset($context["field_description"]) ? $context["field_description"] : null), "options", array(), "any", false, true), "multiple", array(), "any", true, true) && ($this->getAttribute($this->getAttribute((isset($context["field_description"]) ? $context["field_description"] : $this->getContext($context, "field_description")), "options"), "multiple") == true)) && twig_test_iterable((isset($context["value"]) ? $context["value"] : $this->getContext($context, "value"))))) {
+            if ((($this->getAttribute($this->getAttribute((isset($context["field_description"]) ? $context["field_description"] : null), "options", array(), "any", false, true), "multiple", array(), "any", true, true) && ($this->getAttribute($this->getAttribute((isset($context["field_description"]) ? $context["field_description"] : null), "options"), "multiple") == true)) && twig_test_iterable((isset($context["value"]) ? $context["value"] : null)))) {
                 // line 18
                 echo "
             ";
@@ -46,14 +46,14 @@ class __TwigTemplate_7f40fa1b4c1223446939e014a47db2c45190f59779f7361c4a3c721f3be
             ";
                 // line 22
                 $context['_parent'] = (array) $context;
-                $context['_seq'] = twig_ensure_traversable((isset($context["value"]) ? $context["value"] : $this->getContext($context, "value")));
+                $context['_seq'] = twig_ensure_traversable((isset($context["value"]) ? $context["value"] : null));
                 foreach ($context['_seq'] as $context["_key"] => $context["val"]) {
                     // line 23
                     echo "                ";
-                    if ((!twig_test_empty((isset($context["result"]) ? $context["result"] : $this->getContext($context, "result"))))) {
+                    if ((!twig_test_empty((isset($context["result"]) ? $context["result"] : null)))) {
                         // line 24
                         echo "                    ";
-                        $context["result"] = ((isset($context["result"]) ? $context["result"] : $this->getContext($context, "result")) . (isset($context["delimiter"]) ? $context["delimiter"] : $this->getContext($context, "delimiter")));
+                        $context["result"] = ((isset($context["result"]) ? $context["result"] : null) . (isset($context["delimiter"]) ? $context["delimiter"] : null));
                         // line 25
                         echo "                ";
                     }
@@ -61,19 +61,19 @@ class __TwigTemplate_7f40fa1b4c1223446939e014a47db2c45190f59779f7361c4a3c721f3be
                     echo "
                 ";
                     // line 27
-                    if ($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["field_description"]) ? $context["field_description"] : null), "options", array(), "any", false, true), "choices", array(), "any", false, true), (isset($context["val"]) ? $context["val"] : $this->getContext($context, "val")), array(), "array", true, true)) {
+                    if ($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["field_description"]) ? $context["field_description"] : null), "options", array(), "any", false, true), "choices", array(), "any", false, true), (isset($context["val"]) ? $context["val"] : null), array(), "array", true, true)) {
                         // line 28
                         echo "                    ";
                         if ((!$this->getAttribute($this->getAttribute((isset($context["field_description"]) ? $context["field_description"] : null), "options", array(), "any", false, true), "catalogue", array(), "any", true, true))) {
                             // line 29
                             echo "                        ";
-                            $context["result"] = ((isset($context["result"]) ? $context["result"] : $this->getContext($context, "result")) . $this->getAttribute($this->getAttribute($this->getAttribute((isset($context["field_description"]) ? $context["field_description"] : $this->getContext($context, "field_description")), "options"), "choices"), (isset($context["val"]) ? $context["val"] : $this->getContext($context, "val")), array(), "array"));
+                            $context["result"] = ((isset($context["result"]) ? $context["result"] : null) . $this->getAttribute($this->getAttribute($this->getAttribute((isset($context["field_description"]) ? $context["field_description"] : null), "options"), "choices"), (isset($context["val"]) ? $context["val"] : null), array(), "array"));
                             // line 30
                             echo "                    ";
                         } else {
                             // line 31
                             echo "                        ";
-                            $context["result"] = ((isset($context["result"]) ? $context["result"] : $this->getContext($context, "result")) . $this->env->getExtension('translator')->trans($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["field_description"]) ? $context["field_description"] : $this->getContext($context, "field_description")), "options"), "choices"), (isset($context["val"]) ? $context["val"] : $this->getContext($context, "val")), array(), "array"), array(), $this->getAttribute($this->getAttribute((isset($context["field_description"]) ? $context["field_description"] : $this->getContext($context, "field_description")), "options"), "catalogue")));
+                            $context["result"] = ((isset($context["result"]) ? $context["result"] : null) . $this->env->getExtension('translator')->trans($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["field_description"]) ? $context["field_description"] : null), "options"), "choices"), (isset($context["val"]) ? $context["val"] : null), array(), "array"), array(), $this->getAttribute($this->getAttribute((isset($context["field_description"]) ? $context["field_description"] : null), "options"), "catalogue")));
                             // line 32
                             echo "                    ";
                         }
@@ -82,7 +82,7 @@ class __TwigTemplate_7f40fa1b4c1223446939e014a47db2c45190f59779f7361c4a3c721f3be
                     } else {
                         // line 34
                         echo "                    ";
-                        $context["result"] = ((isset($context["result"]) ? $context["result"] : $this->getContext($context, "result")) . (isset($context["val"]) ? $context["val"] : $this->getContext($context, "val")));
+                        $context["result"] = ((isset($context["result"]) ? $context["result"] : null) . (isset($context["val"]) ? $context["val"] : null));
                         // line 35
                         echo "                ";
                     }
@@ -96,23 +96,23 @@ class __TwigTemplate_7f40fa1b4c1223446939e014a47db2c45190f59779f7361c4a3c721f3be
                 echo "
             ";
                 // line 38
-                $context["value"] = (isset($context["result"]) ? $context["result"] : $this->getContext($context, "result"));
+                $context["value"] = (isset($context["result"]) ? $context["result"] : null);
                 // line 39
                 echo "
         ";
-            } elseif (twig_in_filter((isset($context["value"]) ? $context["value"] : $this->getContext($context, "value")), twig_get_array_keys_filter($this->getAttribute($this->getAttribute((isset($context["field_description"]) ? $context["field_description"] : $this->getContext($context, "field_description")), "options"), "choices")))) {
+            } elseif (twig_in_filter((isset($context["value"]) ? $context["value"] : null), twig_get_array_keys_filter($this->getAttribute($this->getAttribute((isset($context["field_description"]) ? $context["field_description"] : null), "options"), "choices")))) {
                 // line 41
                 echo "            ";
                 if ((!$this->getAttribute($this->getAttribute((isset($context["field_description"]) ? $context["field_description"] : null), "options", array(), "any", false, true), "catalogue", array(), "any", true, true))) {
                     // line 42
                     echo "                ";
-                    $context["value"] = $this->getAttribute($this->getAttribute($this->getAttribute((isset($context["field_description"]) ? $context["field_description"] : $this->getContext($context, "field_description")), "options"), "choices"), (isset($context["value"]) ? $context["value"] : $this->getContext($context, "value")), array(), "array");
+                    $context["value"] = $this->getAttribute($this->getAttribute($this->getAttribute((isset($context["field_description"]) ? $context["field_description"] : null), "options"), "choices"), (isset($context["value"]) ? $context["value"] : null), array(), "array");
                     // line 43
                     echo "            ";
                 } else {
                     // line 44
                     echo "                ";
-                    $context["value"] = $this->env->getExtension('translator')->trans($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["field_description"]) ? $context["field_description"] : $this->getContext($context, "field_description")), "options"), "choices"), (isset($context["value"]) ? $context["value"] : $this->getContext($context, "value")), array(), "array"), array(), $this->getAttribute($this->getAttribute((isset($context["field_description"]) ? $context["field_description"] : $this->getContext($context, "field_description")), "options"), "catalogue"));
+                    $context["value"] = $this->env->getExtension('translator')->trans($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["field_description"]) ? $context["field_description"] : null), "options"), "choices"), (isset($context["value"]) ? $context["value"] : null), array(), "array"), array(), $this->getAttribute($this->getAttribute((isset($context["field_description"]) ? $context["field_description"] : null), "options"), "catalogue"));
                     // line 45
                     echo "            ";
                 }
@@ -126,7 +126,7 @@ class __TwigTemplate_7f40fa1b4c1223446939e014a47db2c45190f59779f7361c4a3c721f3be
         echo "
     ";
         // line 49
-        echo twig_escape_filter($this->env, (isset($context["value"]) ? $context["value"] : $this->getContext($context, "value")), "html", null, true);
+        echo twig_escape_filter($this->env, (isset($context["value"]) ? $context["value"] : null), "html", null, true);
         echo "
 ";
         echo trim(preg_replace('/>\s+</', '><', ob_get_clean()));

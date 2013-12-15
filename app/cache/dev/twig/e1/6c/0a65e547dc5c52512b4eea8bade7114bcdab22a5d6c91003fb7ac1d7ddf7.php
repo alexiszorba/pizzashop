@@ -14,7 +14,7 @@ class __TwigTemplate_e16c0a65e547dc5c52512b4eea8bade7114bcdab22a5d6c91003fb7ac1d
 
     protected function doGetParent(array $context)
     {
-        return $this->env->resolveTemplate($this->getAttribute((isset($context["admin"]) ? $context["admin"] : $this->getContext($context, "admin")), "getTemplate", array(0 => "base_list_field"), "method"));
+        return $this->env->resolveTemplate($this->getAttribute((isset($context["admin"]) ? $context["admin"] : null), "getTemplate", array(0 => "base_list_field"), "method"));
     }
 
     protected function doDisplay(array $context, array $blocks = array())
@@ -26,15 +26,15 @@ class __TwigTemplate_e16c0a65e547dc5c52512b4eea8bade7114bcdab22a5d6c91003fb7ac1d
     public function block_field($context, array $blocks = array())
     {
         // line 15
-        if (twig_test_empty((isset($context["value"]) ? $context["value"] : $this->getContext($context, "value")))) {
+        if (twig_test_empty((isset($context["value"]) ? $context["value"] : null))) {
             // line 16
             echo "&nbsp;";
         } elseif ($this->getAttribute($this->getAttribute((isset($context["field_description"]) ? $context["field_description"] : null), "options", array(), "any", false, true), "format", array(), "any", true, true)) {
             // line 18
-            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, (isset($context["value"]) ? $context["value"] : $this->getContext($context, "value")), $this->getAttribute($this->getAttribute((isset($context["field_description"]) ? $context["field_description"] : $this->getContext($context, "field_description")), "options"), "format")), "html", null, true);
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, (isset($context["value"]) ? $context["value"] : null), $this->getAttribute($this->getAttribute((isset($context["field_description"]) ? $context["field_description"] : null), "options"), "format")), "html", null, true);
         } else {
             // line 20
-            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, (isset($context["value"]) ? $context["value"] : $this->getContext($context, "value")), "F j, Y"), "html", null, true);
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, (isset($context["value"]) ? $context["value"] : null), "F j, Y"), "html", null, true);
         }
     }
 

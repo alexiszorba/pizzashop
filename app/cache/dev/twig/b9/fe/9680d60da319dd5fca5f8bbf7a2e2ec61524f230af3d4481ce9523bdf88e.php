@@ -19,7 +19,7 @@ class __TwigTemplate_b9fe9680d60da319dd5fca5f8bbf7a2e2ec61524f230af3d4481ce9523b
         echo "
 ";
         // line 12
-        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute((isset($context["revision"]) ? $context["revision"] : $this->getContext($context, "revision")), "timestamp")), "html", null, true);
+        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute((isset($context["revision"]) ? $context["revision"] : null), "timestamp")), "html", null, true);
         echo "
 ";
     }

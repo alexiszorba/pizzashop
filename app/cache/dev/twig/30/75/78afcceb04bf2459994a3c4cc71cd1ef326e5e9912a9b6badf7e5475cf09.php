@@ -14,7 +14,7 @@ class __TwigTemplate_307578afcceb04bf2459994a3c4cc71cd1ef326e5e9912a9b6badf7e547
 
     protected function doGetParent(array $context)
     {
-        return $this->env->resolveTemplate($this->getAttribute((isset($context["admin"]) ? $context["admin"] : $this->getContext($context, "admin")), "getTemplate", array(0 => "base_list_field"), "method"));
+        return $this->env->resolveTemplate($this->getAttribute((isset($context["admin"]) ? $context["admin"] : null), "getTemplate", array(0 => "base_list_field"), "method"));
     }
 
     protected function doDisplay(array $context, array $blocks = array())
@@ -26,12 +26,12 @@ class __TwigTemplate_307578afcceb04bf2459994a3c4cc71cd1ef326e5e9912a9b6badf7e547
     public function block_field($context, array $blocks = array())
     {
         // line 15
-        if (twig_test_empty((isset($context["value"]) ? $context["value"] : $this->getContext($context, "value")))) {
+        if (twig_test_empty((isset($context["value"]) ? $context["value"] : null))) {
             // line 16
             echo "&nbsp;";
         } else {
             // line 18
-            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, (isset($context["value"]) ? $context["value"] : $this->getContext($context, "value")), "H:i:s"), "html", null, true);
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, (isset($context["value"]) ? $context["value"] : null), "H:i:s"), "html", null, true);
         }
     }
 

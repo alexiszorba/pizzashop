@@ -16,7 +16,7 @@ class __TwigTemplate_ce899e125057bf39f04540fd4b510cc3e52a05bb49c96865dc73220fbf6
     protected function doDisplay(array $context, array $blocks = array())
     {
         // line 1
-        echo twig_jsonencode_filter(array("error" => array("code" => (isset($context["status_code"]) ? $context["status_code"] : $this->getContext($context, "status_code")), "message" => (isset($context["status_text"]) ? $context["status_text"] : $this->getContext($context, "status_text")))));
+        echo twig_jsonencode_filter(array("error" => array("code" => (isset($context["status_code"]) ? $context["status_code"] : null), "message" => (isset($context["status_text"]) ? $context["status_text"] : null))));
         echo "
 ";
     }

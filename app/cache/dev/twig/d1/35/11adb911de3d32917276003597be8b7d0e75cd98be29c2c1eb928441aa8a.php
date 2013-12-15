@@ -31,7 +31,7 @@ class __TwigTemplate_d13511adb911de3d32917276003597be8b7d0e75cd98be29c2c1eb92844
         ob_start();
         // line 16
         echo "    ";
-        if (twig_test_empty((isset($context["value"]) ? $context["value"] : $this->getContext($context, "value")))) {
+        if (twig_test_empty((isset($context["value"]) ? $context["value"] : null))) {
             // line 17
             echo "        &nbsp;
     ";
@@ -43,10 +43,10 @@ class __TwigTemplate_d13511adb911de3d32917276003597be8b7d0e75cd98be29c2c1eb92844
                 echo "            ";
                 // line 21
                 echo "            ";
-                $context["url_address"] = $this->getAttribute($this->getAttribute((isset($context["field_description"]) ? $context["field_description"] : $this->getContext($context, "field_description")), "options"), "url");
+                $context["url_address"] = $this->getAttribute($this->getAttribute((isset($context["field_description"]) ? $context["field_description"] : null), "options"), "url");
                 // line 22
                 echo "        ";
-            } elseif (($this->getAttribute($this->getAttribute((isset($context["field_description"]) ? $context["field_description"] : null), "options", array(), "any", false, true), "route", array(), "any", true, true) && !twig_in_filter($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["field_description"]) ? $context["field_description"] : $this->getContext($context, "field_description")), "options"), "route"), "name"), array(0 => "edit", 1 => "show")))) {
+            } elseif (($this->getAttribute($this->getAttribute((isset($context["field_description"]) ? $context["field_description"] : null), "options", array(), "any", false, true), "route", array(), "any", true, true) && !twig_in_filter($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["field_description"]) ? $context["field_description"] : null), "options"), "route"), "name"), array(0 => "edit", 1 => "show")))) {
                 // line 23
                 echo "            ";
                 // line 24
@@ -60,7 +60,7 @@ class __TwigTemplate_d13511adb911de3d32917276003597be8b7d0e75cd98be29c2c1eb92844
                 if ($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["field_description"]) ? $context["field_description"] : null), "options", array(), "any", false, true), "route", array(), "any", false, true), "identifier_parameter_name", array(), "any", true, true)) {
                     // line 28
                     echo "                ";
-                    $context["parameters"] = twig_array_merge((isset($context["parameters"]) ? $context["parameters"] : $this->getContext($context, "parameters")), array($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["field_description"]) ? $context["field_description"] : $this->getContext($context, "field_description")), "options"), "route"), "identifier_parameter_name") => $this->getAttribute((isset($context["admin"]) ? $context["admin"] : $this->getContext($context, "admin")), "normalizedidentifier", array(0 => (isset($context["object"]) ? $context["object"] : $this->getContext($context, "object"))), "method")));
+                    $context["parameters"] = twig_array_merge((isset($context["parameters"]) ? $context["parameters"] : null), array($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["field_description"]) ? $context["field_description"] : null), "options"), "route"), "identifier_parameter_name") => $this->getAttribute((isset($context["admin"]) ? $context["admin"] : null), "normalizedidentifier", array(0 => (isset($context["object"]) ? $context["object"] : null)), "method")));
                     // line 29
                     echo "            ";
                 }
@@ -71,13 +71,13 @@ class __TwigTemplate_d13511adb911de3d32917276003597be8b7d0e75cd98be29c2c1eb92844
                 if ((($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["field_description"]) ? $context["field_description"] : null), "options", array(), "any", false, true), "route", array(), "any", false, true), "absolute", array(), "any", true, true)) ? (_twig_default_filter($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["field_description"]) ? $context["field_description"] : null), "options", array(), "any", false, true), "route", array(), "any", false, true), "absolute"), false)) : (false))) {
                     // line 32
                     echo "                ";
-                    $context["url_address"] = $this->env->getExtension('routing')->getUrl($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["field_description"]) ? $context["field_description"] : $this->getContext($context, "field_description")), "options"), "route"), "name"), (isset($context["parameters"]) ? $context["parameters"] : $this->getContext($context, "parameters")));
+                    $context["url_address"] = $this->env->getExtension('routing')->getUrl($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["field_description"]) ? $context["field_description"] : null), "options"), "route"), "name"), (isset($context["parameters"]) ? $context["parameters"] : null));
                     // line 33
                     echo "            ";
                 } else {
                     // line 34
                     echo "                ";
-                    $context["url_address"] = $this->env->getExtension('routing')->getPath($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["field_description"]) ? $context["field_description"] : $this->getContext($context, "field_description")), "options"), "route"), "name"), (isset($context["parameters"]) ? $context["parameters"] : $this->getContext($context, "parameters")));
+                    $context["url_address"] = $this->env->getExtension('routing')->getPath($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["field_description"]) ? $context["field_description"] : null), "options"), "route"), "name"), (isset($context["parameters"]) ? $context["parameters"] : null));
                     // line 35
                     echo "            ";
                 }
@@ -88,7 +88,7 @@ class __TwigTemplate_d13511adb911de3d32917276003597be8b7d0e75cd98be29c2c1eb92844
                 echo "            ";
                 // line 38
                 echo "            ";
-                $context["url_address"] = (isset($context["value"]) ? $context["value"] : $this->getContext($context, "value"));
+                $context["url_address"] = (isset($context["value"]) ? $context["value"] : null);
                 // line 39
                 echo "        ";
             }
@@ -99,7 +99,7 @@ class __TwigTemplate_d13511adb911de3d32917276003597be8b7d0e75cd98be29c2c1eb92844
             if ((($this->getAttribute($this->getAttribute((isset($context["field_description"]) ? $context["field_description"] : null), "options", array(), "any", false, true), "hide_protocol", array(), "any", true, true)) ? (_twig_default_filter($this->getAttribute($this->getAttribute((isset($context["field_description"]) ? $context["field_description"] : null), "options", array(), "any", false, true), "hide_protocol"), false)) : (false))) {
                 // line 42
                 echo "            ";
-                $context["value"] = strtr((isset($context["value"]) ? $context["value"] : $this->getContext($context, "value")), array("http://" => "", "https://" => ""));
+                $context["value"] = strtr((isset($context["value"]) ? $context["value"] : null), array("http://" => "", "https://" => ""));
                 // line 43
                 echo "        ";
             }
@@ -107,15 +107,15 @@ class __TwigTemplate_d13511adb911de3d32917276003597be8b7d0e75cd98be29c2c1eb92844
             echo "
         <a href=\"";
             // line 45
-            echo twig_escape_filter($this->env, (isset($context["url_address"]) ? $context["url_address"] : $this->getContext($context, "url_address")), "html", null, true);
+            echo twig_escape_filter($this->env, (isset($context["url_address"]) ? $context["url_address"] : null), "html", null, true);
             echo "\">";
             // line 46
-            if ($this->getAttribute($this->getAttribute((isset($context["field_description"]) ? $context["field_description"] : $this->getContext($context, "field_description")), "options"), "safe")) {
+            if ($this->getAttribute($this->getAttribute((isset($context["field_description"]) ? $context["field_description"] : null), "options"), "safe")) {
                 // line 47
-                echo (isset($context["value"]) ? $context["value"] : $this->getContext($context, "value"));
+                echo (isset($context["value"]) ? $context["value"] : null);
             } else {
                 // line 49
-                echo twig_escape_filter($this->env, (isset($context["value"]) ? $context["value"] : $this->getContext($context, "value")), "html", null, true);
+                echo twig_escape_filter($this->env, (isset($context["value"]) ? $context["value"] : null), "html", null, true);
             }
             // line 51
             echo "</a>

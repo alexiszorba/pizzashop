@@ -27,7 +27,7 @@ class __TwigTemplate_79179710d73e6c48e1a3cbc1ab4a699c29540bc443aa39b1f8ada3c2454
         if (array_key_exists("invalid_username", $context)) {
             // line 6
             echo "            <p>";
-            echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("resetting.request.invalid_username", array("%username%" => (isset($context["invalid_username"]) ? $context["invalid_username"] : $this->getContext($context, "invalid_username"))), "FOSUserBundle"), "html", null, true);
+            echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("resetting.request.invalid_username", array("%username%" => (isset($context["invalid_username"]) ? $context["invalid_username"] : null)), "FOSUserBundle"), "html", null, true);
             echo "</p>
         ";
         }

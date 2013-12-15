@@ -14,7 +14,7 @@ class __TwigTemplate_fdca8d9704220da24686a5a3db80151ff51b62c337180a76f3d2a8d00b1
 
     protected function doGetParent(array $context)
     {
-        return $this->env->resolveTemplate($this->getAttribute((isset($context["admin"]) ? $context["admin"] : $this->getContext($context, "admin")), "getTemplate", array(0 => "base_list_field"), "method"));
+        return $this->env->resolveTemplate($this->getAttribute((isset($context["admin"]) ? $context["admin"] : null), "getTemplate", array(0 => "base_list_field"), "method"));
     }
 
     protected function doDisplay(array $context, array $blocks = array())
@@ -30,13 +30,13 @@ class __TwigTemplate_fdca8d9704220da24686a5a3db80151ff51b62c337180a76f3d2a8d00b1
         if ((!$this->getAttribute($this->getAttribute((isset($context["field_description"]) ? $context["field_description"] : null), "options", array(), "any", false, true), "catalogue", array(), "any", true, true))) {
             // line 16
             echo "        ";
-            echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans((isset($context["value"]) ? $context["value"] : $this->getContext($context, "value"))), "html", null, true);
+            echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans((isset($context["value"]) ? $context["value"] : null)), "html", null, true);
             echo "
     ";
         } else {
             // line 18
             echo "        ";
-            echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans((isset($context["value"]) ? $context["value"] : $this->getContext($context, "value")), array(), $this->getAttribute($this->getAttribute((isset($context["field_description"]) ? $context["field_description"] : $this->getContext($context, "field_description")), "options"), "catalogue")), "html", null, true);
+            echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans((isset($context["value"]) ? $context["value"] : null), array(), $this->getAttribute($this->getAttribute((isset($context["field_description"]) ? $context["field_description"] : null), "options"), "catalogue")), "html", null, true);
             echo "
     ";
         }

@@ -23,7 +23,7 @@ class __TwigTemplate_ca2e7f9e535835ad5981e84312a9da76b3ca1f414a02a25c738d99181ce
 <div>
     <div class=\"sonata-ba-field ";
         // line 13
-        if ((twig_length_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["field_element"]) ? $context["field_element"] : $this->getContext($context, "field_element")), "vars"), "errors")) > 0)) {
+        if ((twig_length_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["field_element"]) ? $context["field_element"] : null), "vars"), "errors")) > 0)) {
             echo "sonata-ba-field-error";
         }
         echo "\">
@@ -50,7 +50,7 @@ class __TwigTemplate_ca2e7f9e535835ad5981e84312a9da76b3ca1f414a02a25c738d99181ce
     // line 14
     public function block_field($context, array $blocks = array())
     {
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["field_element"]) ? $context["field_element"] : $this->getContext($context, "field_element")), 'widget');
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["field_element"]) ? $context["field_element"] : null), 'widget');
     }
 
     // line 15
@@ -61,13 +61,13 @@ class __TwigTemplate_ca2e7f9e535835ad5981e84312a9da76b3ca1f414a02a25c738d99181ce
         if ($this->getAttribute($this->getAttribute((isset($context["field_description"]) ? $context["field_description"] : null), "options", array(), "any", false, true), "name", array(), "any", true, true)) {
             // line 17
             echo "                ";
-            echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["field_element"]) ? $context["field_element"] : $this->getContext($context, "field_element")), 'label', (twig_test_empty($_label_ = $this->getAttribute($this->getAttribute((isset($context["field_description"]) ? $context["field_description"] : $this->getContext($context, "field_description")), "options"), "name")) ? array() : array("label" => $_label_)));
+            echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["field_element"]) ? $context["field_element"] : null), 'label', (twig_test_empty($_label_ = $this->getAttribute($this->getAttribute((isset($context["field_description"]) ? $context["field_description"] : null), "options"), "name")) ? array() : array("label" => $_label_)));
             echo "
             ";
         } else {
             // line 19
             echo "                ";
-            echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["field_element"]) ? $context["field_element"] : $this->getContext($context, "field_element")), 'label');
+            echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["field_element"]) ? $context["field_element"] : null), 'label');
             echo "
             ";
         }
@@ -79,7 +79,7 @@ class __TwigTemplate_ca2e7f9e535835ad5981e84312a9da76b3ca1f414a02a25c738d99181ce
     // line 25
     public function block_errors($context, array $blocks = array())
     {
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["field_element"]) ? $context["field_element"] : $this->getContext($context, "field_element")), 'errors');
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["field_element"]) ? $context["field_element"] : null), 'errors');
     }
 
     public function getTemplateName()

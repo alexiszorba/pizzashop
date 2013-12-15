@@ -38,28 +38,33 @@ class __TwigTemplate_ea6c140f1b6f0c0482b3b4c3beff19a6d0a3b49a7598e3764497da78bf8
     public function block_body($context, array $blocks = array())
     {
         // line 6
-        echo "<h1>Pizza list</h1>
+        echo "<h1>Onze Pizza's</h1>
 
 <table class=\"records_list\">
-    
+
     <tbody>
+        <tr>
+            <th></th>
+            <th></th>
+            <th style=\"color:#BF011D;text-align:center;\">Basis Prijs</th>            
+        </tr>
         ";
-        // line 11
+        // line 16
         $context['_parent'] = (array) $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["entities"]) ? $context["entities"] : $this->getContext($context, "entities")));
         foreach ($context['_seq'] as $context["_key"] => $context["entity"]) {
-            // line 12
-            echo "        <tr>            
-            <td>";
-            // line 13
+            echo "        
+        <tr> 
+            <td style=\"color:#BF011D;text-align:left;font-size: 24px;width: 305px;height: 35px;\">";
+            // line 18
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "naam"), "html", null, true);
             echo "</td>
-            <td>";
-            // line 14
+            <td style=\"color:blue;text-align:left;font-size: 12px;\">";
+            // line 19
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "omschrijving"), "html", null, true);
             echo "</td>
-            <td>";
-            // line 15
+            <td style=\"color:#BF011D;text-align:left;font-size: 24px;width: 95px;\">€ ";
+            // line 20
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "basisprijs"), "html", null, true);
             echo "</td>         
         </tr>
@@ -68,7 +73,7 @@ class __TwigTemplate_ea6c140f1b6f0c0482b3b4c3beff19a6d0a3b49a7598e3764497da78bf8
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['entity'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 18
+        // line 23
         echo "    </tbody>
 </table>
 
@@ -88,6 +93,6 @@ class __TwigTemplate_ea6c140f1b6f0c0482b3b4c3beff19a6d0a3b49a7598e3764497da78bf8
 
     public function getDebugInfo()
     {
-        return array (  72 => 18,  63 => 15,  59 => 14,  55 => 13,  52 => 12,  48 => 11,  41 => 6,  35 => 5,  32 => 4,  29 => 3,);
+        return array (  77 => 23,  68 => 20,  64 => 19,  60 => 18,  53 => 16,  41 => 6,  35 => 5,  32 => 4,  29 => 3,);
     }
 }

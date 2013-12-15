@@ -53,20 +53,20 @@ class __TwigTemplate_14236ebe74f1b0cd70ddda1b0a9e71a46d2dc05a55e41580496fa807a1e
         echo "
     ";
         // line 21
-        if (((twig_length_filter($this->env, (isset($context["_list_table"]) ? $context["_list_table"] : $this->getContext($context, "_list_table"))) > 0) || (twig_length_filter($this->env, (isset($context["_list_filters"]) ? $context["_list_filters"] : $this->getContext($context, "_list_filters"))) > 0))) {
+        if (((twig_length_filter($this->env, (isset($context["_list_table"]) ? $context["_list_table"] : null)) > 0) || (twig_length_filter($this->env, (isset($context["_list_filters"]) ? $context["_list_filters"] : null)) > 0))) {
             // line 22
             echo "        <div class=\"row-fluid\">
             <div class=\"sonata-ba-list span10\">
                 ";
             // line 24
-            echo (isset($context["_list_table"]) ? $context["_list_table"] : $this->getContext($context, "_list_table"));
+            echo (isset($context["_list_table"]) ? $context["_list_table"] : null);
             echo "
             </div>
 
             <div class=\"sonata-ba-filter span2\">
                 ";
             // line 28
-            echo (isset($context["_list_filters"]) ? $context["_list_filters"] : $this->getContext($context, "_list_filters"));
+            echo (isset($context["_list_filters"]) ? $context["_list_filters"] : null);
             echo "
             </div>
         </div>

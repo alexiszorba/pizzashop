@@ -16,7 +16,7 @@ class __TwigTemplate_0f86386cc882f81f19dac81a94be7762908cf5b9f7a9d7f349d70bc9add
 
     protected function doGetParent(array $context)
     {
-        return $this->env->resolveTemplate((isset($context["base_template"]) ? $context["base_template"] : $this->getContext($context, "base_template")));
+        return $this->env->resolveTemplate((isset($context["base_template"]) ? $context["base_template"] : null));
     }
 
     protected function doDisplay(array $context, array $blocks = array())
@@ -27,7 +27,7 @@ class __TwigTemplate_0f86386cc882f81f19dac81a94be7762908cf5b9f7a9d7f349d70bc9add
     // line 14
     public function block_title($context, array $blocks = array())
     {
-        echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("title_search_results", array("%query%" => (isset($context["query"]) ? $context["query"] : $this->getContext($context, "query"))), "SonataAdminBundle"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("title_search_results", array("%query%" => (isset($context["query"]) ? $context["query"] : null)), "SonataAdminBundle"), "html", null, true);
     }
 
     // line 15
@@ -48,7 +48,7 @@ class __TwigTemplate_0f86386cc882f81f19dac81a94be7762908cf5b9f7a9d7f349d70bc9add
             <div class=\"input-append\">
                 <input type=\"text\" name=\"q\" value=\"";
         // line 21
-        echo twig_escape_filter($this->env, (isset($context["query"]) ? $context["query"] : $this->getContext($context, "query")), "html", null, true);
+        echo twig_escape_filter($this->env, (isset($context["query"]) ? $context["query"] : null), "html", null, true);
         echo "\" class=\"input-large search-query\"/>
                 <button type=\"submit\" class=\"btn\">Search</button>
             </div>
@@ -58,12 +58,12 @@ class __TwigTemplate_0f86386cc882f81f19dac81a94be7762908cf5b9f7a9d7f349d70bc9add
 
     <h1>";
         // line 28
-        echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("title_search_results", array("%query%" => (isset($context["query"]) ? $context["query"] : $this->getContext($context, "query"))), "SonataAdminBundle"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("title_search_results", array("%query%" => (isset($context["query"]) ? $context["query"] : null)), "SonataAdminBundle"), "html", null, true);
         echo "</h1>
 
     ";
         // line 30
-        if ((isset($context["query"]) ? $context["query"] : $this->getContext($context, "query"))) {
+        if ((isset($context["query"]) ? $context["query"] : null)) {
             // line 31
             echo "        ";
             $context["count"] = 0;
@@ -73,20 +73,20 @@ class __TwigTemplate_0f86386cc882f81f19dac81a94be7762908cf5b9f7a9d7f349d70bc9add
             ";
             // line 34
             $context['_parent'] = (array) $context;
-            $context['_seq'] = twig_ensure_traversable((isset($context["groups"]) ? $context["groups"] : $this->getContext($context, "groups")));
+            $context['_seq'] = twig_ensure_traversable((isset($context["groups"]) ? $context["groups"] : null));
             foreach ($context['_seq'] as $context["_key"] => $context["group"]) {
                 // line 35
                 echo "                ";
-                $context["display"] = (twig_test_empty($this->getAttribute((isset($context["group"]) ? $context["group"] : $this->getContext($context, "group")), "roles")) || $this->env->getExtension('security')->isGranted("ROLE_SUPER_ADMIN"));
+                $context["display"] = (twig_test_empty($this->getAttribute((isset($context["group"]) ? $context["group"] : null), "roles")) || $this->env->getExtension('security')->isGranted("ROLE_SUPER_ADMIN"));
                 // line 36
                 echo "                ";
                 $context['_parent'] = (array) $context;
-                $context['_seq'] = twig_ensure_traversable($this->getAttribute((isset($context["group"]) ? $context["group"] : $this->getContext($context, "group")), "roles"));
+                $context['_seq'] = twig_ensure_traversable($this->getAttribute((isset($context["group"]) ? $context["group"] : null), "roles"));
                 foreach ($context['_seq'] as $context["_key"] => $context["role"]) {
-                    if ((!(isset($context["display"]) ? $context["display"] : $this->getContext($context, "display")))) {
+                    if ((!(isset($context["display"]) ? $context["display"] : null))) {
                         // line 37
                         echo "                    ";
-                        $context["display"] = $this->env->getExtension('security')->isGranted((isset($context["role"]) ? $context["role"] : $this->getContext($context, "role")));
+                        $context["display"] = $this->env->getExtension('security')->isGranted((isset($context["role"]) ? $context["role"] : null));
                         // line 38
                         echo "                ";
                     }
@@ -98,15 +98,15 @@ class __TwigTemplate_0f86386cc882f81f19dac81a94be7762908cf5b9f7a9d7f349d70bc9add
                 echo "
                 ";
                 // line 40
-                if ((isset($context["display"]) ? $context["display"] : $this->getContext($context, "display"))) {
+                if ((isset($context["display"]) ? $context["display"] : null)) {
                     // line 41
                     echo "                    ";
                     $context['_parent'] = (array) $context;
-                    $context['_seq'] = twig_ensure_traversable($this->getAttribute((isset($context["group"]) ? $context["group"] : $this->getContext($context, "group")), "items"));
+                    $context['_seq'] = twig_ensure_traversable($this->getAttribute((isset($context["group"]) ? $context["group"] : null), "items"));
                     foreach ($context['_seq'] as $context["_key"] => $context["admin"]) {
                         // line 42
                         echo "                        ";
-                        if ((((isset($context["count"]) ? $context["count"] : $this->getContext($context, "count")) % 3) == 0)) {
+                        if ((((isset($context["count"]) ? $context["count"] : null) % 3) == 0)) {
                             // line 43
                             echo "                            </div><div class=\"row-fluid\">
                         ";
@@ -115,13 +115,13 @@ class __TwigTemplate_0f86386cc882f81f19dac81a94be7762908cf5b9f7a9d7f349d70bc9add
                         echo "
                         ";
                         // line 46
-                        $context["count"] = ((isset($context["count"]) ? $context["count"] : $this->getContext($context, "count")) + 1);
+                        $context["count"] = ((isset($context["count"]) ? $context["count"] : null) + 1);
                         // line 47
                         echo "                        ";
-                        if ((($this->getAttribute((isset($context["admin"]) ? $context["admin"] : $this->getContext($context, "admin")), "hasroute", array(0 => "create"), "method") && $this->getAttribute((isset($context["admin"]) ? $context["admin"] : $this->getContext($context, "admin")), "isGranted", array(0 => "CREATE"), "method")) || ($this->getAttribute((isset($context["admin"]) ? $context["admin"] : $this->getContext($context, "admin")), "hasroute", array(0 => "list"), "method") && $this->getAttribute((isset($context["admin"]) ? $context["admin"] : $this->getContext($context, "admin")), "isGranted", array(0 => "LIST"), "method")))) {
+                        if ((($this->getAttribute((isset($context["admin"]) ? $context["admin"] : null), "hasroute", array(0 => "create"), "method") && $this->getAttribute((isset($context["admin"]) ? $context["admin"] : null), "isGranted", array(0 => "CREATE"), "method")) || ($this->getAttribute((isset($context["admin"]) ? $context["admin"] : null), "hasroute", array(0 => "list"), "method") && $this->getAttribute((isset($context["admin"]) ? $context["admin"] : null), "isGranted", array(0 => "LIST"), "method")))) {
                             // line 48
                             echo "                            ";
-                            echo call_user_func_array($this->env->getFunction('sonata_block_render')->getCallable(), array(array("type" => "sonata.admin.block.search_result"), array("query" => (isset($context["query"]) ? $context["query"] : $this->getContext($context, "query")), "admin_code" => $this->getAttribute((isset($context["admin"]) ? $context["admin"] : $this->getContext($context, "admin")), "code"), "page" => 0, "per_page" => 10)));
+                            echo call_user_func_array($this->env->getFunction('sonata_block_render')->getCallable(), array(array("type" => "sonata.admin.block.search_result"), array("query" => (isset($context["query"]) ? $context["query"] : null), "admin_code" => $this->getAttribute((isset($context["admin"]) ? $context["admin"] : null), "code"), "page" => 0, "per_page" => 10)));
                             // line 55
                             echo "
                         ";

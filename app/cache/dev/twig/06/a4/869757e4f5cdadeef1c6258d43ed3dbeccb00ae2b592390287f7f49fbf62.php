@@ -16,7 +16,7 @@ class __TwigTemplate_06a4869757e4f5cdadeef1c6258d43ed3dbeccb00ae2b592390287f7f49
 
     protected function doGetParent(array $context)
     {
-        return $this->env->resolveTemplate((isset($context["base_template"]) ? $context["base_template"] : $this->getContext($context, "base_template")));
+        return $this->env->resolveTemplate((isset($context["base_template"]) ? $context["base_template"] : null));
     }
 
     protected function doDisplay(array $context, array $blocks = array())
@@ -44,7 +44,7 @@ class __TwigTemplate_06a4869757e4f5cdadeef1c6258d43ed3dbeccb00ae2b592390287f7f49
     public function block_side_menu($context, array $blocks = array())
     {
         if (array_key_exists("action", $context)) {
-            echo $this->env->getExtension('knp_menu')->render($this->getAttribute((isset($context["admin"]) ? $context["admin"] : $this->getContext($context, "admin")), "sidemenu", array(0 => (isset($context["action"]) ? $context["action"] : $this->getContext($context, "action"))), "method"), array("currentClass" => "active"), "list");
+            echo $this->env->getExtension('knp_menu')->render($this->getAttribute((isset($context["admin"]) ? $context["admin"] : null), "sidemenu", array(0 => (isset($context["action"]) ? $context["action"] : null)), "method"), array("currentClass" => "active"), "list");
         }
     }
 

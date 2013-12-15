@@ -23,11 +23,11 @@ class __TwigTemplate_4171503845909a205c4bc1af146f91ef9b6278b24110f372f3219294919
         echo "
 <div class=\"control-group";
         // line 12
-        if ((twig_length_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["field_element"]) ? $context["field_element"] : $this->getContext($context, "field_element")), "var"), "errors")) > 0)) {
+        if ((twig_length_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["field_element"]) ? $context["field_element"] : null), "var"), "errors")) > 0)) {
             echo " error";
         }
         echo "\" id=\"sonata-ba-field-container-";
-        echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["field_element"]) ? $context["field_element"] : $this->getContext($context, "field_element")), "vars"), "id"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["field_element"]) ? $context["field_element"] : null), "vars"), "id"), "html", null, true);
         echo "\">
     ";
         // line 13
@@ -36,11 +36,11 @@ class __TwigTemplate_4171503845909a205c4bc1af146f91ef9b6278b24110f372f3219294919
         echo "
     <div class=\"controls sonata-ba-field sonata-ba-field-";
         // line 21
-        echo twig_escape_filter($this->env, (isset($context["edit"]) ? $context["edit"] : $this->getContext($context, "edit")), "html", null, true);
+        echo twig_escape_filter($this->env, (isset($context["edit"]) ? $context["edit"] : null), "html", null, true);
         echo "-";
-        echo twig_escape_filter($this->env, (isset($context["inline"]) ? $context["inline"] : $this->getContext($context, "inline")), "html", null, true);
+        echo twig_escape_filter($this->env, (isset($context["inline"]) ? $context["inline"] : null), "html", null, true);
         echo " ";
-        if ((twig_length_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["field_element"]) ? $context["field_element"] : $this->getContext($context, "field_element")), "vars"), "errors")) > 0)) {
+        if ((twig_length_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["field_element"]) ? $context["field_element"] : null), "vars"), "errors")) > 0)) {
             echo "sonata-ba-field-error";
         }
         echo "\">
@@ -52,7 +52,7 @@ class __TwigTemplate_4171503845909a205c4bc1af146f91ef9b6278b24110f372f3219294919
         echo "
         ";
         // line 25
-        if ($this->getAttribute((isset($context["field_description"]) ? $context["field_description"] : $this->getContext($context, "field_description")), "help")) {
+        if ($this->getAttribute((isset($context["field_description"]) ? $context["field_description"] : null), "help")) {
             // line 26
             echo "            <span class=\"help-inline\">";
             $this->displayBlock('help', $context, $blocks);
@@ -81,13 +81,13 @@ class __TwigTemplate_4171503845909a205c4bc1af146f91ef9b6278b24110f372f3219294919
         if ($this->getAttribute($this->getAttribute((isset($context["field_description"]) ? $context["field_description"] : null), "options", array(), "any", false, true), "name", array(), "any", true, true)) {
             // line 15
             echo "            ";
-            echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["field_element"]) ? $context["field_element"] : $this->getContext($context, "field_element")), 'label', (twig_test_empty($_label_ = $this->getAttribute($this->getAttribute((isset($context["field_description"]) ? $context["field_description"] : $this->getContext($context, "field_description")), "options"), "name")) ? array() : array("label" => $_label_)));
+            echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["field_element"]) ? $context["field_element"] : null), 'label', (twig_test_empty($_label_ = $this->getAttribute($this->getAttribute((isset($context["field_description"]) ? $context["field_description"] : null), "options"), "name")) ? array() : array("label" => $_label_)));
             echo "
         ";
         } else {
             // line 17
             echo "            ";
-            echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["field_element"]) ? $context["field_element"] : $this->getContext($context, "field_element")), 'label');
+            echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["field_element"]) ? $context["field_element"] : null), 'label');
             echo "
         ";
         }
@@ -98,19 +98,19 @@ class __TwigTemplate_4171503845909a205c4bc1af146f91ef9b6278b24110f372f3219294919
     // line 23
     public function block_field($context, array $blocks = array())
     {
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["field_element"]) ? $context["field_element"] : $this->getContext($context, "field_element")), 'widget');
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["field_element"]) ? $context["field_element"] : null), 'widget');
     }
 
     // line 26
     public function block_help($context, array $blocks = array())
     {
-        echo $this->getAttribute((isset($context["field_description"]) ? $context["field_description"] : $this->getContext($context, "field_description")), "help");
+        echo $this->getAttribute((isset($context["field_description"]) ? $context["field_description"] : null), "help");
     }
 
     // line 30
     public function block_errors($context, array $blocks = array())
     {
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["field_element"]) ? $context["field_element"] : $this->getContext($context, "field_element")), 'errors');
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["field_element"]) ? $context["field_element"] : null), 'errors');
     }
 
     public function getTemplateName()

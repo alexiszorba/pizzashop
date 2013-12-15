@@ -14,7 +14,7 @@ class __TwigTemplate_19c5961edacac4b9e38df955d812ad3cca70897210a52fafc98a402ea6c
 
     protected function doGetParent(array $context)
     {
-        return $this->env->resolveTemplate($this->getAttribute($this->getAttribute((isset($context["sonata_block"]) ? $context["sonata_block"] : $this->getContext($context, "sonata_block")), "templates"), "block_base"));
+        return $this->env->resolveTemplate($this->getAttribute($this->getAttribute((isset($context["sonata_block"]) ? $context["sonata_block"] : null), "templates"), "block_base"));
     }
 
     protected function doDisplay(array $context, array $blocks = array())
@@ -27,7 +27,7 @@ class __TwigTemplate_19c5961edacac4b9e38df955d812ad3cca70897210a52fafc98a402ea6c
     {
         // line 15
         echo "    ";
-        echo $this->env->getExtension('knp_menu')->render((isset($context["menu"]) ? $context["menu"] : $this->getContext($context, "menu")), (isset($context["menu_options"]) ? $context["menu_options"] : $this->getContext($context, "menu_options")));
+        echo $this->env->getExtension('knp_menu')->render((isset($context["menu"]) ? $context["menu"] : null), (isset($context["menu_options"]) ? $context["menu_options"] : null));
         echo "
 ";
     }

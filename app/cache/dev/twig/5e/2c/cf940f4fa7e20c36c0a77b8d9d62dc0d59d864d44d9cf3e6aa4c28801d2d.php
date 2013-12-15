@@ -28,7 +28,7 @@ class __TwigTemplate_5e2ccf940f4fa7e20c36c0a77b8d9d62dc0d59d864d44d9cf3e6aa4c288
         echo "
     <div class=\"sonata-ba-field";
         // line 23
-        if ($this->getAttribute($this->getAttribute((isset($context["filter_form"]) ? $context["filter_form"] : $this->getContext($context, "filter_form")), "vars"), "errors")) {
+        if ($this->getAttribute($this->getAttribute((isset($context["filter_form"]) ? $context["filter_form"] : null), "vars"), "errors")) {
             echo " sonata-ba-field-error";
         }
         echo "\">
@@ -49,13 +49,13 @@ class __TwigTemplate_5e2ccf940f4fa7e20c36c0a77b8d9d62dc0d59d864d44d9cf3e6aa4c288
         if ($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["filter"]) ? $context["filter"] : null), "fielddescription", array(), "any", false, true), "options", array(), "any", false, true), "name", array(), "any", true, true)) {
             // line 16
             echo "            ";
-            echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["filter_form"]) ? $context["filter_form"] : $this->getContext($context, "filter_form")), 'label', (twig_test_empty($_label_ = $this->getAttribute($this->getAttribute($this->getAttribute((isset($context["filter"]) ? $context["filter"] : $this->getContext($context, "filter")), "fielddescription"), "options"), "name")) ? array() : array("label" => $_label_)));
+            echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["filter_form"]) ? $context["filter_form"] : null), 'label', (twig_test_empty($_label_ = $this->getAttribute($this->getAttribute($this->getAttribute((isset($context["filter"]) ? $context["filter"] : null), "fielddescription"), "options"), "name")) ? array() : array("label" => $_label_)));
             echo "
         ";
         } else {
             // line 18
             echo "            ";
-            echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["filter_form"]) ? $context["filter_form"] : $this->getContext($context, "filter_form")), 'label');
+            echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["filter_form"]) ? $context["filter_form"] : null), 'label');
             echo "
         ";
         }
@@ -67,7 +67,7 @@ class __TwigTemplate_5e2ccf940f4fa7e20c36c0a77b8d9d62dc0d59d864d44d9cf3e6aa4c288
     // line 24
     public function block_field($context, array $blocks = array())
     {
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["filter_form"]) ? $context["filter_form"] : $this->getContext($context, "filter_form")), 'widget');
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["filter_form"]) ? $context["filter_form"] : null), 'widget');
     }
 
     public function getTemplateName()

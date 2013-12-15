@@ -22,9 +22,9 @@ class __TwigTemplate_93a42a36be24d27d0afc8fa4fb88127a45eafb168cb1fa27add076c74d0
 
 <error code=\"";
         // line 3
-        echo twig_escape_filter($this->env, (isset($context["status_code"]) ? $context["status_code"] : $this->getContext($context, "status_code")), "html", null, true);
+        echo twig_escape_filter($this->env, (isset($context["status_code"]) ? $context["status_code"] : null), "html", null, true);
         echo "\" message=\"";
-        echo twig_escape_filter($this->env, (isset($context["status_text"]) ? $context["status_text"] : $this->getContext($context, "status_text")), "html", null, true);
+        echo twig_escape_filter($this->env, (isset($context["status_text"]) ? $context["status_text"] : null), "html", null, true);
         echo "\" />
 ";
     }

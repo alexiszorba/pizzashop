@@ -15,7 +15,7 @@ class __TwigTemplate_23494e25bfe551f9aa7e06983b0feb19576042df8e495d32760e446383e
 
     protected function doGetParent(array $context)
     {
-        return $this->env->resolveTemplate((isset($context["base_template"]) ? $context["base_template"] : $this->getContext($context, "base_template")));
+        return $this->env->resolveTemplate((isset($context["base_template"]) ? $context["base_template"] : null));
     }
 
     protected function doDisplay(array $context, array $blocks = array())
@@ -76,7 +76,7 @@ class __TwigTemplate_23494e25bfe551f9aa7e06983b0feb19576042df8e495d32760e446383e
                 ";
         // line 36
         $context['_parent'] = (array) $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["revisions"]) ? $context["revisions"] : $this->getContext($context, "revisions")));
+        $context['_seq'] = twig_ensure_traversable((isset($context["revisions"]) ? $context["revisions"] : null));
         $context['loop'] = array(
           'parent' => $context['_parent'],
           'index0' => 0,
@@ -95,22 +95,22 @@ class __TwigTemplate_23494e25bfe551f9aa7e06983b0feb19576042df8e495d32760e446383e
             echo "                    <tr>
                         <td>";
             // line 38
-            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["revision"]) ? $context["revision"] : $this->getContext($context, "revision")), "rev"), "html", null, true);
+            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["revision"]) ? $context["revision"] : null), "rev"), "html", null, true);
             echo "</td>
                         <td>";
             // line 39
-            $template = $this->env->resolveTemplate($this->getAttribute((isset($context["admin"]) ? $context["admin"] : $this->getContext($context, "admin")), "getTemplate", array(0 => "history_revision_timestamp"), "method"));
+            $template = $this->env->resolveTemplate($this->getAttribute((isset($context["admin"]) ? $context["admin"] : null), "getTemplate", array(0 => "history_revision_timestamp"), "method"));
             $template->display($context);
             echo "</td>
                         <td>";
             // line 40
-            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["revision"]) ? $context["revision"] : $this->getContext($context, "revision")), "username"), "html", null, true);
+            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["revision"]) ? $context["revision"] : null), "username"), "html", null, true);
             echo "</td>
                         <td><a href=\"";
             // line 41
-            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["admin"]) ? $context["admin"] : $this->getContext($context, "admin")), "generateObjectUrl", array(0 => "history_view_revision", 1 => (isset($context["object"]) ? $context["object"] : $this->getContext($context, "object")), 2 => array("revision" => $this->getAttribute((isset($context["revision"]) ? $context["revision"] : $this->getContext($context, "revision")), "rev"))), "method"), "html", null, true);
+            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["admin"]) ? $context["admin"] : null), "generateObjectUrl", array(0 => "history_view_revision", 1 => (isset($context["object"]) ? $context["object"] : null), 2 => array("revision" => $this->getAttribute((isset($context["revision"]) ? $context["revision"] : null), "rev"))), "method"), "html", null, true);
             echo "\" class=\"revision-link\" rel=\"";
-            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["revision"]) ? $context["revision"] : $this->getContext($context, "revision")), "rev"), "html", null, true);
+            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["revision"]) ? $context["revision"] : null), "rev"), "html", null, true);
             echo "\">";
             echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("label_view_revision", array(), "SonataAdminBundle"), "html", null, true);
             echo "</a></td>

@@ -21,11 +21,11 @@ class __TwigTemplate_718e7d5b30e197b659a432e16944c1d7ca52b94e081c6d08e82658c8ac8
         // line 3
         echo $this->env->getExtension('routing')->getPath("fos_user_change_password");
         echo "\" ";
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'enctype');
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : null), 'enctype');
         echo " method=\"POST\" class=\"fos_user_change_password\">
     ";
         // line 4
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'widget');
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : null), 'widget');
         echo "
     <div>
         <input type=\"submit\" value=\"";

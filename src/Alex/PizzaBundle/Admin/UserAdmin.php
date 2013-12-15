@@ -25,7 +25,7 @@ class UserAdmin extends Admin {
                 ->add('password')
                 ->add('locked', null, array('required' => false))
                 ->add('expired', null, array('required' => false))
-                ->add('roles')
+                ->add('roles', null, array('required' => true, 'allow_delete' => true))
                 ->add('name')
                 ->add('surname')
                 ->add('address')
@@ -33,6 +33,9 @@ class UserAdmin extends Admin {
                 ->add('telnr')
                 ->add('promotie', null, array('required' => false))
                 ->add('bemerking', null, array('required' => false))
+                ->setHelps(array(
+                    'roles' => $this->trans('Delete ROLE_ADMIN or ROLE_SUPERADMIN to demote to user. If no user present it will be a ROLE_USER')
+                ))
         ;
     }
 
@@ -41,13 +44,13 @@ class UserAdmin extends Admin {
                 ->add('username')
                 ->add('name')
                 ->add('surname')
-                 ->add('email')
+                ->add('email')
                 ->add('postnr')
                 ->add('telnr')
                 ->add('enabled')
                 ->add('locked')
                 ->add('expired')
-                
+
         ;
     }
 

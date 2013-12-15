@@ -21,13 +21,13 @@ class __TwigTemplate_e71c77095cc573ee8249bbe89519e8124b9f8f9e414611ce49260152a98
     ";
         // line 3
         $context['_parent'] = (array) $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["groups"]) ? $context["groups"] : $this->getContext($context, "groups")));
+        $context['_seq'] = twig_ensure_traversable((isset($context["groups"]) ? $context["groups"] : null));
         foreach ($context['_seq'] as $context["_key"] => $context["group"]) {
             // line 4
             echo "        <li><a href=\"";
-            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("fos_user_group_show", array("groupName" => $this->getAttribute((isset($context["group"]) ? $context["group"] : $this->getContext($context, "group")), "getName", array(), "method"))), "html", null, true);
+            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("fos_user_group_show", array("groupName" => $this->getAttribute((isset($context["group"]) ? $context["group"] : null), "getName", array(), "method"))), "html", null, true);
             echo "\">";
-            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["group"]) ? $context["group"] : $this->getContext($context, "group")), "getName", array(), "method"), "html", null, true);
+            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["group"]) ? $context["group"] : null), "getName", array(), "method"), "html", null, true);
             echo "</a></li>
     ";
         }
