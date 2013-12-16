@@ -12,11 +12,11 @@ class Builder extends ContainerAware {
     public function mainMenu(FactoryInterface $factory, array $options) {
         $menu = $factory->createItem('root');
 
-        $menu->addChild('Home', array('route' => 'pizza'));
-        $menu->addChild('Over Ons', array('route' => 'bestelling'));
+        $menu->addChild('Home', array('route' => 'home'));
+        $menu->addChild('Over Ons', array('route' => 'overons'));
         $menu->addChild('Delivery', array('route' => 'pizza'));
-        $menu->addChild('Voorwaarden', array('route' => 'pizza'));
-        $menu->addChild('Contact', array('route' => 'pizza'));
+        $menu->addChild('Voorwaarden', array('route' => 'voorwaarden'));
+        $menu->addChild('Contact', array('route' => 'contact'));
         // ... add more children
 
         return $menu;

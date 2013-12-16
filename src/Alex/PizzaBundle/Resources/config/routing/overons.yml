@@ -1,0 +1,5 @@
+overons:
+    pattern:  /
+    defaults: { _controller: "AlexPizzaBundle:Static:overons",maxAge: 86400, sharedMaxAge: 86400}
+        
+       

@@ -3,10 +3,13 @@
 {% block content %}
 
 {% block body -%}
+<h1>Levering gebeurt in volgende regio's.</h1>
+ 
+{% render (controller('AlexPizzaBundle:Postnr:index')) %}
+
 <h1>Onze Pizza's</h1>
 
 <table class="records_list">
-
     <tbody>
         <tr>
             <th></th>

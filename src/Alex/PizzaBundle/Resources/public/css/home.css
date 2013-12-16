@@ -1,0 +1,161 @@
+/** ------------- Class ------------- **/
+
+.right{float:right; display:inline;}
+.left{float:left; display:inline;}
+.clear{ clear:both; }
+.blue{color:#1389d0;}
+
+/** ------------- CORPS ------------- **/
+
+#corps{
+    clear:both;
+    width:783px;
+    margin:auto;
+    position:relative;
+    top:10px;
+    background:#31598a url('../media/img/commun/corps_fond.jpg') no-repeat left top;
+    padding:8px 0;
+}
+
+.sous_corps{
+    width:783px;
+    height: 10px;
+    background: transparent url('../media/img/commun/corps_bas_arrondi.png') no-repeat left top;
+    position:relative;
+    top:-17px;
+    _top:-42px;
+    z-index:50;
+}
+
+#corps-gauche{
+    width:649px;
+    height:330px;
+    float:left;
+    display:inline-block;
+}
+
+#highlight{
+    height:325px;
+    padding-left:7px;
+    padding-top:5px;
+}
+
+#bannieres{
+    clear:both;
+    height:155px;
+    padding-left:5px;
+}
+
+#bannieres ul{list-style-type:none; }
+
+#bannieres ul li{float:left; display:inline; margin:0 3px;}
+
+#box_mdp{
+    background-color:#004777;
+    display:none;
+    bottom:164px;
+    left:648px;
+    position:absolute;
+    z-index:102;
+    width:315px;
+}
+
+#box_mon_dominos{
+    background-color:#00477f;
+    bottom:11px;
+    display:none;
+    height:142px;
+    left:328px;
+    position:absolute;
+    z-index:102;
+}
+
+#box_inscription{
+    background-color:#004777;
+    display:none;
+    top:145px;
+    left:648px;
+    position:absolute;
+    z-index:102;
+}
+    #box_inscription h1{display:none;}
+
+#box_mdp{
+    background-color:#004777;
+    display:none;
+    bottom:164px;
+    left:648px;
+    position:absolute;
+    z-index:102;
+    width:315px;
+}
+
+#message_status{
+    color:#FFFFFF;
+    font-size:11px;
+    text-align:center;
+    padding-bottom:5px;
+}
+
+#popup_mon_domi{
+    width:314px;
+    text-align:center;
+}
+
+#mon_dom_close{
+    width:100%;
+    text-align:right;
+}
+
+#popup_mon_domi form p {
+    width:200px;
+    margin: 10px auto 0;
+    text-align:left;
+}
+
+#popup_mon_domi input, #popup_mon_domi select{float:left; display:inline; margin:0 2px;}
+
+select#precision{ width:144px; border:0; margin-top:10px; clear:both; font-size:11px; }
+
+#corps-droite{
+    width:320px;
+    height:330px;
+    float:left;
+    display:inline-block;
+}
+
+    #bloc_liens{
+        /*height:325px;*/
+    }
+        #olo{
+            width:300px;
+            margin:46px auto 30px;
+        }
+    
+        #my_dominos{
+            background:transparent url('../media/img/accueil/corps_mon_domi.gif') no-repeat left top;
+            width:216px;
+            height:133px;
+            margin:auto;
+        }
+            
+            #my_dominos p{
+                padding:40px 0 0 15px;
+            }
+            
+            #my_dominos p .input {
+                width:165px;
+                font-size:11px;
+            }
+            
+            #my_dominos p .input_valid{
+                width:17px;
+                height:17px;
+            }
+            
+            #my_dominos p a{
+                margin-right:10px;
+                font-family:Arial;
+                font-size:10px;
+                color:#93c6e3;
+            }

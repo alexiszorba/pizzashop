@@ -4,7 +4,6 @@ namespace Alex\PizzaBundle\Controller;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-
 use Alex\PizzaBundle\Entity\Kosten;
 use Alex\PizzaBundle\Form\KostenType;
 
@@ -12,29 +11,41 @@ use Alex\PizzaBundle\Form\KostenType;
  * Kosten controller.
  *
  */
-class KostenController extends Controller
-{
+class KostenController extends Controller {
+
+    /**
+     * Lists all Kosten for $postnr.
+     *
+     */
+    public function showCostAction($id) {
+        $em = $this->getDoctrine()->getManager();
+
+        $entities = $em->getRepository('AlexPizzaBundle:Kosten')->findOneByPostnrId($id);
+
+        return $this->render('AlexPizzaBundle:Kosten:index.html.twig', array(
+                    'entities' => $entities,
+        ));
+    }
 
     /**
      * Lists all Kosten entities.
      *
      */
-    public function indexAction()
-    {
+    public function indexAction() {
         $em = $this->getDoctrine()->getManager();
 
         $entities = $em->getRepository('AlexPizzaBundle:Kosten')->findAll();
 
         return $this->render('AlexPizzaBundle:Kosten:index.html.twig', array(
-            'entities' => $entities,
+                    'entities' => $entities,
         ));
     }
+
     /**
      * Creates a new Kosten entity.
      *
      */
-    public function createAction(Request $request)
-    {
+    public function createAction(Request $request) {
         $entity = new Kosten();
         $form = $this->createCreateForm($entity);
         $form->handleRequest($request);
@@ -48,20 +59,19 @@ class KostenController extends Controller
         }
 
         return $this->render('AlexPizzaBundle:Kosten:new.html.twig', array(
-            'entity' => $entity,
-            'form'   => $form->createView(),
+                    'entity' => $entity,
+                    'form' => $form->createView(),
         ));
     }
 
     /**
-    * Creates a form to create a Kosten entity.
-    *
-    * @param Kosten $entity The entity
-    *
-    * @return \Symfony\Component\Form\Form The form
-    */
-    private function createCreateForm(Kosten $entity)
-    {
+     * Creates a form to create a Kosten entity.
+     *
+     * @param Kosten $entity The entity
+     *
+     * @return \Symfony\Component\Form\Form The form
+     */
+    private function createCreateForm(Kosten $entity) {
         $form = $this->createForm(new KostenType(), $entity, array(
             'action' => $this->generateUrl('kosten_create'),
             'method' => 'POST',
@@ -76,14 +86,13 @@ class KostenController extends Controller
      * Displays a form to create a new Kosten entity.
      *
      */
-    public function newAction()
-    {
+    public function newAction() {
         $entity = new Kosten();
-        $form   = $this->createCreateForm($entity);
+        $form = $this->createCreateForm($entity);
 
         return $this->render('AlexPizzaBundle:Kosten:new.html.twig', array(
-            'entity' => $entity,
-            'form'   => $form->createView(),
+                    'entity' => $entity,
+                    'form' => $form->createView(),
         ));
     }
 
@@ -91,8 +100,7 @@ class KostenController extends Controller
      * Finds and displays a Kosten entity.
      *
      */
-    public function showAction($id)
-    {
+    public function showAction($id) {
         $em = $this->getDoctrine()->getManager();
 
         $entity = $em->getRepository('AlexPizzaBundle:Kosten')->find($id);
@@ -104,8 +112,8 @@ class KostenController extends Controller
         $deleteForm = $this->createDeleteForm($id);
 
         return $this->render('AlexPizzaBundle:Kosten:show.html.twig', array(
-            'entity'      => $entity,
-            'delete_form' => $deleteForm->createView(),
+                    'entity' => $entity,
+                    'delete_form' => $deleteForm->createView(),
         ));
     }
 
@@ -113,8 +121,7 @@ class KostenController extends Controller
      * Displays a form to edit an existing Kosten entity.
      *
      */
-    public function editAction($id)
-    {
+    public function editAction($id) {
         $em = $this->getDoctrine()->getManager();
 
         $entity = $em->getRepository('AlexPizzaBundle:Kosten')->find($id);
@@ -127,21 +134,20 @@ class KostenController extends Controller
         $deleteForm = $this->createDeleteForm($id);
 
         return $this->render('AlexPizzaBundle:Kosten:edit.html.twig', array(
-            'entity'      => $entity,
-            'edit_form'   => $editForm->createView(),
-            'delete_form' => $deleteForm->createView(),
+                    'entity' => $entity,
+                    'edit_form' => $editForm->createView(),
+                    'delete_form' => $deleteForm->createView(),
         ));
     }
 
     /**
-    * Creates a form to edit a Kosten entity.
-    *
-    * @param Kosten $entity The entity
-    *
-    * @return \Symfony\Component\Form\Form The form
-    */
-    private function createEditForm(Kosten $entity)
-    {
+     * Creates a form to edit a Kosten entity.
+     *
+     * @param Kosten $entity The entity
+     *
+     * @return \Symfony\Component\Form\Form The form
+     */
+    private function createEditForm(Kosten $entity) {
         $form = $this->createForm(new KostenType(), $entity, array(
             'action' => $this->generateUrl('kosten_update', array('id' => $entity->getId())),
             'method' => 'PUT',
@@ -151,12 +157,12 @@ class KostenController extends Controller
 
         return $form;
     }
+
     /**
      * Edits an existing Kosten entity.
      *
      */
-    public function updateAction(Request $request, $id)
-    {
+    public function updateAction(Request $request, $id) {
         $em = $this->getDoctrine()->getManager();
 
         $entity = $em->getRepository('AlexPizzaBundle:Kosten')->find($id);
@@ -176,17 +182,17 @@ class KostenController extends Controller
         }
 
         return $this->render('AlexPizzaBundle:Kosten:edit.html.twig', array(
-            'entity'      => $entity,
-            'edit_form'   => $editForm->createView(),
-            'delete_form' => $deleteForm->createView(),
+                    'entity' => $entity,
+                    'edit_form' => $editForm->createView(),
+                    'delete_form' => $deleteForm->createView(),
         ));
     }
+
     /**
      * Deletes a Kosten entity.
      *
      */
-    public function deleteAction(Request $request, $id)
-    {
+    public function deleteAction(Request $request, $id) {
         $form = $this->createDeleteForm($id);
         $form->handleRequest($request);
 
@@ -212,13 +218,13 @@ class KostenController extends Controller
      *
      * @return \Symfony\Component\Form\Form The form
      */
-    private function createDeleteForm($id)
-    {
+    private function createDeleteForm($id) {
         return $this->createFormBuilder()
-            ->setAction($this->generateUrl('kosten_delete', array('id' => $id)))
-            ->setMethod('DELETE')
-            ->add('submit', 'submit', array('label' => 'Delete'))
-            ->getForm()
+                        ->setAction($this->generateUrl('kosten_delete', array('id' => $id)))
+                        ->setMethod('DELETE')
+                        ->add('submit', 'submit', array('label' => 'Delete'))
+                        ->getForm()
         ;
     }
+
 }

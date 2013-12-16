@@ -1211,12 +1211,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sensiolabs/SensioDistributionBundle.git",
-                "reference": "52b964d793e989768a44a8900b2373bdc9ce666a"
+                "reference": "cf0179711b24d84d4a29d71a4010540f4c990bd8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sensiolabs/SensioDistributionBundle/zipball/52b964d793e989768a44a8900b2373bdc9ce666a",
-                "reference": "52b964d793e989768a44a8900b2373bdc9ce666a",
+                "url": "https://api.github.com/repos/sensiolabs/SensioDistributionBundle/zipball/cf0179711b24d84d4a29d71a4010540f4c990bd8",
+                "reference": "cf0179711b24d84d4a29d71a4010540f4c990bd8",
                 "shasum": ""
             },
             "require": {
@@ -1248,7 +1248,7 @@
                 "configuration",
                 "distribution"
             ],
-            "time": "2013-11-14 21:00:23"
+            "time": "2013-12-16 06:18:38"
         },
         {
             "name": "sensio/framework-extra-bundle",
@@ -1352,12 +1352,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sonata-project/SonataAdminBundle.git",
-                "reference": "29ca1a7bf156cd17444cf94ba9afd0a40294595d"
+                "reference": "9d8133d699e0166ddce79acba9de452d1bcf2eee"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/SonataAdminBundle/zipball/29ca1a7bf156cd17444cf94ba9afd0a40294595d",
-                "reference": "29ca1a7bf156cd17444cf94ba9afd0a40294595d",
+                "url": "https://api.github.com/repos/sonata-project/SonataAdminBundle/zipball/9d8133d699e0166ddce79acba9de452d1bcf2eee",
+                "reference": "9d8133d699e0166ddce79acba9de452d1bcf2eee",
                 "shasum": ""
             },
             "require": {
@@ -1423,7 +1423,7 @@
                 "bootstrap",
                 "sonata"
             ],
-            "time": "2013-12-14 15:45:41"
+            "time": "2013-12-15 15:07:27"
         },
         {
             "name": "sonata-project/block-bundle",
@@ -2052,12 +2052,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "1bc2d9f00ea12ce36d400b6b842558cf97a3a4f1"
+                "reference": "dc79423d0425c61d01138f50ca8ed1ce1f0b7da8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/1bc2d9f00ea12ce36d400b6b842558cf97a3a4f1",
-                "reference": "1bc2d9f00ea12ce36d400b6b842558cf97a3a4f1",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/dc79423d0425c61d01138f50ca8ed1ce1f0b7da8",
+                "reference": "dc79423d0425c61d01138f50ca8ed1ce1f0b7da8",
                 "shasum": ""
             },
             "require": {
@@ -2152,7 +2152,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2013-12-14 20:35:13"
+            "time": "2013-12-15 18:46:51"
         },
         {
             "name": "twig/extensions",

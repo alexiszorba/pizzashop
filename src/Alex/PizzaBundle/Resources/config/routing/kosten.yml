@@ -1,6 +1,10 @@
 kosten:
     pattern:  /
     defaults: { _controller: "AlexPizzaBundle:Kosten:index" }
+    
+kosten_showCost:
+    pattern:  /{id}
+    defaults: { _controller: "AlexPizzaBundle:Kosten:showCost" }
 
 kosten_show:
     pattern:  /{id}/show

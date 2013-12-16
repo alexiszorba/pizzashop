@@ -23,7 +23,7 @@ class PostnrController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $entities = $em->getRepository('AlexPizzaBundle:Postnr')->findAll();
+        $entities = $em->getRepository('AlexPizzaBundle:Postnr')->findAllOrderedByPostnr();
 
         return $this->render('AlexPizzaBundle:Postnr:index.html.twig', array(
             'entities' => $entities,

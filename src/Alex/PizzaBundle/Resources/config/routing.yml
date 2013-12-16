@@ -1,14 +1,18 @@
-alex_pizza_homepage:
-    pattern:  /
-    defaults: { _controller: AlexPizzaBundle:Pizza:index }    
-    
-alex_pizza_shop:
-    path: /shop
-    defaults: { _controller: AlexPizzaBundle:Pizza:shop }   
-    
-alex_pizza_overons:
-    path: /overons
-    defaults: { _controller: AlexPizzaBundle:Overons:index }  
+AlexPizzaBundle_home:
+        resource: "@AlexPizzaBundle/Resources/config/routing/home.yml"
+        prefix:   /home
+        
+AlexPizzaBundle_overons:
+        resource: "@AlexPizzaBundle/Resources/config/routing/overons.yml"
+        prefix:   /overons
+        
+AlexPizzaBundle_voorwaarden:
+        resource: "@AlexPizzaBundle/Resources/config/routing/voorwaarden.yml"
+        prefix:   /voorwaarden
+        
+AlexPizzaBundle_contact:
+        resource: "@AlexPizzaBundle/Resources/config/routing/contact.yml"
+        prefix:   /contact
     
 AlexPizzaBundle_bestelling:
         resource: "@AlexPizzaBundle/Resources/config/routing/bestelling.yml"
