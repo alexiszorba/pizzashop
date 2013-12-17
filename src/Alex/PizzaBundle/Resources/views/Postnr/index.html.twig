@@ -5,6 +5,7 @@
         {% for entity in entities %}
     <li style="display:inline-block;font-size: 75%;">
             {{ entity.postnr }} {{ entity.gemeente }} {{ render(controller('AlexPizzaBundle:Kosten:showCost', { 'postnr': entity.id })) }}
+            &nbsp
     </li>           
 
         {% endfor %}

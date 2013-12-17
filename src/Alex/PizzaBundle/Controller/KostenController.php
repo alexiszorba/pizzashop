@@ -14,15 +14,15 @@ use Alex\PizzaBundle\Form\KostenType;
 class KostenController extends Controller {
 
     /**
-     * Lists all Kosten for $postnr.
+     * Lists Kosten for one $postnr.
      *
      */
-    public function showCostAction($id) {
+    public function showCostAction($postnr = null) {
         $em = $this->getDoctrine()->getManager();
 
-        $entities = $em->getRepository('AlexPizzaBundle:Kosten')->findOneByPostnrId($id);
+        $entities = $em->getRepository('AlexPizzaBundle:Kosten')->findBy(array('postnr' => $postnr));
 
-        return $this->render('AlexPizzaBundle:Kosten:index.html.twig', array(
+        return $this->render('AlexPizzaBundle:Kosten:showCost.html.twig', array(
                     'entities' => $entities,
         ));
     }

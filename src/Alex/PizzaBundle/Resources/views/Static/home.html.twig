@@ -9,7 +9,9 @@
 
 {% block body -%}
 <div id="corps">
-
+    {% block fos_user_content %}{% endblock %}
+    {% render url('fos_user_registration_register') %}
+    {% render url('fos_user_security_login') %}
     <!--# DIV CORPS GAUCHE #-->
     <div id="corps-gauche">
 

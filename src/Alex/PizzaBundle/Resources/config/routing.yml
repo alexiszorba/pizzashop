@@ -1,5 +1,9 @@
 AlexPizzaBundle_home:
         resource: "@AlexPizzaBundle/Resources/config/routing/home.yml"
+        prefix:   /
+        
+AlexPizzaBundle_home:
+        resource: "@AlexPizzaBundle/Resources/config/routing/home.yml"
         prefix:   /home
         
 AlexPizzaBundle_overons:
