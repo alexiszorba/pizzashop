@@ -1,0 +1,34 @@
+kosten:
+    pattern:  /
+    defaults: { _controller: "AlexPizzaBundle:Kosten:index" }
+    
+kosten_showCost:
+    pattern:  /{id}/showCost
+    defaults: { _controller: "AlexPizzaBundle:Kosten:showCost" }
+
+kosten_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "AlexPizzaBundle:Kosten:show" }
+
+kosten_new:
+    pattern:  /new
+    defaults: { _controller: "AlexPizzaBundle:Kosten:new" }
+
+kosten_create:
+    pattern:  /create
+    defaults: { _controller: "AlexPizzaBundle:Kosten:create" }
+    requirements: { _method: post }
+
+kosten_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "AlexPizzaBundle:Kosten:edit" }
+
+kosten_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "AlexPizzaBundle:Kosten:update" }
+    requirements: { _method: post|put }
+
+kosten_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "AlexPizzaBundle:Kosten:delete" }
+    requirements: { _method: post|delete }

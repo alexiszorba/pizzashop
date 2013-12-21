@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<orm-designer version="2.2.5.754" mvc="Symfony2" orm="Doctrine2">
+  <module name="MainModule" import-format="Doctrine2Php" import-path="src/Alex/HelloBundle/Entity" uuid="c60a08e1-99fb-4b39-ac90-90609d56dd86">
+    <entity name="Type" uuid="cb2d0e4b-9d81-4c16-9f65-4182bde85bb7">
+      <field name="TypeId" type="integer" required="true" unique="true" primary="true" auto-increment="true" uuid="579e8fc0-0b9c-4df1-be8b-7e32e6d11f2b"/>
+      <field name="TypeOmschrijving" type="string" required="true" unique="true" uuid="dbccea50-17ae-47d6-a970-c8d650e516ae"/>
+      <field name="TypeExtraKost" type="float" default="0" required="true" uuid="44b7410b-b42f-4350-90e2-0438f51e20e5"/>
+    </entity>
+    <entity name="Extras" uuid="fa954c7a-2d67-4b6d-98fc-f59f726a579f">
+      <field name="ExtraId" type="integer" required="true" unique="true" primary="true" auto-increment="true" uuid="34bb614d-ec96-4320-8428-692d482712ac"/>
+      <field name="ExtraOmschrijving" type="string" required="true" unique="true" uuid="cae5fa14-34d4-4882-ae8c-f2128e2cd501"/>
+      <field name="ExtraKost" type="float" required="true" uuid="6b1106a3-f87a-48bf-8192-3b070fe4085b"/>
+    </entity>
+    <entity name="Size" uuid="48b70098-341e-4cf8-9c19-564340736692">
+      <field name="SizeId" type="integer" required="true" unique="true" primary="true" auto-increment="true" uuid="3ba32ebb-538c-4c16-a570-1e0d9ab95bfe"/>
+      <field name="SizeOmschrijving" description="normaal, medium, groot etc" type="string" size="50" required="true" unique="true" uuid="5794e3bd-b9a8-4c44-9ccb-0b80b430eeee"/>
+      <field name="SizeExtraKost" type="float" default="0" required="true" uuid="dc3214b7-d546-49b2-acfa-cdbc8b458b2c"/>
+    </entity>
+    <entity name="Postnr" description="postnummers&#10;met gemeente" uuid="5a2b2bba-d47c-4cde-a6b4-37c5a589fd8e">
+      <field name="PostnrId" type="integer" required="true" unique="true" primary="true" auto-increment="true" uuid="2bba66eb-aff5-45bc-b3ae-88b2f30f3361"/>
+      <field name="PostnrPostnr" type="string" size="5" required="true" uuid="57c35eec-6ba8-499b-8778-f4bb8969d898"/>
+      <field name="PostnrGemeente" type="string" size="50" required="true" uuid="52762219-3fcc-4218-8003-848e2a5db9b8"/>
+    </entity>
+    <entity name="Bestelling" description="klant bestelling" uuid="bad5b3d8-5a00-4f9c-bb02-a45d64aca809">
+      <field name="BestelVolgnr" type="integer" required="true" unique="true" primary="true" auto-increment="true" uuid="99652781-d88b-4fbd-bdc6-09ce9714178b"/>
+      <field name="BestelDatum" type="datetime" uuid="cd498fe0-02f5-43b9-a0ed-df49a8ba22c3"/>
+      <field name="BestelLevering" type="string" size="50" uuid="f77a0bc9-3c6b-4bd2-b6bb-adba45e74721"/>
+      <field name="BestelLeveringskost" type="float" size="20" uuid="a731a8ba-2c13-43a2-bb57-5a35d15425c3"/>
+      <field name="Klanten_Klantvolgnr" type="integer" required="true" uuid="82b47093-b026-4e6a-bb2e-886e69e1908e"/>
+    </entity>
+    <association from="Bestelling" to="Klanten" caption="Bestelling Klanten" inverse-alias="Klanten" uuid="2df60bb7-8f50-4f4b-ac04-97ab9f2ea865">
+      <association-field from="Klanten_Klantvolgnr" to="KlantVolgnr"/>
+    </association>
+    <entity name="Details" description="detaillijn van een bestelling" uuid="770faa3c-6768-4d5d-85f8-6517bd8885ab">
+      <field name="DetailVolgnr" type="integer" required="true" unique="true" primary="true" auto-increment="true" uuid="9c025b71-ce46-4a60-9ba7-d9dd350f1a75"/>
+      <field name="DetailAantal" type="integer" uuid="c96aa9e3-7890-4b09-9ae4-f9e3e2b6c088"/>
+      <field name="DetailPrijs" type="float" uuid="c7868d02-902c-4820-bca3-26004415bc32"/>
+      <field name="DetailPromotie" type="string" size="50" uuid="4a90ef3b-78f5-4603-bd56-9f3c69ecd789"/>
+      <field name="DetailPizza" type="integer" unique="true" uuid="50f410d2-ad13-4478-aeb5-34155ac78bdc"/>
+      <field name="Bestelling_Bestelvolgnr" type="integer" required="true" uuid="5a800c48-5ce1-4cba-bda1-e0ea420b3949"/>
+      <field name="Pizza_Pizza_Volgnr" type="integer" required="true" uuid="94be839b-cfd7-4092-9071-4897b1c929b7"/>
+    </entity>
+    <association from="Details" to="Bestelling" caption="Details Bestelling" inverse-alias="Bestelling" uuid="499bb349-2006-461b-b747-c2f41c4e6949">
+      <association-field from="Bestelling_Bestelvolgnr" to="BestelVolgnr"/>
+    </association>
+    <association from="Details" to="Pizza" caption="Details Pizza" inverse-alias="Pizza" uuid="e4a07afd-6c1c-48cd-8489-418e2e71d210">
+      <association-field from="Pizza_Pizza_Volgnr" to="PizzaVolgnr"/>
+    </association>
+    <entity name="Pizza" description="artikels hier pizzas" uuid="f2328e4b-3e71-4838-a4af-6816d85e30b9">
+      <field name="PizzaVolgnr" description="volgnummer" type="integer" required="true" unique="true" primary="true" auto-increment="true" uuid="f6b83824-4d98-45c1-a481-5b8ac3424e28"/>
+      <field name="PizzaNr" description="nummer" type="integer" uuid="c2af74f1-902b-40a1-8895-a56faaceb82a"/>
+      <field name="PizzaNaam" description="naam" type="string" size="250" required="true" unique="true" uuid="ab2585d7-cbb0-45fd-b274-766de2e6b7ec"/>
+      <field name="PizzaOmschrijving" description="omschrijving" type="string" size="250" required="true" uuid="34b472b8-975c-4663-887c-90536fd42db4"/>
+      <field name="PizzaBasisPrijs" description="prijs" type="float" size="20" required="true" uuid="85cc8ce2-4655-4db8-9af0-4758442d244d"/>
+      <field name="Type_Type_id" type="integer" required="true" uuid="8c7d2b7b-da14-486d-832e-c09582d7414a"/>
+      <field name="Size_Size_id" type="integer" required="true" uuid="3ca5041d-e901-4cf6-8aa2-f0ca4bd1add7"/>
+      <field name="Extras_Extra_id" type="integer" uuid="c197b84f-bfe9-4b20-9477-05946c0a3d29"/>
+    </entity>
+    <association from="Pizza" to="Type" caption="Pizza Type" inverse-alias="Type" uuid="3af99253-93ed-4c57-afec-8f50e4de68ac">
+      <association-field from="Type_Type_id" to="TypeId"/>
+    </association>
+    <association from="Pizza" to="Size" caption="Pizza Size" inverse-alias="Size" uuid="3f08a392-3118-41f4-a9fa-6e69067b75d6">
+      <association-field from="Size_Size_id" to="SizeId"/>
+    </association>
+    <association from="Pizza" to="Extras" caption="Pizza Extras" inverse-alias="Extras" uuid="e9d882b4-9912-4345-b732-5f476fe02d34">
+      <association-field from="Extras_Extra_id" to="ExtraId"/>
+    </association>
+    <entity name="Kosten" description="leveringskosten" uuid="ba142990-0a5a-4499-b663-5b5e3f61e646">
+      <field name="KostVolgnr" type="integer" required="true" unique="true" primary="true" auto-increment="true" uuid="c3d84bf4-afec-45f5-af29-6aba4e96deec"/>
+      <field name="KostBedrag" type="float" size="20" uuid="a91a4b90-b7b1-4b82-885c-2d5324bd0d88"/>
+      <field name="KostGratistarief" description="vanaf welke prijs is het gratis levering" type="float" size="20" uuid="b810621c-4106-453d-83e8-2b2b67045a1d"/>
+      <field name="Postnr_Postnr_Id" type="integer" required="true" uuid="b025accb-134e-4183-8e67-5c901f2e6bf8"/>
+    </entity>
+    <association from="Kosten" to="Postnr" caption="Kosten Postnr" inverse-alias="Postnr" uuid="77f7d1a7-7259-4924-9b39-a0ef588c006a">
+      <association-field from="Postnr_Postnr_Id" to="PostnrId"/>
+    </association>
+    <entity name="Klanten" description="klanten van de pizza shop" uuid="dfe22e5b-6f30-4e81-85de-c5025cbdcb56">
+      <field name="KlantVolgnr" type="integer" required="true" unique="true" primary="true" auto-increment="true" uuid="dddda23d-eb2f-46e5-999c-0e3794b1cf74"/>
+      <field name="KlantNaam" type="string" size="40" uuid="80444d37-1eae-4502-bd7e-04a7be8f4dff"/>
+      <field name="KlantAdres" type="string" size="40" uuid="eb7d5cdf-7cfd-467a-a58e-cc654dab0e45"/>
+      <field name="KlantTelnrGsm" type="string" size="10" uuid="a9cf062d-2fc5-4750-89f5-24f5aa6ca3a5"/>
+      <field name="KlantEmail" type="string" size="50" uuid="47b86de7-bce8-4f4d-a749-555851e80460"/>
+      <field name="KlantPromotie" type="string" size="50" uuid="7c4584c3-6a3d-4361-850c-c063fd90cfa2"/>
+      <field name="KlantBlokkering" type="boolean" default="false" uuid="436f0dd8-c372-47a3-a7d2-1dd81523230b"/>
+      <field name="KlantBemerking" type="string" size="200" uuid="6fb18272-42b0-4df6-a2d6-d0cdbaadb738"/>
+      <field name="Postnr_Postnr_Id" type="integer" required="true" uuid="747883f2-dbfa-40ea-a77f-1a0568f406b1"/>
+    </entity>
+    <association from="Klanten" to="Postnr" caption="Klanten Postnr" inverse-alias="Postnr" uuid="614238e4-0f97-43d9-9dd7-b25b12e7cf99">
+      <association-field from="Postnr_Postnr_Id" to="PostnrId"/>
+    </association>
+  </module>
+  <visual-data>
+    <entity uuid="48b70098-341e-4cf8-9c19-564340736692" position-x="359" position-y="228" size-x="0" size-x2="145" size-y="0" size-y2="59"/>
+    <entity uuid="5a2b2bba-d47c-4cde-a6b4-37c5a589fd8e" position-x="163" position-y="196" size-x="0" size-x2="114" size-y="0" size-y2="45"/>
+    <entity uuid="770faa3c-6768-4d5d-85f8-6517bd8885ab" position-x="558" position-y="11" size-x="0" size-x2="131" size-y="0" size-y2="101"/>
+    <entity uuid="ba142990-0a5a-4499-b663-5b5e3f61e646" position-x="330" position-y="105" size-x="0" size-x2="132" size-y="0" size-y2="73"/>
+    <entity uuid="bad5b3d8-5a00-4f9c-bb02-a45d64aca809" position-x="318" position-y="-9" size-x="0" size-x2="150" size-y="0" size-y2="87"/>
+    <module uuid="c60a08e1-99fb-4b39-ac90-90609d56dd86" bk-color="4294308862" position-x="-104" position-y="72" size-x="11" size-x2="956" size-y="22" size-y2="608"/>
+    <entity uuid="cb2d0e4b-9d81-4c16-9f65-4182bde85bb7" position-x="471" position-y="500" size-x="0" size-x2="133" size-y="0" size-y2="59"/>
+    <entity uuid="dfe22e5b-6f30-4e81-85de-c5025cbdcb56" position-x="32" position-y="11" size-x="0" size-x2="141" size-y="0" size-y2="143"/>
+    <entity uuid="f2328e4b-3e71-4838-a4af-6816d85e30b9" position-x="604" position-y="228" size-x="0" size-x2="154" size-y="0" size-y2="129"/>
+    <entity uuid="fa954c7a-2d67-4b6d-98fc-f59f726a579f" position-x="634" position-y="501" size-x="0" size-x2="134" size-y="0" size-y2="59"/>
+  </visual-data>
+</orm-designer>

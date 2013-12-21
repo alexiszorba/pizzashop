@@ -1,0 +1,3 @@
+voorwaarden:
+    pattern:  /
+    defaults: { _controller: "AlexPizzaBundle:Static:voorwaarden",maxAge: 86400, sharedMaxAge: 86400}

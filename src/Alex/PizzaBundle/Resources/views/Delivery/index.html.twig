@@ -1,0 +1,29 @@
+{% extends 'AlexPizzaBundle::layout.html.twig' %}
+
+{% block content %}
+
+{% block body -%}
+{% render url('fos_user_profile_show') %}
+{% render (controller('AlexPizzaBundle:Postnr:index')) %}
+
+    <div id="dialog_onze_pizzas" title="Onze Pizza's" >
+
+        <table>
+            <tbody>
+
+        {% for entity in entities %}        
+                <tr> 
+                    <td class="col1">{{ entity.naam }}</td>
+                    <td class="col2">{{ entity.omschrijving }}</td>
+                    <td class="col3">€ {{ entity.basisprijs }}</td>         
+                </tr>
+        {% endfor %}
+            </tbody>
+        </table>
+
+    </div>
+    <button id="opener_onze_pizzas">Onze Pizza's</button>
+
+    {% endblock %}
+{% endblock %}
+

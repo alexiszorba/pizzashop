@@ -1,0 +1,10 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+<ul>
+{% for entity in entities %}
+
+    <li> Leveringskost € {{ entity.bedrag }} Gratis vanaf € {{ entity.gratistarief }} </li>
+{% endfor %}
+</ul> 
+{% endblock %}

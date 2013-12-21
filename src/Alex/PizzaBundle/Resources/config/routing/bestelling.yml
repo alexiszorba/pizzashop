@@ -1,0 +1,30 @@
+bestelling:
+    pattern:  /
+    defaults: { _controller: "AlexPizzaBundle:Bestelling:index" }
+
+bestelling_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "AlexPizzaBundle:Bestelling:show" }
+
+bestelling_new:
+    pattern:  /new
+    defaults: { _controller: "AlexPizzaBundle:Bestelling:new" }
+
+bestelling_create:
+    pattern:  /create
+    defaults: { _controller: "AlexPizzaBundle:Bestelling:create" }
+    requirements: { _method: post }
+
+bestelling_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "AlexPizzaBundle:Bestelling:edit" }
+
+bestelling_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "AlexPizzaBundle:Bestelling:update" }
+    requirements: { _method: post|put }
+
+bestelling_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "AlexPizzaBundle:Bestelling:delete" }
+    requirements: { _method: post|delete }

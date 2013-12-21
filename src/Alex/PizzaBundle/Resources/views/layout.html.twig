@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            {% block title %}
+                Alex Pizza Shop
+            {% endblock %}
+        </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        {% block stylesheets %}
+            <link rel="stylesheet" href="{{ asset('bundles/alexpizza/css/main.css') }}" type="text/css" media="all" />
+        {% endblock stylesheets %}
+        {% block javascripts %}
+            <script type="text/javascript" src="{{ asset('bundles/alexpizza/js/jquery-2.0.3.min.js') }}"></script>
+            <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.14/jquery-ui.min.js"></script>
+              <script type="text/javascript" src="{{ asset('bundles/alexpizza/js/main.js') }}"></script>
+            <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.14/themes/ui-lightness/jquery-ui.css" type="text/css" media="all"/>
+        {% endblock javascripts %}
+        <link rel="shortcut icon" href="{{ asset('bundles/alexpizza/images/favicon.ico') }}" />
+    </head>
+    <body>
+        <div id="container">
+            <div id="header">
+                <div class="content">
+                    <h1><a href="{{ path('pizza') }}">
+                            <img src="{{ asset('bundles/alexpizza/images/logo.png') }}" alt="Alex Pizza Shop" />                        
+                        </a></h1>
+
+                    <div id="sub_header">
+                        <div class="search">
+                            <h2>Doorzoek Onze Site</h2>
+                            <form action="" method="get">
+                                <input type="text" name="keywords" id="search_keywords" />
+                                <input type="submit" value="search" />
+                                <div class="help">
+                                    Geef zoekternen (pizza, extras, levering, map ...)
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div id='menu'>
+                        <div class="menu">
+                            <h2>Menu</h2>
+                            <div>
+                                {{ knp_menu_render('AlexPizzaBundle:Builder:mainMenu') }}
+
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+
+            <div id="content">
+               {% for flashMessage in app.session.flashbag.get('notice') %}
+                <div class="flash_notice">
+                       {{ flashMessage }}
+                </div>
+               {% endfor %}
+
+               {% for flashMessage in app.session.flashbag.get('error') %}
+                <div class="flash_error">
+                       {{ flashMessage }}
+                </div>
+               {% endfor %}
+ {#<------------------------------ hier begint fos_user_content block ---------------------------->#}
+                   {% block fos_user_content %}
+                
+                   {% endblock fos_user_content %}
+ {#<------------------------------- hier begint content block ------------------------------------>#}               
+                   {% block content %}
+
+
+                   {% endblock %}
+               
+            </div>
+
+            <div id="footer">
+                <div class="content">
+                    <span class="symfony">
+                        <img src="{{ asset('bundles/alexpizza/images/jobeet-mini.png') }}" />
+                        powered by <a href="http://www.symfony.com/">
+                            <img src="{{ asset('bundles/alexpizza/images/symfony.gif') }}" alt="symfony framework" />
+                        </a>
+                    </span>
+                    <ul>
+                        <li><a href="{{ path('overons') }}">Over Ons</a></li>
+                        <li><a href="{{ path('pizza') }}">Leverings Map</a></li>
+                        <li class="last"><a href="{{ path('contact') }}">Contact</a></li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

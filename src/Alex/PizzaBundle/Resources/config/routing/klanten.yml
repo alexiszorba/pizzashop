@@ -1,0 +1,30 @@
+klanten:
+    pattern:  /
+    defaults: { _controller: "AlexPizzaBundle:Klanten:index" }
+
+klanten_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "AlexPizzaBundle:Klanten:show" }
+
+klanten_new:
+    pattern:  /new
+    defaults: { _controller: "AlexPizzaBundle:Klanten:new" }
+
+klanten_create:
+    pattern:  /create
+    defaults: { _controller: "AlexPizzaBundle:Klanten:create" }
+    requirements: { _method: post }
+
+klanten_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "AlexPizzaBundle:Klanten:edit" }
+
+klanten_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "AlexPizzaBundle:Klanten:update" }
+    requirements: { _method: post|put }
+
+klanten_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "AlexPizzaBundle:Klanten:delete" }
+    requirements: { _method: post|delete }

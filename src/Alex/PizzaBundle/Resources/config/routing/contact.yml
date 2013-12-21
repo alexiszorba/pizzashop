@@ -1,0 +1,5 @@
+contact:
+    pattern:  /
+    defaults: { _controller: "AlexPizzaBundle:Static:contact",maxAge: 86400, sharedMaxAge: 86400}
+        
+       

@@ -1,0 +1,30 @@
+user:
+    pattern:  /
+    defaults: { _controller: "AlexPizzaBundle:User:index" }
+
+user_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "AlexPizzaBundle:User:show" }
+
+user_new:
+    pattern:  /new
+    defaults: { _controller: "AlexPizzaBundle:User:new" }
+
+user_create:
+    pattern:  /create
+    defaults: { _controller: "AlexPizzaBundle:User:create" }
+    requirements: { _method: post }
+
+user_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "AlexPizzaBundle:User:edit" }
+
+user_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "AlexPizzaBundle:User:update" }
+    requirements: { _method: post|put }
+
+user_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "AlexPizzaBundle:User:delete" }
+    requirements: { _method: post|delete }

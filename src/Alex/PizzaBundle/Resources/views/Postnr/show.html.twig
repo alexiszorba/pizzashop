@@ -1,0 +1,39 @@
+{% extends 'AlexPizzaBundle::layout.html.twig' %}
+
+{% block content %}
+
+{% block body -%}
+    <h1>Postnr</h1>
+
+    <table class="record_properties">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ entity.id }}</td>
+            </tr>
+            <tr>
+                <th>Postnr</th>
+                <td>{{ entity.postnr }}</td>
+            </tr>
+            <tr>
+                <th>Gemeente</th>
+                <td>{{ entity.gemeente }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('postnr') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('postnr_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+{% endblock %}
+{% endblock %}

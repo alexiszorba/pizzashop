@@ -1,0 +1,18 @@
+{% extends 'AlexPizzaBundle::layout.html.twig' %}
+
+{% block content %}
+
+{% block body -%}
+    <h1>Pizza creation</h1>
+
+    {{ form(form) }}
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('pizza') }}">
+            Back to the list
+        </a>
+    </li>
+</ul>
+{% endblock %}
+{% endblock %}

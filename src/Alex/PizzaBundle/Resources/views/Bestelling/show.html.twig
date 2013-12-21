@@ -1,0 +1,43 @@
+{% extends 'AlexPizzaBundle::layout.html.twig' %}
+
+{% block content %}
+
+{% block body -%}
+    <h1>Bestelling</h1>
+
+    <table class="record_properties">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ entity.id }}</td>
+            </tr>
+            <tr>
+                <th>Datum</th>
+                <td>{{ entity.datum|date('Y-m-d H:i') }}</td>
+            </tr>
+            <tr>
+                <th>Levering</th>
+                <td>{{ entity.levering|date('Y-m-d H:i') }}</td>
+            </tr>
+            <tr>
+                <th>Leveringskost</th>
+                <td>{{ entity.leveringskost }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('bestelling') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('bestelling_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+{% endblock %}
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'AlexPizzaBundle::layout.html.twig' %}
+
+
+{% block content %}
+
+   
+    <div>
+        
+        {% render url('fos_user_profile_show') %}
+       {# {% render url('fos_user_security_login') %}
+        {% render url('fos_user_registration_register') %} #}
+        
+    </div>
+    
+{% endblock content%}

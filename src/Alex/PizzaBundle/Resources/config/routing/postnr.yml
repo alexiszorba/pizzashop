@@ -1,0 +1,30 @@
+postnr:
+    pattern:  /
+    defaults: { _controller: "AlexPizzaBundle:Postnr:index" }
+
+postnr_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "AlexPizzaBundle:Postnr:show" }
+
+postnr_new:
+    pattern:  /new
+    defaults: { _controller: "AlexPizzaBundle:Postnr:new" }
+
+postnr_create:
+    pattern:  /create
+    defaults: { _controller: "AlexPizzaBundle:Postnr:create" }
+    requirements: { _method: post }
+
+postnr_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "AlexPizzaBundle:Postnr:edit" }
+
+postnr_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "AlexPizzaBundle:Postnr:update" }
+    requirements: { _method: post|put }
+
+postnr_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "AlexPizzaBundle:Postnr:delete" }
+    requirements: { _method: post|delete }

@@ -1,0 +1,73 @@
+AlexPizzaBundle_home:
+        resource: "@AlexPizzaBundle/Resources/config/routing/home.yml"
+        prefix:   /home
+        
+AlexPizzaBundle_delivery:
+        resource: "@AlexPizzaBundle/Resources/config/routing/delivery.yml"
+        prefix:   /delivery
+        
+AlexPizzaBundle_overons:
+        resource: "@AlexPizzaBundle/Resources/config/routing/overons.yml"
+        prefix:   /overons
+        
+AlexPizzaBundle_voorwaarden:
+        resource: "@AlexPizzaBundle/Resources/config/routing/voorwaarden.yml"
+        prefix:   /voorwaarden
+        
+AlexPizzaBundle_contact:
+        resource: "@AlexPizzaBundle/Resources/config/routing/contact.yml"
+        prefix:   /contact
+    
+AlexPizzaBundle_bestelling:
+        resource: "@AlexPizzaBundle/Resources/config/routing/bestelling.yml"
+        prefix:   /bestelling
+        
+AlexPizzaBundle_details:
+        resource: "@AlexPizzaBundle/Resources/config/routing/details.yml"
+        prefix:   /details
+    
+AlexPizzaBundle_extras:
+        resource: "@AlexPizzaBundle/Resources/config/routing/extras.yml"
+        prefix:   /extras
+        
+AlexPizzaBundle_kosten:
+        resource: "@AlexPizzaBundle/Resources/config/routing/kosten.yml"
+        prefix:   /kosten
+        
+AlexPizzaBundle_pizza:
+        resource: "@AlexPizzaBundle/Resources/config/routing/pizza.yml"
+        prefix:   /pizza
+        
+AlexPizzaBundle_postnr:
+        resource: "@AlexPizzaBundle/Resources/config/routing/postnr.yml"
+        prefix:   /postnr
+
+AlexPizzaBundle_size:
+        resource: "@AlexPizzaBundle/Resources/config/routing/size.yml"
+        prefix:   /size
+        
+AlexPizzaBundle_type:
+        resource: "@AlexPizzaBundle/Resources/config/routing/type.yml"
+        prefix:   /type
+        
+fos_user_security:
+    resource: "@FOSUserBundle/Resources/config/routing/security.xml"
+
+fos_user_profile:
+    resource: "@FOSUserBundle/Resources/config/routing/profile.xml"
+    prefix: /profile
+
+fos_user_register:
+    resource: "@FOSUserBundle/Resources/config/routing/registration.xml"
+    prefix: /register
+
+fos_user_resetting:
+    resource: "@FOSUserBundle/Resources/config/routing/resetting.xml"
+    prefix: /resetting
+
+fos_user_change_password:
+    resource: "@FOSUserBundle/Resources/config/routing/change_password.xml"
+    prefix: /profile
+    
+
+    

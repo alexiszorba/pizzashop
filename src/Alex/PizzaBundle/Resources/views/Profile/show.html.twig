@@ -1,0 +1,10 @@
+{% trans_default_domain 'FOSUserBundle' %}
+
+{% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+   <div id="toon_user">
+    <p>Welkom terug {{ user.username }}. Uw e-mail is {{ user.email }}.  <a href="{{ path('fos_user_security_logout') }}">Log Uit</a></p>  
+   </div>
+{% endif %}
+
+
+

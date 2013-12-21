@@ -1,0 +1,22 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+
+
+<div id="dialog_levering" title="Levering">  
+    <div>
+        <ul>
+        {% for entity in entities %}
+            <li >
+            {{ entity.postnr }} {{ entity.gemeente }} {{ render(controller('AlexPizzaBundle:Kosten:showCost', { 'postnr': entity.id })) }}
+                &nbsp
+            </li>           
+
+        {% endfor %}
+
+        </ul>
+
+    </div>
+</div>
+<button id="opener_levering">Leverings Map</button>
+{% endblock %}

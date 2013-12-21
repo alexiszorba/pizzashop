@@ -1,0 +1,90 @@
+parameters:
+
+services:
+    alex_user.registration.form.type:
+        class: Alex\PizzaBundle\Form\Type\RegistrationFormType
+        arguments: [%fos_user.model.user.class%]
+        tags:
+            - { name: form.type, alias: alex_user_registration }
+            
+    alex.pizza.admin.bestelling:
+      class: Alex\PizzaBundle\Admin\BestellingAdmin
+      tags:
+          - { name: sonata.admin, manager_type: orm, group: pizza, label: Bestelling } 
+      arguments:
+            - ~
+            - Alex\PizzaBundle\Entity\Bestelling
+            - 'AlexPizzaBundle:BestellingAdmin'
+            
+    alex.pizza.admin.details:
+      class: Alex\PizzaBundle\Admin\DetailsAdmin
+      tags:
+          - { name: sonata.admin, manager_type: orm, group: pizza, label: Details } 
+      arguments:
+            - ~
+            - Alex\PizzaBundle\Entity\Details
+            - 'AlexPizzaBundle:DetailsAdmin'
+
+    alex.pizza.admin.extras:
+      class: Alex\PizzaBundle\Admin\ExtrasAdmin
+      tags:
+          - { name: sonata.admin, manager_type: orm, group: pizza, label: Extras } 
+      arguments:
+            - ~
+            - Alex\PizzaBundle\Entity\Extras
+            - 'AlexPizzaBundle:ExtrasAdmin'
+            
+    alex.pizza.admin.kosten:
+      class: Alex\PizzaBundle\Admin\KostenAdmin
+      tags:
+          - { name: sonata.admin, manager_type: orm, group: pizza, label: Kosten } 
+      arguments:
+            - ~
+            - Alex\PizzaBundle\Entity\Kosten
+            - 'AlexPizzaBundle:KostenAdmin'
+            
+    alex.pizza.admin.pizza:
+      class: Alex\PizzaBundle\Admin\PizzaAdmin
+      tags:
+          - { name: sonata.admin, manager_type: orm, group: pizza, label: Pizza } 
+      arguments:
+            - ~
+            - Alex\PizzaBundle\Entity\Pizza
+            - 'AlexPizzaBundle:PizzaAdmin'
+            
+    alex.pizza.admin.postnr:
+      class: Alex\PizzaBundle\Admin\PostnrAdmin
+      tags:
+          - { name: sonata.admin, manager_type: orm, group: pizza, label: Postnr } 
+      arguments:
+            - ~
+            - Alex\PizzaBundle\Entity\Postnr
+            - 'AlexPizzaBundle:PostnrAdmin'
+    
+    alex.pizza.admin.size:
+      class: Alex\PizzaBundle\Admin\SizeAdmin
+      tags:
+          - { name: sonata.admin, manager_type: orm, group: pizza, label: Size } 
+      arguments:
+            - ~
+            - Alex\PizzaBundle\Entity\Size
+            - 'AlexPizzaBundle:SizeAdmin'
+            
+    alex.pizza.admin.type:
+      class: Alex\PizzaBundle\Admin\TypeAdmin
+      tags:
+          - { name: sonata.admin, manager_type: orm, group: pizza, label: Type } 
+      arguments:
+            - ~
+            - Alex\PizzaBundle\Entity\Type
+            - 'AlexPizzaBundle:TypeAdmin'
+            
+    alex.pizza.admin.user:
+      class: Alex\PizzaBundle\Admin\UserAdmin
+      tags:
+          - { name: sonata.admin, manager_type: orm, group: pizza, label: User } 
+      arguments:
+            - ~
+            - Alex\PizzaBundle\Entity\User
+            - 'AlexPizzaBundle:UserAdmin'
+            

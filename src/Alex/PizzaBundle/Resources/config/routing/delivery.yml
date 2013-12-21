@@ -1,0 +1,4 @@
+delivery:
+    pattern:  /
+    defaults: { _controller: "AlexPizzaBundle:Delivery:index" }
+
